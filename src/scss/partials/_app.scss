@@ -2,6 +2,11 @@ body{
   font-family: $font-base;
 }
 
-.app{
-
+.app {
+  width: 100vw;
 }
+
+.app-header {
+  height: $app-header-height;
+}
+
