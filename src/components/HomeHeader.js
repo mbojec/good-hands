@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Image from '../assets/images/Home-Hero-Image.jpg'
 
 class HomeHeader extends Component{
 
@@ -6,7 +7,11 @@ class HomeHeader extends Component{
   render() {
 
     return(
-      <div/>
+      <div className={'header-container'} style={{backgroundImage: `url(${Image})`}}>
+        <div className={'row'}>
+
+        </div>
+      </div>
     )
   }
 }
