@@ -1,14 +1,11 @@
 import React, {Component} from "react";
 
-class HomeHeader extends Component{
-
-
+class HomeWhoWeHelp extends Component{
   render() {
-
     return(
       <div/>
     )
   }
 }
 
-export default HomeHeader
+export default HomeWhoWeHelp;
