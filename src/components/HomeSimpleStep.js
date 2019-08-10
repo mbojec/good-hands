@@ -1,14 +1,12 @@
 import React, {Component} from "react";
 
-class HomeHeader extends Component{
-
-
+class HomeSimpleStep extends Component{
   render() {
-
     return(
       <div/>
     )
   }
+
 }
 
-export default HomeHeader
+export default HomeSimpleStep

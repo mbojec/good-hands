@@ -1,8 +1,13 @@
 @import "~normalize.css";
 @import "settings/colors";
 @import "settings/fonts";
-@import "partials/app";
-@import "modules/base";
 @import "modules/measurments";
+@import "modules/base";
 @import "modules/grid";
 @import "modules/mixins";
+@import "partials/app";
+@import "partials/header";
+@import "partials/three-columns";
+@import "partials/simple-steps";
+@import "partials/about";
+@import "partials/who-whe-help";
