@@ -7,3 +7,39 @@
   background-color:white;
   background-position: -70%;
 }
+
+.header__top-menu{
+
+}
+
+.header__top-menu__navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top-menu__login-register{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__top-menu__login-register__btn{
+  height: 36px;
+  padding: 0 0.5rem;
+  background-color: white;
+  border: none;
+  outline: 0;
+}
+
+.header__top-menu__login-register__btn--pressed{
+  border: 0.75px solid $color-yellow;
+}
+
+.header__top-menu__login-register__btn--login{
+  font-size: 14px;
+}
+
+.header__top-menu__login-register__btn--register{
+  font-size: 13px;
+}
