@@ -12,10 +12,10 @@
 
 }
 
-.header__top-menu__navigation{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+%header__top-menu__btn {
+  background-color: white;
+  border: none;
+  outline: 0;
 }
 
 .header__top-menu__login-register{
@@ -27,13 +27,11 @@
 .header__top-menu__login-register__btn{
   height: 36px;
   padding: 0 0.5rem;
-  background-color: white;
-  border: none;
-  outline: 0;
+  @extend %header__top-menu__btn;
 }
 
 .header__top-menu__login-register__btn--pressed{
-  border: 0.75px solid $color-yellow;
+  @include btn-border($color-yellow)
 }
 
 .header__top-menu__login-register__btn--login{
@@ -43,3 +41,21 @@
 .header__top-menu__login-register__btn--register{
   font-size: 13px;
 }
+
+.header__top-menu__navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top-menu__navigation__btn{
+  height: 42px;
+  flex-grow: 1;
+  @extend %header__top-menu__btn;
+  @include fluid-type(768px, 1900px, 10px, 18px)
+}
+
+.header__top-menu__navigation__btn--pressed{
+  @include btn-border($color-dark)
+}
+

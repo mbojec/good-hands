@@ -10,11 +10,11 @@ class HeaderTopMenu extends Component{
           <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--register header__top-menu__login-register__btn--pressed'}>Załóż konto</button>
         </div>
         <nav className={'col-xs-12 header__top-menu__navigation'}>
-          <button>Start</button>
-          <button>O co chodzi?</button>
-          <button>O nas</button>
-          <button>Fudacja i organizacje</button>
-          <button>Kontakt</button>
+          <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>Start</button>
+          <button className={'header__top-menu__navigation__btn'}>O co chodzi?</button>
+          <button className={'header__top-menu__navigation__btn'}>O nas</button>
+          <button className={'header__top-menu__navigation__btn'}>Fudacja i organizacje</button>
+          <button className={'header__top-menu__navigation__btn'}>Kontakt</button>
         </nav>
       </div>
     )

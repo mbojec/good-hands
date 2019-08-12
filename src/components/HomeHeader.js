@@ -11,8 +11,8 @@ class HomeHeader extends Component{
           <div className={'col-xs-6'}/>
           <div className={'col-xs-6'}>
             <div className={'row'} style={{height: '100%'}}>
-              <div className={'col-xs-2'}/>
-              <div className={'col-xs-10'}><HeaderTopMenu/></div>
+              <div className={'col-xl-1 col-xxl-2'}/>
+              <div className={'col-xs-12 col-xl-11 col-xxl-10'}><HeaderTopMenu/></div>
               <div className={'col-xs-10'}/>
               <div className={'col-xs-2'}></div>
             </div>
