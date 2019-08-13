@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
-import * as Scroll from 'react-scroll';
-import { Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
+import { Link as ScrollLink} from 'react-scroll'
 
 class HomeHeaderTopMenu extends Component{
 

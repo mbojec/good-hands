@@ -14,8 +14,10 @@ class Home extends Component{
           <HomeHeader/>
         </header>
         <main>
-          <HomeThreeColumns/>
-          <section id={'simpleStepsSection'}><HomeSimpleStep/></section>
+          <section id={'simpleStepsSection'} className={'app-simple-step-section'}>
+            <HomeThreeColumns/>
+            <HomeSimpleStep/>
+          </section>
           <section id={'aboutSection'}><HomeAbout/></section>
           <section id={'whoWheHelpSection'}><HomeWhoWeHelp/></section>
           <section id={'contactSection'}><HomeContact/></section>
