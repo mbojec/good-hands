@@ -67,3 +67,10 @@
     }
   }
 }
+
+@mixin fluid-background-image($ddp-image, $double-ddp-image){
+  background-image: url($ddp-image);
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 2dppx){
+    background-image: url($double-ddp-image);
+  }
+}
