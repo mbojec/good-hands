@@ -8,11 +8,7 @@
   background-position: -70%;
 }
 
-.header__top-menu{
-
-}
-
-%header__top-menu__btn {
+%header__btn {
   background-color: white;
   border: none;
   outline: 0;
@@ -27,7 +23,7 @@
 .header__top-menu__login-register__btn{
   height: 36px;
   padding: 0 0.5rem;
-  @extend %header__top-menu__btn;
+  @extend %header__btn;
 }
 
 .header__top-menu__login-register__btn--pressed{
@@ -51,11 +47,39 @@
 .header__top-menu__navigation__btn{
   height: 42px;
   flex-grow: 1;
-  @extend %header__top-menu__btn;
+  @extend %header__btn;
   @include fluid-type(768px, 1900px, 10px, 18px)
 }
 
 .header__top-menu__navigation__btn--pressed{
   @include btn-border($color-dark)
 }
+
+.header__intro__title{
+  @include fluid-type(768px, 1900px, 18px, 38px);
+  text-align: center;
+}
+
+.header__intro__decoration{
+  @extend %center
+}
+
+.header__intro__btn-section{
+  @extend %center;
+  margin-top: 65px;
+}
+
+.header__intro__btn-section__btn{
+  @include fluid-type(768px, 1440px, 18px, 36px);
+  @include btn-border($color-dark);
+  @extend %header__btn;
+  max-height: 120px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  flex-basis: 50%;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 22px;
+}
+
 
