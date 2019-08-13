@@ -16,10 +16,18 @@ body{
   max-height: $header-max-height;
 }
 
+.app-three-columns-section {
+  width: 100%;
+  background: white;
+  height: 50vh;
+  max-height: $three-columns-height;
+  margin-bottom: 55px;
+}
+
 .app-simple-step-section {
   width: 100%;
   background: white;
-  height: 120vh;
-  max-height: calc(#{$three-columns-height} + #{$simple-steps-height} + 55px);
+  height: 70vh;
+  max-height: $simple-steps-height;
 }
 

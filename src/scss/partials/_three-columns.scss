@@ -6,6 +6,7 @@
   background-size: 100% 100%;
   background-color:$color-yellow;
   max-height: $three-columns-height;
+  @include fluid-background-image("../assets/images/3-Columns-Background.png", "../assets/images/3-Columns-Background@2x.png")
 }
 
 .three-columns__single-column{
@@ -19,6 +20,7 @@
   font-size: 90px;
   font-weight: 300;
   text-align: center;
+  @include fluid-type(768px, 1900px, 72px, 90px);
 }
 
 .three-columns__single-column__title{
@@ -26,10 +28,12 @@
   text-align: center;
   margin-bottom: 24px;
   margin-top: 10px;
+  @include fluid-type(768px, 1900px, 14px, 18px);
 }
 
 .three-columns__single-column__subtitle{
   font-size: 16px;
   font-weight: 300;
   text-align: center;
+  @include fluid-type(768px, 1900px, 12px, 16px);
 }

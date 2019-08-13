@@ -1,10 +1,9 @@
 import React, {Component} from "react";
-import Image from '../assets/images/3-Columns-Background.png'
 
 class HomeThreeColumns extends Component{
   render() {
     return(
-      <div className={'three-columns-container'} style={{backgroundImage: `url(${Image})`}}>
+      <div className={'three-columns-container'}>
         <div className={'row'} style={{height: '100%'}}>
           <div className={'col-xs-3 three-columns__single-column'}>
             <p className={'three-columns__single-column__number'}>10</p>
