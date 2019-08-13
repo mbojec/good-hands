@@ -24,6 +24,9 @@
   height: 36px;
   padding: 0 0.5rem;
   @extend %header__btn;
+  a{
+    color: $color-gray;
+  }
 }
 
 .header__top-menu__login-register__btn--pressed{

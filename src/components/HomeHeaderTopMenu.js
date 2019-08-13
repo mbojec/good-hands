@@ -1,13 +1,14 @@
 import React, {Component} from "react";
+import {Link} from 'react-router-dom';
 
-class HeaderTopMenu extends Component{
+class HomeHeaderTopMenu extends Component{
 
   render() {
     return(
       <div className={'row'}>
         <div className={'col-xs-12 header__top-menu__login-register'}>
-          <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--login'}>Zaloguj</button>
-          <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--register header__top-menu__login-register__btn--pressed'}>Załóż konto</button>
+          <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--login'}><Link to={'/logowanie'}>Zaloguj</Link></button>
+          <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--register header__top-menu__login-register__btn--pressed'}><Link to={'/rejestracja'}>Załóż konto</Link></button>
         </div>
         <nav className={'col-xs-12 header__top-menu__navigation'}>
           <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>Start</button>
@@ -21,4 +22,4 @@ class HeaderTopMenu extends Component{
   }
 }
 
-export default HeaderTopMenu
+export default HomeHeaderTopMenu
