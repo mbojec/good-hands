@@ -46,3 +46,12 @@
     }
   }
 }
+
+@for $i from 1 through 12 {
+  @media(min-width: $screen-breakpoint-xxl){
+    .col-xxl-#{$i}{
+      padding: 0.5rem;
+      width: 100% * ($i / 12);
+    }
+  }
+}

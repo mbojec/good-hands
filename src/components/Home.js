@@ -15,10 +15,10 @@ class Home extends Component{
         </header>
         <main>
           <HomeThreeColumns/>
-          <HomeSimpleStep/>
-          <HomeAbout/>
-          <HomeWhoWeHelp/>
-          <HomeContact/>
+          <section id={'simpleStepsSection'}><HomeSimpleStep/></section>
+          <section id={'aboutSection'}><HomeAbout/></section>
+          <section id={'whoWheHelpSection'}><HomeWhoWeHelp/></section>
+          <section id={'contactSection'}><HomeContact/></section>
         </main>
       </div>
     )
