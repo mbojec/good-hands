@@ -51,7 +51,10 @@
   height: 42px;
   flex-grow: 1;
   @extend %header__btn;
-  @include fluid-type(768px, 1900px, 10px, 18px)
+  @include fluid-type(768px, 1900px, 10px, 18px);
+  a{
+    color: $color-dark;
+  }
 }
 
 .header__top-menu__navigation__btn--pressed{
@@ -83,6 +86,7 @@
   font-weight: 300;
   text-align: center;
   margin: 0 22px;
+  color: $color-dark;
 }
 
 

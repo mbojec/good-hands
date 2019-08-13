@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
+import * as Scroll from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 
 class HomeHeaderTopMenu extends Component{
 
@@ -12,10 +14,18 @@ class HomeHeaderTopMenu extends Component{
         </div>
         <nav className={'col-xs-12 header__top-menu__navigation'}>
           <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>Start</button>
-          <button className={'header__top-menu__navigation__btn'}>O co chodzi?</button>
-          <button className={'header__top-menu__navigation__btn'}>O nas</button>
-          <button className={'header__top-menu__navigation__btn'}>Fudacja i organizacje</button>
-          <button className={'header__top-menu__navigation__btn'}>Kontakt</button>
+          <button className={'header__top-menu__navigation__btn'}>
+            <ScrollLink to={'simpleStepsSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O co chodzi?</ScrollLink>
+          </button>
+          <button className={'header__top-menu__navigation__btn'}>
+            <ScrollLink to={'aboutSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O nas</ScrollLink>
+          </button>
+          <button className={'header__top-menu__navigation__btn'}>
+            <ScrollLink to={'whoWheHelpSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Fudacja i organizacje</ScrollLink>
+          </button>
+          <button className={'header__top-menu__navigation__btn'}>
+            <ScrollLink to={'contactSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Kontakt</ScrollLink>
+          </button>
         </nav>
       </div>
     )
