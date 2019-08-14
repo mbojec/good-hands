@@ -8,7 +8,7 @@
   max-height: 110px;
   padding: 0 calc(100% * (1 / 14));
   @extend %center--column;
-  font-size: 38px;
+  @include fluid-type(768px, 1400px, 30px, 38px);
   p {
     margin-bottom: 25px;
   }
@@ -57,9 +57,9 @@
 }
 
 .simple-steps-btn-section__btn{
-  width: 310px;
   height: 120px;
-  font-size: 36px;
+  @include fluid-width(768px, 1400px, 240px, 310px);
+  @include fluid-type(768px, 1400px, 30px, 36px);
   font-weight: 300;
   @include btn-border($color-dark);
   @extend %btn-bkg;
