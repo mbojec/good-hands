@@ -9,12 +9,6 @@
   @include fluid-background-image("../assets/images/Hero-Image.png", "../assets/images/Hero-Image@2x.png")
 }
 
-%header__btn {
-  background-color: white;
-  border: none;
-  outline: 0;
-}
-
 .header__top-menu__login-register{
   display: flex;
   justify-content: flex-end;
@@ -24,7 +18,7 @@
 .header__top-menu__login-register__btn{
   height: 36px;
   padding: 0 0.5rem;
-  @extend %header__btn;
+  @extend %btn-bkg;
   a{
     color: $color-gray;
   }
@@ -51,7 +45,7 @@
 .header__top-menu__navigation__btn{
   height: 42px;
   flex-grow: 1;
-  @extend %header__btn;
+  @extend %btn-bkg;
   @include fluid-type(768px, 1900px, 10px, 18px);
   a{
     color: $color-dark;
@@ -79,7 +73,7 @@
 .header__intro__btn-section__btn{
   @include fluid-type(768px, 1440px, 18px, 36px);
   @include btn-border($color-dark);
-  @extend %header__btn;
+  @extend %btn-bkg;
   max-height: 120px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;

@@ -19,6 +19,20 @@
   align-items: center;
 }
 
+%center--column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+%btn-bkg {
+  background-color: white;
+  border: none;
+  outline: 0;
+}
+
 a {
   text-decoration: none;
 }
