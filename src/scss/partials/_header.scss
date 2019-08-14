@@ -6,6 +6,7 @@
   background-size: 67% 100%;
   background-color:white;
   background-position: -70%;
+  @include fluid-background-image("../assets/images/Hero-Image.png", "../assets/images/Hero-Image@2x.png")
 }
 
 %header__btn {
