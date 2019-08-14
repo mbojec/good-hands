@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon1() {
+function Things() {
   return (
     <svg
       viewBox="0 0 83 83"
@@ -37,4 +37,4 @@ function Icon1() {
   );
 }
 
-export default Icon1;
+export default Things;

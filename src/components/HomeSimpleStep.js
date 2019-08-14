@@ -1,9 +1,11 @@
 import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
-import Icon1 from "../assets/svg/Icon-1";
-import Icon2 from "../assets/svg/Icon-2";
-import Icon3 from "../assets/svg/Icon-3";
-import Icon4 from "../assets/svg/Icon-4";
+import Things from "../assets/svg/Things";
+import Bag from "../assets/svg/Bag";
+import MagnifeGlass from "../assets/svg/Magnife-Glass";
+import Reload from "../assets/svg/Reload";
+import {Link} from 'react-router-dom';
+
 
 class HomeSimpleStep extends Component{
   render() {
@@ -19,7 +21,7 @@ class HomeSimpleStep extends Component{
             <div className={'col-xs-8 simple-steps-row__icons-container'}>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Icon1/>
+                  <Things/>
                 </div>
                 <p>Wybierze rzeczy</p>
                 <hr/>
@@ -27,7 +29,7 @@ class HomeSimpleStep extends Component{
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Icon2/>
+                  <Bag/>
                 </div>
                 <p>Spakuj je</p>
                 <hr/>
@@ -35,7 +37,7 @@ class HomeSimpleStep extends Component{
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Icon3/>
+                  <MagnifeGlass/>
                 </div>
                 <p>Zecyduj komu <br/>chcesz pomóc</p>
                 <hr/>
@@ -43,7 +45,7 @@ class HomeSimpleStep extends Component{
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Icon4/>
+                  <Reload/>
                 </div>
                 <p>Zamów kuriera</p>
                 <hr/>
@@ -53,7 +55,7 @@ class HomeSimpleStep extends Component{
             <div className={'col-xs-2'}/>
           </div>
           <div className={'col-xs-12 simple-steps-btn-section'}>
-            <button className={'simple-steps-btn-section__btn'}>ODDAJ <br/> RZECZY</button>
+            <button className={'simple-steps-btn-section__btn'}><Link to={'/logowanie'}>ODDAJ <br/> RZECZY</Link></button>
           </div>
         </div>
       </div>

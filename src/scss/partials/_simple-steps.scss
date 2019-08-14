@@ -63,4 +63,7 @@
   font-weight: 300;
   @include btn-border($color-dark);
   @extend %btn-bkg;
+  a{
+    color: $color-dark;
+  }
 }
