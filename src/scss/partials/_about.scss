@@ -1,0 +1,40 @@
+.about-container {
+  padding: 0 calc(100% * (1 / 14));
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-desc-section{
+  @extend %center--column
+}
+
+.about-desc-section__title{
+  @include fluid-type(768px, 1900px, 18px, 38px);
+}
+
+.about-desc-section__decoration{
+ max-width: 253px;
+  margin-top: 25px;
+  margin-bottom: 56px;
+}
+
+.about-desc-section__desc{
+  text-align: center;
+  @include fluid-type(768px, 1900px, 16px, 30px);
+}
+
+.about-desc-section__signature{
+  margin-top: 40px;
+  align-self: flex-end;
+}
+
+.about-image-container{
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 130% 100%;
+  background-color:white;
+  @include fluid-background-image("../assets/images/People.png", "../assets/images/People@2x.png")
+}
