@@ -34,11 +34,15 @@ class PaginationList extends Component{
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
-      return (
-        <li className={this.state.currentPage === number? 'list-btn-section__btn list-btn-section__btn--selected': 'list-btn-section__btn'} key={number} id={number} onClick={event => this.handleClick(event)}>
-          {number}
-        </li>
-      );
+      if(pageNumbers.length <= 1){
+        return null;
+      } else {
+        return (
+          <li className={this.state.currentPage === number? 'list-btn-section__btn list-btn-section__btn--selected': 'list-btn-section__btn'} key={number} id={number} onClick={event => this.handleClick(event)}>
+            {number}
+          </li>
+        );
+      }
     });
 
     return(

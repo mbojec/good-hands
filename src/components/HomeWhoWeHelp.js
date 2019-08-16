@@ -50,10 +50,83 @@ const list = [
   },
 ];
 
+const list2 = [
+  {
+    title: `Organizacja  “Lorem Ipsum 1”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  },
+  {
+    title: `Organizacja  “Lorem Ipsum 2”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  },
+  {
+    title: `Organizacja  “Lorem Ipsum 3”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  },
+  {
+    title: `Organizacja  “Lorem Ipsum 4”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  },
+  {
+    title: `Organizacja  “Lorem Ipsum 5”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  },
+  {
+    title: `Organizacja  “Lorem Ipsum 6”`,
+    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
+    info: `Egestas, sed, tempus `
+  }
+];
+
+const list3 = [
+  {
+    title: `Zbiórka  “Lorem Ipsum 1”`,
+    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
+    info: `Mi, quis, hendrerit, dolor `
+  },
+  {
+    title: `Zbiórka  “Lorem Ipsum 2”`,
+    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
+    info: `Mi, quis, hendrerit, dolor `
+  },
+  {
+    title: `Zbiórka  “Lorem Ipsum 3”`,
+    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
+    info: `Mi, quis, hendrerit, dolor `
+  }
+];
+
 
 class HomeWhoWeHelp extends Component{
 
+  constructor(props){
+    super(props);
+    this.state = {
+      currentList: 0
+    }
+  }
+
+  handleClick(event) {
+    this.setState({
+      currentList: Number(event.target.id)
+    });
+  }
+
   render() {
+    let currentList;
+    if(this.state.currentList === 0){
+      currentList = list;
+    } else if(this.state.currentList === 1){
+      currentList = list2;
+    } else {
+      currentList = list3;
+    }
+
     return(
       <div className={'help-container'} >
         <div className={'row'} style={{height: '100%'}}>
@@ -65,9 +138,9 @@ class HomeWhoWeHelp extends Component{
           </div>
           <div className={'col-xs-3'}/>
           <div className={'col-xs-6 help-menu'}>
-            <button className={'help-menu__btn help-menu__btn--selected'}>Fundacjom</button>
-            <button className={'help-menu__btn'}>Organizacjom <br/> pozarządowym</button>
-            <button className={'help-menu__btn'}>Lokalnym <br/> zbiórkom</button>
+            <button id={0} className={this.state.currentList === 0? 'help-menu__btn help-menu__btn--selected':'help-menu__btn'} onClick={event => this.handleClick(event)}>Fundacjom</button>
+            <button id={1} className={this.state.currentList === 1? 'help-menu__btn help-menu__btn--selected':'help-menu__btn'} onClick={event => this.handleClick(event)}>Organizacjom <br/> pozarządowym</button>
+            <button id={2} className={this.state.currentList === 2? 'help-menu__btn help-menu__btn--selected':'help-menu__btn'} onClick={event => this.handleClick(event)}>Lokalnym <br/> zbiórkom</button>
           </div>
           <div className={'col-xs-3'}/>
           <div className={'col-xs-3'}/>
@@ -78,7 +151,7 @@ class HomeWhoWeHelp extends Component{
           <div className={'col-xs-3'}/>
           <div className={'col-xs-1'}/>
           <div className={'col-xs-10'}>
-            <PaginationList list={list}/>
+            <PaginationList key={this.state.currentList} list={currentList}/>
           </div>
           <div className={'col-xs-1'}/>
         </div>
