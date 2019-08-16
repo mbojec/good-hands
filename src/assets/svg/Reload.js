@@ -6,11 +6,11 @@ function Reload() {
       viewBox="0 0 83 83"
     >
       <defs>
-        <clipPath id="a">
+        <clipPath id="g">
           <path fill="none" d="M0 0H83V83H0z" />
         </clipPath>
         <pattern
-          id="b"
+          id="h"
           width="100%"
           height="100%"
           preserveAspectRatio="xMidYMid slice"
@@ -24,10 +24,10 @@ function Reload() {
         </pattern>
       </defs>
       <g
-        fill="url(#b)"
+        fill="url(#h)"
         stroke="rgba(0,0,0,0)"
         strokeWidth="1"
-        clipPath="url(#a)"
+        clipPath="url(#g)"
         data-name="Icon"
       >
         <path stroke="none" d="M0 0H83V83H0z" />

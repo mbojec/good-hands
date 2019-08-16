@@ -6,11 +6,11 @@ function MagnifeGlass() {
       viewBox="0 0 83 83"
     >
       <defs>
-        <clipPath id="a">
+        <clipPath id="e">
           <path fill="none" d="M0 0H83V83H0z" />
         </clipPath>
         <pattern
-          id="b"
+          id="f"
           width="100%"
           height="100%"
           preserveAspectRatio="xMidYMid slice"
@@ -24,10 +24,10 @@ function MagnifeGlass() {
         </pattern>
       </defs>
       <g
-        fill="url(#b)"
+        fill="url(#f)"
         stroke="rgba(0,0,0,0)"
         strokeWidth="1"
-        clipPath="url(#a)"
+        clipPath="url(#e)"
         data-name="Icon"
       >
         <path stroke="none" d="M0 0H83V83H0z" />
