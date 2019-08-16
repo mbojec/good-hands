@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
+import IstagramIcon from "../assets/svg/Istagram";
+import FacebookIcon from "../assets/svg/Facebook";
 
 class HomeContact extends Component{
   render() {
@@ -33,6 +35,10 @@ class HomeContact extends Component{
                 </div>
               </div>
             </form>
+          </div>
+          <div className={'contact-form-section__social-media'}>
+            <FacebookIcon/>
+            <IstagramIcon/>
           </div>
         </div>
       </div>

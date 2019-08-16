@@ -11,6 +11,7 @@
 
 .contact-form-section{
   margin-top: 100px;
+  position: relative;
 }
 
 .contact-form-section__title{
@@ -70,4 +71,10 @@
     @include btn-border($color-dark);
     background-color: transparent;
   }
+}
+
+.contact-form-section__social-media{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
