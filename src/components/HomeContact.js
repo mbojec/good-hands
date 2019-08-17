@@ -15,6 +15,7 @@ class HomeContact extends Component{
       nameValidationError: false,
       emailValidationError: false,
       messageValidationError: false,
+      messageSend: false
     };
   }
 
@@ -34,14 +35,15 @@ class HomeContact extends Component{
     const messageValidation = this.state.message.length >= 120;
     if(nameValidation && emailValidation && messageValidation){
       this.send();
+      this.setState({messageSend: true})
     } else {
       this.setState({
         name: '',
         email: '',
         message: '',
-        nameValidationError: nameValidation,
-        emailValidationError: emailValidation,
-        messageValidationError: messageValidation
+        nameValidationError: !nameValidation,
+        emailValidationError: !emailValidation,
+        messageValidationError: !messageValidation
       })
     }
   }
@@ -71,6 +73,7 @@ class HomeContact extends Component{
             <p>Skontaktuj się z nami</p>
             <div className={'contact-form-section__decoration'}>
               <Decoration/>
+              {this.state.messageSend && <p className={'contact-form-section__decoration__message'}>Wiadomość została wysłana! <br/> Wkrótce się skontaktujemy</p>}
             </div>
           </div>
           <div className={'contact-form-section__contact-form'}>
@@ -84,10 +87,13 @@ class HomeContact extends Component{
                   <label>Wpisz swoje email</label>
                   <input name={'email'} className={'contact-form-section__contact-form__input'} type={'email'} placeholder={'abc@xyz.pl'} value={this.state.email} onChange={e => this.handleChange(e)}/>
                 </div>
+                <div className={'col-xs-6 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__name'}>{this.state.nameValidationError && <label>Podane imie jest nieprawidłowe!</label>}</div>
+                <div className={'col-xs-6 contact-form-section__contact-form__error-section'}>{ this.state.emailValidationError && <label>Poadany email jest nieprawidłowy!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__textarea-section'}>
                   <label>Wpisz swoją wiadomość</label>
                   <textarea name={'message'} rows={'4'} value={this.state.message} onChange={e => this.handleChange(e)} placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
                 </div>
+                <div className={'col-xs-12 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__desc'}>{this.state.messageValidationError && <label>Wiadomość musi mieć conajmiej 120 znaków!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__sbm-btn'}>
                   <input type={"submit"} value={'Wyślij'} onClick={event => this.handleSubmit(event)} onSubmit={event => this.handleSubmit(event)}/>
                 </div>
