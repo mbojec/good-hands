@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
+import {Link} from 'react-router-dom';
 
 class LoginPanel extends Component{
 
@@ -22,7 +23,7 @@ class LoginPanel extends Component{
             </div>
           </div>
           <div className={'login-form__btn-section'}>
-            <button className={'login-form__btn login-form__btn--register'}>Załóż konto</button>
+            <button className={'login-form__btn login-form__btn--register'}><Link to={'/rejestracja'}>Załóż konto</Link></button>
             <button className={'login-form__btn login-form__btn--login login-form__btn--selected'}>Zaloguj się</button>
           </div>
         </div>

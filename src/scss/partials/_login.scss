@@ -61,7 +61,12 @@
   font-size: 18px;
   height: 50px;
   padding: 0 16px;
-  @extend %btn-bkg
+  @extend %btn-bkg;
+
+  a{
+    color: black;
+  }
+
 }
 
 .login-form__btn--selected{
