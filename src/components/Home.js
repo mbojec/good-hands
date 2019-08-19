@@ -18,8 +18,10 @@ class Home extends Component{
           <section id={'simpleStepsSection'} className={'app-simple-step-section'}><HomeSimpleStep/></section>
           <section id={'aboutSection'} className={'app-about-section'}><HomeAbout/></section>
           <section id={'whoWheHelpSection'} className={'app-help-section'}><HomeWhoWeHelp/></section>
-          <section id={'contactSection'} className={'app-contact-section'}><HomeContact/></section>
         </main>
+        <footer>
+          <section id={'contactSection'} className={'app-contact-section'}><HomeContact/></section>
+        </footer>
       </div>
     )
   }

@@ -16,6 +16,13 @@ body{
   max-height: $header-max-height;
 }
 
+.app-header--login{
+  width: 100%;
+  background: white;
+  height: 30vh;
+  max-height: $header-login-max-height;
+}
+
 .app-three-columns-section {
   width: 100%;
   background: white;
@@ -49,6 +56,13 @@ body{
   background: white;
   height: 100vh;
   max-height: $contact-height;
+}
+
+.app-login-section{
+  width: 100%;
+  background: white;
+  height: 80vh;
+  max-height: $login-height;
 }
 
 

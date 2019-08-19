@@ -1,9 +1,18 @@
 import React, {Component} from "react";
+import LoginHeader from "./LoginHeader";
+import LoginPanel from "./LoginPanel";
 
 class Login extends Component{
   render() {
     return(
-      <h1>Logowanie</h1>
+      <div className={'app'}>
+        <header className={"app-header--login"}>
+          <LoginHeader/>
+        </header>
+        <main>
+          <section className={'app-login-section'}><LoginPanel/></section>
+        </main>
+      </div>
     )
   }
 }
