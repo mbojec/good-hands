@@ -58,32 +58,5 @@
   @include btn-border($color-dark)
 }
 
-.header__intro__title{
-  @include fluid-type(768px, 1900px, 18px, 38px);
-  text-align: center;
-}
-
-.header__intro__decoration{
-  @extend %center
-}
-
-.header__intro__btn-section{
-  @extend %center;
-  margin-top: 65px;
-}
-
-.header__intro__btn-section__btn{
-  @include fluid-type(768px, 1440px, 18px, 36px);
-  @include btn-border($color-dark);
-  @extend %btn-bkg;
-  max-height: 120px;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  flex-basis: 50%;
-  font-weight: 300;
-  text-align: center;
-  margin: 0 22px;
-  color: $color-dark;
-}
 
 

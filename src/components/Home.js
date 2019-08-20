@@ -5,7 +5,7 @@ import HomeAbout from "./HomeAbout";
 import HomeWhoWeHelp from "./HomeWhoWeHelp";
 import HomeContact from "./HomeContact";
 import Header from "./Header";
-import HomeHeaderIntro from "./HomeHeaderIntro";
+import HomeIntro from "./HomeIntro";
 
 class Home extends Component{
   render() {
@@ -15,7 +15,7 @@ class Home extends Component{
           <Header/>
         </header>
         <main className={'app-main'}>
-          <section className={'app-intro'}><HomeHeaderIntro/></section>
+          <section className={'app-intro'}><HomeIntro/></section>
           <section className={'app-three-columns-section'}><HomeThreeColumns/></section>
           <section id={'simpleStepsSection'} className={'app-simple-step-section'}><HomeSimpleStep/></section>
           <section id={'aboutSection'} className={'app-about-section'}><HomeAbout/></section>
