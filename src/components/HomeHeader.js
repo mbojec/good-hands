@@ -1,10 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import HomeHeaderTopMenu from "./HomeHeaderTopMenu";
 import HomeHeaderIntro from "./HomeHeaderIntro";
 
-class HomeHeader extends Component{
-  
-  render() {
+function HomeHeader() {
     return(
       <div className={'header-container'}>
         <div className={'row'} style={{height: '100%'}}>
@@ -20,7 +18,6 @@ class HomeHeader extends Component{
         </div>
       </div>
     )
-  }
 }
 
 export default HomeHeader

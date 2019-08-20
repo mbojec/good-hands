@@ -1,9 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import HomeHeaderTopMenu from "./HomeHeaderTopMenu";
 
-class RegisterHeader extends Component{
-
-  render() {
+function RegisterHeader() {
     return(
       <div className={'header-container--login'}>
         <div className={'row'} style={{height: '100%'}}>
@@ -17,7 +15,6 @@ class RegisterHeader extends Component{
         </div>
       </div>
     )
-  }
 }
 
 export default RegisterHeader

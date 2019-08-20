@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
 
-class HomeHeaderIntro extends Component{
-
-  render() {
+function HomeHeaderIntro() {
     return(
       <div className={'row'}>
         <div className={'col-xs-12 header__intro__title'}><p>Zacznij pomagać!</p></div>
@@ -17,7 +15,6 @@ class HomeHeaderIntro extends Component{
         <div className={'col-xxl-1'}/>
       </div>
     )
-  }
 }
 
 export default HomeHeaderIntro

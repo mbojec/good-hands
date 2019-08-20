@@ -1,7 +1,6 @@
-import React, {Component} from "react";
+import React from "react";
 
-class HomeThreeColumns extends Component{
-  render() {
+function HomeThreeColumns() {
     return(
       <div className={'three-columns-container'}>
         <div className={'row'} style={{height: '100%'}}>
@@ -31,7 +30,6 @@ class HomeThreeColumns extends Component{
         </div>
       </div>
     )
-  }
 }
 
 export default HomeThreeColumns;

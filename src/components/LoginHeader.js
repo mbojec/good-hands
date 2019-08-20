@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import HomeHeaderTopMenu from "./HomeHeaderTopMenu";
 
-class LoginHeader extends Component{
-
-  render() {
+function LoginHeader() {
     return(
       <div className={'header-container--login'}>
         <div className={'row'} style={{height: '100%'}}>
@@ -17,7 +15,6 @@ class LoginHeader extends Component{
         </div>
       </div>
     )
-  }
 }
 
 export default LoginHeader
