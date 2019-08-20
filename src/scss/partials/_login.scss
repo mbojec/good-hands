@@ -29,6 +29,14 @@
   font-size: 16px;
 }
 
+.login-form__form__label--error{
+  display: block;
+  width: 100%;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 .login-form__form__input{
   display: block;
   background-color: $color-light;
@@ -39,12 +47,15 @@
   height: 40px;
 }
 
+.login-form__form__input--error{
+  border-bottom: 1px solid red;
+}
+
 .login-form__form__email{
   padding-top: 40px;
   padding-right: 67px;
   padding-left: 67px;
 }
-
 
 .login-form__form__password{
   padding: 31px 67px 40px;
