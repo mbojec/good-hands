@@ -3,6 +3,12 @@
   flex-wrap: wrap;
 }
 
+.row--ful-height {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
 @for $i from 1 through 12 {
   .col-xs-#{$i} {
     padding: 0.5rem;
