@@ -23,11 +23,21 @@ class LoginPanel extends Component{
     this.validateForm()
   }
 
-  validateForm(){
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  handlePasswordValidation(){
     const passwordValidation = this.state.password.length >= 6;
+    this.setState({passwordValidationError: !passwordValidation})
+  }
+
+  handleEmailValidation(){
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = re.test(String(this.state.email).toLowerCase());
-    if(passwordValidation && emailValidation){
+    this.setState({emailValidationError: !emailValidation,})
+  }
+
+  validateForm(){
+    const passwordValidation = this.state.passwordValidationError;
+    const emailValidation = this.state.emailValidationError;
+    if(!passwordValidation && !emailValidation){
       console.log('proper validation');
     } else {
       this.setState({
@@ -50,12 +60,12 @@ class LoginPanel extends Component{
           <div className={'login-form__form'}>
             <div className={'login-form__form__email'}>
               <label className={'login-form__form__label'}>Email</label>
-              <input value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={event => this.handleEmailValidation()} value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
               {this.state.emailValidationError && <label className={'login-form__form__label--error'}>Podany email jest nieprawidłowy!</label>}
             </div>
             <div className={'login-form__form__password'}>
               <label className={'login-form__form__label'}>Hasło</label>
-              <input value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={event => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
               {this.state.passwordValidationError && <label className={'login-form__form__label--error'}>Podane hasło jest za krótkie!</label>}
             </div>
           </div>

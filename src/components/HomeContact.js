@@ -28,22 +28,35 @@ class HomeContact extends Component{
     this.validateForm()
   }
 
-  validateForm(){
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  handleNameValidation(){
     const nameValidation = this.state.name.split(' ').length === 1;
+    this.setState({nameValidationError: !nameValidation})
+  }
+
+  handleEmailValidation(){
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = re.test(String(this.state.email).toLowerCase());
+    this.setState({emailValidationError: !emailValidation,})
+  }
+
+  handleMessageValidation(){
     const messageValidation = this.state.message.length >= 120;
-    if(nameValidation && emailValidation && messageValidation){
+    this.setState({messageValidationError: !messageValidation})
+  }
+
+  validateForm(){
+    const nameValidation = this.state.nameValidationError;
+    const emailValidation = this.state.emailValidationError;
+    const messageValidation = this.state.messageValidationError;
+    if(!nameValidation && !emailValidation && !messageValidation){
       this.send();
-      this.setState({messageSend: true})
-    } else {
       this.setState({
         name: '',
         email: '',
         message: '',
-        nameValidationError: !nameValidation,
-        emailValidationError: !emailValidation,
-        messageValidationError: !messageValidation
+        nameValidationError: false,
+        emailValidationError: false,
+        messageValidationError: false
       })
     }
   }
@@ -58,8 +71,9 @@ class HomeContact extends Component{
         "Content-Type": "application/json"
       }} )
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        if(res.status === 200){
+          this.setState({ messageSend: true});
+        }
       })
   }
 
@@ -81,17 +95,17 @@ class HomeContact extends Component{
               <div className={'row'}>
                 <div className={'col-xs-6 contact-form-section__contact-form__input-section contact-form-section__contact-form__input-section__name'}>
                   <label>Wpisz swoje imię</label>
-                  <input name={'name'} className={'contact-form-section__contact-form__input'} type={'text'} placeholder={'Krzysztof'} value={this.state.name} onChange={e => this.handleChange(e)}/>
+                  <input onBlur={event => this.handleNameValidation()} name={'name'} className={'contact-form-section__contact-form__input'} type={'text'} placeholder={'Krzysztof'} value={this.state.name} onChange={e => this.handleChange(e)}/>
                 </div>
                 <div className={'col-xs-6 contact-form-section__contact-form__input-section'}>
                   <label>Wpisz swoje email</label>
-                  <input name={'email'} className={'contact-form-section__contact-form__input'} type={'email'} placeholder={'abc@xyz.pl'} value={this.state.email} onChange={e => this.handleChange(e)}/>
+                  <input onBlur={event => this.handleEmailValidation()} name={'email'} className={'contact-form-section__contact-form__input'} type={'email'} placeholder={'abc@xyz.pl'} value={this.state.email} onChange={e => this.handleChange(e)}/>
                 </div>
                 <div className={'col-xs-6 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__name'}>{this.state.nameValidationError && <label>Podane imie jest nieprawidłowe!</label>}</div>
                 <div className={'col-xs-6 contact-form-section__contact-form__error-section'}>{ this.state.emailValidationError && <label>Poadany email jest nieprawidłowy!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__textarea-section'}>
                   <label>Wpisz swoją wiadomość</label>
-                  <textarea name={'message'} rows={'4'} value={this.state.message} onChange={e => this.handleChange(e)} placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
+                  <textarea onBlur={event => this.handleMessageValidation()} name={'message'} rows={'4'} value={this.state.message} onChange={e => this.handleChange(e)} placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
                 </div>
                 <div className={'col-xs-12 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__desc'}>{this.state.messageValidationError && <label>Wiadomość musi mieć conajmiej 120 znaków!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__sbm-btn'}>
