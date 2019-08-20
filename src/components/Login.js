@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import LoginHeader from "./LoginHeader";
 import LoginPanel from "./LoginPanel";
 
-class Login extends Component{
-  render() {
+function Login() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
@@ -14,7 +13,6 @@ class Login extends Component{
         </main>
       </div>
     )
-  }
 }
 
 export default Login

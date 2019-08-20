@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import RegisterHeader from "./RegisterHeader";
 import RegisterPanel from "./RegisterPanel";
 
-class Register extends Component{
-  render() {
+function Register() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
@@ -14,7 +13,6 @@ class Register extends Component{
         </main>
       </div>
     )
-  }
 }
 
 export default Register

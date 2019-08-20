@@ -1,21 +1,18 @@
-import React, {Component} from "react";
+import React from "react";
 
 
-class ListItem extends Component{
-
-  render() {
+function  ListItem({listItem}) {
     return(
       <div className={'list-item row'}>
         <div className={'col-xs-7 list-item__titles-section'}>
-          <p className={'list-item__titles-section__title'}>{this.props.listItem.title}</p>
-          <p className={'list-item__titles-section__subtitle'}>{this.props.listItem.subtitle}</p>
+          <p className={'list-item__titles-section__title'}>{listItem.title}</p>
+          <p className={'list-item__titles-section__subtitle'}>{listItem.subtitle}</p>
         </div>
         <div className={'col-xs-5 list-item__info-section'}>
-          <p className={'list-item__info-section__info'}>{this.props.listItem.info}</p>
+          <p className={'list-item__info-section__info'}>{listItem.info}</p>
         </div>
       </div>
     )
   }
-}
 
 export default ListItem

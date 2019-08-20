@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import Decoration from "../assets/svg/Decoration";
 import Things from "../assets/svg/Things";
 import Bag from "../assets/svg/Bag";
@@ -7,8 +7,7 @@ import Reload from "../assets/svg/Reload";
 import {Link} from 'react-router-dom';
 
 
-class HomeSimpleStep extends Component{
-  render() {
+function HomeSimpleStep() {
     return(
       <div className={'simple-steps-container'}>
         <div className={'row'} style={{height: '100%'}}>
@@ -60,8 +59,6 @@ class HomeSimpleStep extends Component{
         </div>
       </div>
     )
-  }
-
 }
 
 export default HomeSimpleStep

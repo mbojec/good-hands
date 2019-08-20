@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import Decoration from "../assets/svg/Decoration";
 import Signature from "../assets/svg/Signature";
 
-class HomeAbout extends Component{
-    render() {
+function HomeAbout() {
       return(
         <div className={'about-container row'}>
           <div className={'col-xs-5 about-desc-section'}>
@@ -20,7 +19,6 @@ class HomeAbout extends Component{
           <div className={'col-xs-6 about-image-container'}/>
         </div>
       )
-    }
 }
 
 export default HomeAbout;
