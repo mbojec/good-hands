@@ -1,12 +1,12 @@
 import React from "react";
-import LoginHeader from "./LoginHeader";
+import Header from "./Header";
 import LoginPanel from "./LoginPanel";
 
 function Login() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
-          <LoginHeader/>
+          <Header/>
         </header>
         <main>
           <section className={'app-login-section'}><LoginPanel/></section>
