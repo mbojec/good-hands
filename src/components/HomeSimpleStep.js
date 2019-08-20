@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 function HomeSimpleStep() {
     return(
       <div className={'simple-steps-container'}>
-        <div className={'row'} style={{height: '100%'}}>
+        <div className={'row--ful-height'}>
           <div className={'col-xs-12 simple-steps-title'}>
             <p>Wystarczą 4 proste kroki</p>
             <Decoration/>

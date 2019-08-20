@@ -3,7 +3,7 @@ import Decoration from "../assets/svg/Decoration";
 
 function HomeIntro() {
     return(
-      <div className={'row intro-container'} style={{height: '100%'}}>
+      <div className={'row--ful-height intro-container'}>
         <div className={'col-xs-5 col-xxl-5'}/>
           <div className={'col-xs-7 col-xxl-7 intro-content'}>
           <div className={'col-xs-12 intro__title'}><p>Zacznij pomagać!</p></div>

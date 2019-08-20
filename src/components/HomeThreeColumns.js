@@ -3,7 +3,7 @@ import React from "react";
 function HomeThreeColumns() {
     return(
       <div className={'three-columns-container'}>
-        <div className={'row'} style={{height: '100%'}}>
+        <div className={'row--ful-height'}>
           <div className={'col-xs-3 three-columns__single-column'}>
             <p className={'three-columns__single-column__number'}>10</p>
             <p className={'three-columns__single-column__title'}>ODDANYCH WORKÓW</p>

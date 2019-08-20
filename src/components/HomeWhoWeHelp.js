@@ -129,7 +129,7 @@ class HomeWhoWeHelp extends Component{
 
     return(
       <div className={'help-container'} >
-        <div className={'row'} style={{height: '100%'}}>
+        <div className={'row--ful-height'}>
           <div className={'col-xs-12 help-title'}>
             <p>Komu pomagamy?</p>
             <div className={'help-title__decoration'}>

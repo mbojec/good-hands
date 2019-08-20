@@ -1,7 +1,5 @@
 .help-container{
-  padding: 0 calc(100% * (1 / 14));
-  width: 100%;
-  height: 100%;
+  @extend %container;
 }
 
 .help-title{
