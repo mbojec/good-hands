@@ -54,7 +54,7 @@ class HomeContact extends Component{
       email: this.state.email,
       message: this.state.message
     };
-    axios.post(`https://fer-api.coderslab.pl/v1/portfolio/contact`,{ contact }, {headers: {
+    axios.post(`https://fer-api.coderslab.pl/v1/portfolio/contact`, contact, {headers: {
         "Content-Type": "application/json"
       }} )
       .then(res => {
