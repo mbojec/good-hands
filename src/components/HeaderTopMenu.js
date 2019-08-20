@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll'
 
-class HomeHeaderTopMenu extends Component{
+class HeaderTopMenu extends Component{
 
   render() {
     return(
@@ -31,4 +31,4 @@ class HomeHeaderTopMenu extends Component{
   }
 }
 
-export default HomeHeaderTopMenu
+export default HeaderTopMenu

@@ -3,16 +3,19 @@ import Decoration from "../assets/svg/Decoration";
 
 function HomeHeaderIntro() {
     return(
-      <div className={'row'}>
-        <div className={'col-xs-12 header__intro__title'}><p>Zacznij pomagać!</p></div>
-        <div className={'col-xs-12 header__intro__title'}><p>Oddaj niechciane rzeczy w zaufane ręcę</p></div>
-        <div className={'col-xs-12 header__intro__decoration'}><Decoration/></div>
-        <div className={'col-xxl-1'}/>
-        <div className={'col-xs-12 col-xxl-10 header__intro__btn-section'}>
-          <button className={'header__intro__btn-section__btn'}>ODDAJ <br/> RZECZY</button>
-          <button className={'header__intro__btn-section__btn'}>ZORGANIZUJ ZBIÓRKĘ</button>
-        </div>
-        <div className={'col-xxl-1'}/>
+      <div className={'row intro-container'} style={{height: '100%'}}>
+        <div className={'col-xs-5 col-xxl-5'}/>
+          <div className={'col-xs-7 col-xxl-7 intro-content'}>
+          <div className={'col-xs-12 header__intro__title'}><p>Zacznij pomagać!</p></div>
+          <div className={'col-xs-12 header__intro__title'}><p>Oddaj niechciane rzeczy w zaufane ręcę</p></div>
+          <div className={'col-xs-12 header__intro__decoration'}><Decoration/></div>
+          <div className={'col-xxl-1'}/>
+          <div className={'col-xs-12 col-xxl-10 header__intro__btn-section'}>
+            <button className={'header__intro__btn-section__btn'}>ODDAJ <br/> RZECZY</button>
+            <button className={'header__intro__btn-section__btn'}>ZORGANIZUJ ZBIÓRKĘ</button>
+          </div>
+          <div className={'col-xxl-1'}/>
+          </div>
       </div>
     )
 }
