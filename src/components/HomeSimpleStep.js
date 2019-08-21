@@ -7,7 +7,7 @@ import Reload from "../assets/svg/Reload";
 import {Link} from 'react-router-dom';
 
 
-function HomeSimpleStep() {
+export function HomeSimpleStep() {
     return(
       <div className={'simple-steps-container'}>
         <div className={'row--ful-height'}>
@@ -60,5 +60,3 @@ function HomeSimpleStep() {
       </div>
     )
 }
-
-export default HomeSimpleStep

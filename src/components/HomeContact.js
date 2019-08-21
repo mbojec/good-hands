@@ -4,7 +4,7 @@ import IstagramIcon from "../assets/svg/Istagram";
 import FacebookIcon from "../assets/svg/Facebook";
 import axios from 'axios';
 
-class HomeContact extends Component{
+export class HomeContact extends Component{
 
   constructor(props) {
     super(props);
@@ -123,5 +123,3 @@ class HomeContact extends Component{
     )
   }
 }
-
-export default HomeContact

@@ -1,7 +1,6 @@
 import React from "react";
 
-
-function  ListItem({listItem}) {
+export function  ListItem({listItem}) {
     return(
       <div className={'list-item row'}>
         <div className={'col-xs-7 list-item__titles-section'}>
@@ -15,4 +14,3 @@ function  ListItem({listItem}) {
     )
   }
 
-export default ListItem

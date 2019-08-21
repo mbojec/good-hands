@@ -1,6 +1,6 @@
 import React from "react";
 
-function HomeThreeColumns() {
+export function HomeThreeColumns() {
     return(
       <div className={'three-columns-container'}>
         <div className={'row--ful-height'}>
@@ -31,5 +31,3 @@ function HomeThreeColumns() {
       </div>
     )
 }
-
-export default HomeThreeColumns;

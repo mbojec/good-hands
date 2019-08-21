@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
 
-function HomeIntro() {
+export function HomeIntro() {
     return(
       <div className={'row--ful-height intro-container'}>
         <div className={'col-xs-5 col-xxl-5'}/>
@@ -19,5 +19,3 @@ function HomeIntro() {
       </div>
     )
 }
-
-export default HomeIntro

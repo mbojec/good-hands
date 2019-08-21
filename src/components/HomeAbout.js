@@ -2,7 +2,7 @@ import React from "react";
 import Decoration from "../assets/svg/Decoration";
 import Signature from "../assets/svg/Signature";
 
-function HomeAbout() {
+export function HomeAbout() {
       return(
         <div className={'about-container row'}>
           <div className={'col-xs-5 about-desc-section'}>
@@ -20,5 +20,3 @@ function HomeAbout() {
         </div>
       )
 }
-
-export default HomeAbout;
