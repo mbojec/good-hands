@@ -1,15 +1,14 @@
 import React from "react";
-import LogoutPanel from "../LogoutPanel";
-import Header from "../Header";
+import * as comp from '../components';
 
 export function Logout() {
   return(
     <div className={'app'}>
       <header className={"app-header--login"}>
-        <Header/>
+        <comp.Header/>
       </header>
       <main>
-        <section className={'app-login-section'}><LogoutPanel/></section>
+        <section className={'app-login-section'}><comp.LogoutPanel/></section>
       </main>
     </div>
   )

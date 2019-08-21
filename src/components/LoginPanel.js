@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
 import {Link} from 'react-router-dom';
 
-class LoginPanel extends Component{
+export class LoginPanel extends Component{
 
   constructor(props) {
     super(props);
@@ -78,5 +78,3 @@ class LoginPanel extends Component{
     )
   }
 }
-
-export default LoginPanel;

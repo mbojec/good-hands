@@ -1,7 +1,7 @@
 import React from "react";
 import Decoration from "../assets/svg/Decoration";
 
-function LogoutPanel() {
+export function LogoutPanel() {
 
   return(
       <div className={'login-container row'}>
@@ -15,5 +15,3 @@ function LogoutPanel() {
       </div>
     )
 }
-
-export default LogoutPanel;

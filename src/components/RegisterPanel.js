@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Decoration from "../assets/svg/Decoration";
 import {Link} from 'react-router-dom';
 
-class RegisterPanel extends Component{
+export class RegisterPanel extends Component{
 
   constructor(props) {
     super(props);
@@ -93,5 +93,3 @@ class RegisterPanel extends Component{
     )
   }
 }
-
-export default RegisterPanel;

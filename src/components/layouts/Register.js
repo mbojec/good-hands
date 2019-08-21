@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "../Header";
-import RegisterPanel from "../RegisterPanel";
+import * as comp from '../components';
 
 export function Register() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
-          <Header/>
+          <comp.Header/>
         </header>
         <main>
-          <section className={'app-login-section'}><RegisterPanel/></section>
+          <section className={'app-login-section'}><comp.RegisterPanel/></section>
         </main>
       </div>
     )
