@@ -1,13 +1,13 @@
 import React, {Component} from "react";
-import HomeThreeColumns from "./HomeThreeColumns";
-import HomeSimpleStep from "./HomeSimpleStep";
-import HomeAbout from "./HomeAbout";
-import HomeWhoWeHelp from "./HomeWhoWeHelp";
-import HomeContact from "./HomeContact";
-import Header from "./Header";
-import HomeIntro from "./HomeIntro";
+import HomeThreeColumns from "../HomeThreeColumns";
+import HomeSimpleStep from "../HomeSimpleStep";
+import HomeAbout from "../HomeAbout";
+import HomeWhoWeHelp from "../HomeWhoWeHelp";
+import HomeContact from "../HomeContact";
+import Header from "../Header";
+import HomeIntro from "../HomeIntro";
 
-class Home extends Component{
+export class Home extends Component{
   render() {
     return (
       <div className={'app'}>
@@ -28,5 +28,3 @@ class Home extends Component{
     )
   }
 }
-
-export default Home

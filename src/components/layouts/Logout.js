@@ -1,8 +1,8 @@
 import React from "react";
-import LogoutPanel from "./LogoutPanel";
-import Header from "./Header";
+import LogoutPanel from "../LogoutPanel";
+import Header from "../Header";
 
-function Logout() {
+export function Logout() {
   return(
     <div className={'app'}>
       <header className={"app-header--login"}>
@@ -15,4 +15,4 @@ function Logout() {
   )
 }
 
-export default Logout
+// export default Logout

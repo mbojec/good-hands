@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import RegisterPanel from "./RegisterPanel";
+import Header from "../Header";
+import RegisterPanel from "../RegisterPanel";
 
-function Register() {
+export function Register() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
@@ -15,4 +15,4 @@ function Register() {
     )
 }
 
-export default Register
+// export default Register

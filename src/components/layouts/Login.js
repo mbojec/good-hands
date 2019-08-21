@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import LoginPanel from "./LoginPanel";
+import Header from "../Header";
+import LoginPanel from "../LoginPanel";
 
-function Login() {
+export function Login() {
     return(
       <div className={'app'}>
         <header className={"app-header--login"}>
@@ -15,4 +15,4 @@ function Login() {
     )
 }
 
-export default Login
+// export default Login
