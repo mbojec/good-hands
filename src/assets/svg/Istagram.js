@@ -27,4 +27,4 @@ const IstagramIcon = () => (
   </svg>
 );
 
-export default IstagramIcon
+export {IstagramIcon}

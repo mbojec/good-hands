@@ -1,18 +1,17 @@
 import React from "react";
-import Decoration from "../assets/svg/Decoration";
-import Signature from "../assets/svg/Signature";
+import * as comp from './components'
 
-function HomeAbout() {
+export function HomeAbout() {
       return(
         <div className={'about-container row'}>
           <div className={'col-xs-5 about-desc-section'}>
             <p className={'about-desc-section__title'}>O nas</p>
             <div className={'about-desc-section__decoration'}>
-              <Decoration/>
+              <comp.Decoration/>
             </div>
             <p className={'about-desc-section__desc'}>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
             <div className={'about-desc-section__signature'}>
-              <Signature/>
+              <comp.Signature/>
             </div>
           </div>
           <div className={'col-xs-1'}/>
@@ -20,5 +19,3 @@ function HomeAbout() {
         </div>
       )
 }
-
-export default HomeAbout;

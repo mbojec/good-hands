@@ -37,4 +37,4 @@ function Reload() {
   );
 }
 
-export default Reload;
+export {Reload};

@@ -1,7 +1,8 @@
 import React, {Component} from "react";
-import ListItem from "./ListItem";
+import {ListItem} from "./ListItem";
+import * as comp from './components';
 
-class PaginationList extends Component{
+export class PaginationList extends Component{
 
   constructor(props){
     super(props);
@@ -25,7 +26,7 @@ class PaginationList extends Component{
     const currentItems = list.slice(indexOfFirstItem, indexOfLastItem);
 
     const renderItems = currentItems.map((item, index) => {
-      return <li key={index}><ListItem listItem={item}/></li>;
+      return <li key={index}><comp.ListItem listItem={item}/></li>;
     });
 
     const pageNumbers = [];
@@ -58,5 +59,3 @@ class PaginationList extends Component{
   }
 
 }
-
-export default PaginationList

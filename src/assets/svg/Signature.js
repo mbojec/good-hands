@@ -37,4 +37,4 @@ const Signature = () => (
   </svg>
 );
 
-export default Signature
+export {Signature};

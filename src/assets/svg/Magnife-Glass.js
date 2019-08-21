@@ -37,4 +37,4 @@ function MagnifeGlass() {
   );
 }
 
-export default MagnifeGlass;
+export {MagnifeGlass};

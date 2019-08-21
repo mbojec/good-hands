@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
-import { Link as ScrollLink} from 'react-scroll'
+import { Link as ScrollLink} from 'react-scroll';
 
-class HeaderTopMenu extends Component{
+export class HeaderTopMenu extends Component{
 
   render() {
     return(
@@ -30,5 +30,3 @@ class HeaderTopMenu extends Component{
     )
   }
 }
-
-export default HeaderTopMenu

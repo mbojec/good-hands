@@ -27,4 +27,4 @@ const FacebookIcon = () => (
   </svg>
 );
 
-export default FacebookIcon
+export {FacebookIcon}

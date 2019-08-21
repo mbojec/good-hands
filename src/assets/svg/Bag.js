@@ -37,4 +37,4 @@ function Bag() {
   );
 }
 
-export default Bag;
+export {Bag};

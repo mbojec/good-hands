@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import Decoration from "../assets/svg/Decoration";
-import PaginationList from "./PaginationList";
+import * as comp from './components';
 
 const list = [
   {
@@ -102,7 +101,7 @@ const list3 = [
 ];
 
 
-class HomeWhoWeHelp extends Component{
+export class HomeWhoWeHelp extends Component{
 
   constructor(props){
     super(props);
@@ -133,7 +132,7 @@ class HomeWhoWeHelp extends Component{
           <div className={'col-xs-12 help-title'}>
             <p>Komu pomagamy?</p>
             <div className={'help-title__decoration'}>
-              <Decoration/>
+              <comp.Decoration/>
             </div>
           </div>
           <div className={'col-xs-3'}/>
@@ -151,7 +150,7 @@ class HomeWhoWeHelp extends Component{
           <div className={'col-xs-3'}/>
           <div className={'col-xs-1'}/>
           <div className={'col-xs-10'}>
-            <PaginationList key={this.state.currentList} list={currentList}/>
+            <comp.PaginationList key={this.state.currentList} list={currentList}/>
           </div>
           <div className={'col-xs-1'}/>
         </div>
@@ -159,5 +158,3 @@ class HomeWhoWeHelp extends Component{
     )
   }
 }
-
-export default HomeWhoWeHelp;
