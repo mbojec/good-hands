@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import Decoration from "../assets/svg/Decoration";
-import IstagramIcon from "../assets/svg/Istagram";
-import FacebookIcon from "../assets/svg/Facebook";
+import * as comp from './components'
 import axios from 'axios';
 
 export class HomeContact extends Component{
@@ -86,7 +84,7 @@ export class HomeContact extends Component{
           <div className={'contact-form-section__title'}>
             <p>Skontaktuj się z nami</p>
             <div className={'contact-form-section__decoration'}>
-              <Decoration/>
+              <comp.Decoration/>
               {this.state.messageSend && <p className={'contact-form-section__decoration__message'}>Wiadomość została wysłana! <br/> Wkrótce się skontaktujemy</p>}
             </div>
           </div>
@@ -115,8 +113,8 @@ export class HomeContact extends Component{
             </form>
           </div>
           <div className={'contact-form-section__social-media'}>
-            <FacebookIcon/>
-            <IstagramIcon/>
+            <comp.FacebookIcon/>
+            <comp.IstagramIcon/>
           </div>
         </div>
       </div>

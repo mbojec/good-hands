@@ -40,4 +40,4 @@ const Decoration = () => (
   </svg>
 );
 
-export default Decoration
+export {Decoration};

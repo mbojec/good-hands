@@ -37,4 +37,4 @@ function Things() {
   );
 }
 
-export default Things;
+export {Things};

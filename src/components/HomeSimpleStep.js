@@ -1,9 +1,5 @@
 import React from "react";
-import Decoration from "../assets/svg/Decoration";
-import Things from "../assets/svg/Things";
-import Bag from "../assets/svg/Bag";
-import MagnifeGlass from "../assets/svg/Magnife-Glass";
-import Reload from "../assets/svg/Reload";
+import * as comp from './components'
 import {Link} from 'react-router-dom';
 
 
@@ -13,14 +9,14 @@ export function HomeSimpleStep() {
         <div className={'row--ful-height'}>
           <div className={'col-xs-12 simple-steps-title'}>
             <p>Wystarczą 4 proste kroki</p>
-            <Decoration/>
+            <comp.Decoration/>
           </div>
           <div className={'col-xs-12 row simple-steps-row'}>
             <div className={'col-xs-2'}/>
             <div className={'col-xs-8 simple-steps-row__icons-container'}>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Things/>
+                  <comp.Things/>
                 </div>
                 <p>Wybierze rzeczy</p>
                 <hr/>
@@ -28,7 +24,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Bag/>
+                  <comp.Bag/>
                 </div>
                 <p>Spakuj je</p>
                 <hr/>
@@ -36,7 +32,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <MagnifeGlass/>
+                  <comp.MagnifeGlass/>
                 </div>
                 <p>Zecyduj komu <br/>chcesz pomóc</p>
                 <hr/>
@@ -44,7 +40,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <Reload/>
+                  <comp.Reload/>
                 </div>
                 <p>Zamów kuriera</p>
                 <hr/>

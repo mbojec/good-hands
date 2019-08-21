@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Decoration from "../assets/svg/Decoration";
 import * as comp from './components';
 
 const list = [
@@ -133,7 +132,7 @@ export class HomeWhoWeHelp extends Component{
           <div className={'col-xs-12 help-title'}>
             <p>Komu pomagamy?</p>
             <div className={'help-title__decoration'}>
-              <Decoration/>
+              <comp.Decoration/>
             </div>
           </div>
           <div className={'col-xs-3'}/>
