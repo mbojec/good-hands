@@ -11,9 +11,7 @@ const firebase = (state = initialState, action) => {
     case ADD_THREE_COLUMN_INFO:
       const copy = {
         ...state,
-        bags: action.bags,
-        organizations: action.organizations,
-        founds: action.founds
+        ...action.payload
       };
       return copy;
 
