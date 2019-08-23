@@ -2,17 +2,21 @@ import React, {Component} from "react";
 import * as comp from './components';
 import {Link} from 'react-router-dom';
 
+const INITIAL_STATE = {
+  password: '',
+  repeatedPassword:'',
+  email: '',
+  passwordValidationError: false,
+  repeatedPasswordValidationError: false,
+  emailValidationError: false
+};
+
 export class RegisterPanel extends Component{
 
   constructor(props) {
     super(props);
     this.state = {
-      password: '',
-      repeatedPassword:'',
-      email: '',
-      passwordValidationError: false,
-      repeatedPasswordValidationError: false,
-      emailValidationError: false
+      ...INITIAL_STATE
     };
   }
 
@@ -47,6 +51,23 @@ export class RegisterPanel extends Component{
     const emailValidation = this.state.emailValidationError;
     if(!passwordValidation && !emailValidation && !repeatedPasswordValidation){
       console.log('proper validation');
+      this.props.firebase
+        .doCreateUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then(authUser => {
+          this.setState({ ...INITIAL_STATE });
+          console.log('AUTH OK !!!!!!!');
+        })
+        .catch(error => {
+          console.log(error);
+          this.setState({
+            password: '',
+            repeatedPassword:'',
+            email: '',
+            passwordValidationError: !passwordValidation,
+            repeatedPasswordValidationError: !repeatedPasswordValidation,
+            emailValidationError: !emailValidation,
+          });
+        });
     } else {
       this.setState({
         password: '',
