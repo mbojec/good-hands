@@ -1,5 +1,5 @@
 import React from "react";
-import * as comp from './components'
+import {HeaderTopMenu} from "./HeaderTopMenu";
 
 export function Header() {
   return(
@@ -9,7 +9,7 @@ export function Header() {
         <div className={'col-xs-7 col-xxl-7'}>
           <div className={'row--ful-height'}>
             <div className={'col-xl-1 col-xxl-2'}/>
-            <div className={'col-xs-12 col-xl-11 col-xxl-10'}><comp.HeaderTopMenu/></div>
+            <div className={'col-xs-12 col-xl-11 col-xxl-10'}><HeaderTopMenu/></div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import * as comp from './components';
+import {Decoration} from "../../assets/svg";
 import {Link} from 'react-router-dom';
 
 const INITIAL_STATE = {
@@ -85,7 +85,7 @@ export class RegisterPanel extends Component{
       <div className={'login-container row'}>
         <div className={'col-xl-12 login-title'}>
           <p>Zaloguj się</p>
-          <comp.Decoration/>
+          <Decoration/>
         </div>
         <form onSubmit={event => this.handleSubmit(event)} className={'col-xl-12 login-form__container'}>
           <div className={'login-form__form'}>

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import * as comp from './components';
 import {Link} from 'react-router-dom';
+import {Decoration} from "../../assets/svg";
 
 export class LoginPanel extends Component{
 
@@ -54,7 +54,7 @@ export class LoginPanel extends Component{
       <div className={'login-container row'}>
         <div className={'col-xl-12 login-title'}>
           <p>Zaloguj się</p>
-          <comp.Decoration/>
+          <Decoration/>
         </div>
         <form onSubmit={event => this.handleSubmit(event)} className={'col-xl-12 login-form__container'}>
           <div className={'login-form__form'}>

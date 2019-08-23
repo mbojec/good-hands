@@ -1,5 +1,5 @@
 import React from "react";
-import * as comp from './components'
+import {Decoration, Things, Bag, MagnifeGlass, Reload} from "../../assets/svg";
 import {Link} from 'react-router-dom';
 
 
@@ -9,14 +9,14 @@ export function HomeSimpleStep() {
         <div className={'row--ful-height'}>
           <div className={'col-xs-12 simple-steps-title'}>
             <p>Wystarczą 4 proste kroki</p>
-            <comp.Decoration/>
+            <Decoration/>
           </div>
           <div className={'col-xs-12 row simple-steps-row'}>
             <div className={'col-xs-2'}/>
             <div className={'col-xs-8 simple-steps-row__icons-container'}>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <comp.Things/>
+                  <Things/>
                 </div>
                 <p>Wybierze rzeczy</p>
                 <hr/>
@@ -24,7 +24,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <comp.Bag/>
+                  <Bag/>
                 </div>
                 <p>Spakuj je</p>
                 <hr/>
@@ -32,7 +32,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <comp.MagnifeGlass/>
+                  <MagnifeGlass/>
                 </div>
                 <p>Zecyduj komu <br/>chcesz pomóc</p>
                 <hr/>
@@ -40,7 +40,7 @@ export function HomeSimpleStep() {
               </div>
               <div className={'simple-steps-row__single-icon-container'}>
                 <div className={'simple-steps-row__single-icon-container__icon'}>
-                  <comp.Reload/>
+                  <Reload/>
                 </div>
                 <p>Zamów kuriera</p>
                 <hr/>
