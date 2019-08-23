@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import * as comp from './components';
+import {Decoration} from "../../assets/svg";
 import {connect} from "react-redux";
-import {add, remove} from "../store/actions/firebase";
+import {add, remove} from "../../store/actions/firebase";
 
 const mapStateToProps = state => {
   return {
@@ -26,7 +26,7 @@ class HomeIntro extends Component{
           <div className={'col-xs-7 col-xxl-7 intro-content'}>
             <div className={'col-xs-12 intro__title'}><p>Zacznij pomagać!</p></div>
             <div className={'col-xs-12 intro__title'}><p>Oddaj niechciane rzeczy w zaufane ręcę</p></div>
-            <div className={'col-xs-12 intro__decoration'}><comp.Decoration/></div>
+            <div className={'col-xs-12 intro__decoration'}><Decoration/></div>
             <div className={'col-xxl-1'}/>
             <div className={'col-xs-12 col-xxl-10 intro__btn-section'}>
               <button className={'intro__btn-section__btn'} onClick={event => this.props.onAddInfo()}>ODDAJ <br/> RZECZY</button>

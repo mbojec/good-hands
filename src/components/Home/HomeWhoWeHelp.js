@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import * as comp from './components';
+import {PaginationList} from "./PaginationList";
+import {Decoration} from "../../assets/svg";
 
 const list = [
   {
@@ -132,7 +133,7 @@ export class HomeWhoWeHelp extends Component{
           <div className={'col-xs-12 help-title'}>
             <p>Komu pomagamy?</p>
             <div className={'help-title__decoration'}>
-              <comp.Decoration/>
+              <Decoration/>
             </div>
           </div>
           <div className={'col-xs-3'}/>
@@ -150,7 +151,7 @@ export class HomeWhoWeHelp extends Component{
           <div className={'col-xs-3'}/>
           <div className={'col-xs-1'}/>
           <div className={'col-xs-10'}>
-            <comp.PaginationList key={this.state.currentList} list={currentList}/>
+            <PaginationList key={this.state.currentList} list={currentList}/>
           </div>
           <div className={'col-xs-1'}/>
         </div>
