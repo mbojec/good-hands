@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => {
   return {}
 };
 
-class HomeThreeColumns extends Component{
+export class HomeThreeColumns extends Component{
     render() {
       return(
         <div className={'three-columns-container'}>
@@ -47,5 +47,5 @@ class HomeThreeColumns extends Component{
     }
 }
 
-const connectedComponent = connect(mapStateToProps, mapDispatchToProps) (HomeThreeColumns);
-export {connectedComponent as HomeThreeColumns}
+// const connectedComponent = connect(mapStateToProps, mapDispatchToProps) (HomeThreeColumns);
+// export {connectedComponent as HomeThreeColumns}

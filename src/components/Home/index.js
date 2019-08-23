@@ -1,4 +1,5 @@
-export { HomeThreeColumns } from "./HomeThreeColumns";
+export { HomeThreeColumns as HomeThreeColumnsBasic } from "./HomeThreeColumns";
+export { HomeThreeColumns } from "./../../store/containers/HomeThreeColumns";
 export { HomeWhoWeHelp } from "./HomeWhoWeHelp";
 export { HomeSimpleStep } from "./HomeSimpleStep";
 export { HomeIntro } from "./HomeIntro";
