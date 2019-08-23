@@ -1,5 +1,5 @@
 import React from "react";
-import {Decoration} from "../components";
+import {Decoration} from "../../assets/svg";
 
 export function LogoutPanel() {
 
