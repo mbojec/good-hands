@@ -1,22 +1,6 @@
 import React, {Component} from "react";
 import {Decoration} from "../../assets/svg";
-import {connect} from "react-redux";
-import {add, remove} from "../../store/actions/firebase";
-
-const mapStateToProps = state => {
-  return {
-    bags: state.firebase.bags,
-    organizations: state.firebase.organizations,
-    founds: state.firebase.founds,
-  }
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onAddInfo: () => dispatch(add({bags: 5, organizations: 7, founds: 10})),
-    onClear: () => dispatch(remove())
-  }
-};
+import {withRedux} from "../../store/wrapper";
 
 class HomeIntro extends Component{
     render() {
@@ -39,5 +23,5 @@ class HomeIntro extends Component{
     }
 }
 
-const connectedComponent = connect(mapStateToProps, mapDispatchToProps) (HomeIntro);
+const connectedComponent = withRedux(HomeIntro);
 export {connectedComponent as HomeIntro}

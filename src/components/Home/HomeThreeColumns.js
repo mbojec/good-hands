@@ -1,19 +1,7 @@
 import React, {Component} from "react";
-import { connect } from 'react-redux';
+import {withRedux} from "../../store/wrapper";
 
-const mapStateToProps = state => {
-  return {
-    bags: state.firebase.bags,
-    organizations: state.firebase.organizations,
-    founds: state.firebase.founds,
-  }
-};
-
-const mapDispatchToProps = dispatch => {
-  return {}
-};
-
-export class HomeThreeColumns extends Component{
+class HomeThreeColumns extends Component{
     render() {
       return(
         <div className={'three-columns-container'}>
@@ -47,5 +35,5 @@ export class HomeThreeColumns extends Component{
     }
 }
 
-// const connectedComponent = connect(mapStateToProps, mapDispatchToProps) (HomeThreeColumns);
-// export {connectedComponent as HomeThreeColumns}
+const connectedComponent = withRedux(HomeThreeColumns);
+export {connectedComponent as HomeThreeColumns}
