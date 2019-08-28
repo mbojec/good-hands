@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Decoration} from "../../assets/svg";
 import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const INITIAL_STATE = {
   password: '',
@@ -11,7 +12,7 @@ const INITIAL_STATE = {
   emailValidationError: false
 };
 
-export class RegisterPanel extends Component{
+class RegisterPanel extends Component{
 
   constructor(props) {
     super(props);
@@ -55,7 +56,7 @@ export class RegisterPanel extends Component{
         .doCreateUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(authUser => {
           this.setState({ ...INITIAL_STATE });
-          console.log('AUTH OK !!!!!!!');
+          this.props.history.push({pathname:'/'})
         })
         .catch(error => {
           console.log(error);
@@ -84,7 +85,7 @@ export class RegisterPanel extends Component{
     return(
       <div className={'login-container row'}>
         <div className={'col-xl-12 login-title'}>
-          <p>Zaloguj się</p>
+          <p>Załóż konto</p>
           <Decoration/>
         </div>
         <form onSubmit={event => this.handleSubmit(event)} className={'col-xl-12 login-form__container'}>
@@ -114,3 +115,6 @@ export class RegisterPanel extends Component{
     )
   }
 }
+
+const wrappedComponent = withRouter(RegisterPanel);
+export {wrappedComponent as RegisterPanel}
