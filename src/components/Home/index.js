@@ -1,6 +1,8 @@
+export { HomeThreeColumns as HomeThreeColumnsBasic } from "./HomeThreeColumns";
 export { HomeThreeColumns } from "./HomeThreeColumns";
 export { HomeWhoWeHelp } from "./HomeWhoWeHelp";
 export { HomeSimpleStep } from "./HomeSimpleStep";
+export { HomeIntro as HomeIntroBasic } from "./HomeIntro";
 export { HomeIntro } from "./HomeIntro";
 export { HomeContact } from "./HomeContact";
 export { HomeAbout } from "./HomeAbout";
