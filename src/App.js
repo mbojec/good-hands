@@ -10,6 +10,7 @@ function App() {
         <Route exact path={'/logowanie'} component={comp.Login}/>
         <Route exact path={'/rejestracja'} component={comp.Register}/>
         <Route exact path={'/wylogowano'} component={comp.Logout}/>
+        <Route exact path={'/oddaj-rzeczy'} component={comp.Form}/>
       </Switch>
     </BrowserRouter>
   );

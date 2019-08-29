@@ -1,1 +1,1 @@
-export { Home, Login, Logout, Register } from "./layouts";
+export { Home, Login, Logout, Register, Form } from "./layouts";
