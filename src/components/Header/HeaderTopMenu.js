@@ -1,14 +1,33 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
-import { Link as ScrollLink} from 'react-scroll';
+import { Link as ScrollLink, scroller} from 'react-scroll';
 import {withRedux} from "../../store/wrapper";
 import { withRouter } from 'react-router-dom';
 
 class HeaderTopMenu extends Component{
 
+  state = {
+    sectionToScroll: ""
+  };
+
   logout(){
     this.props.onLogout();
     this.props.history.push({pathname:'/wylogowano'})
+  }
+
+  scrollToSection (destination) {
+    this.props.history.push({pathname: '/'});
+    this.setState({sectionToScroll: destination})
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    scroller.scrollTo(this.state.sectionToScroll, {
+      duration: 500,
+      smooth: true,
+      spy: true,
+      offset: -20
+    });
+
   }
 
 
@@ -23,16 +42,32 @@ class HeaderTopMenu extends Component{
         <nav className={'col-xs-12 header__top-menu__navigation'}>
           <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>Start</button>
           <button className={'header__top-menu__navigation__btn'}>
-            <ScrollLink to={'simpleStepsSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O co chodzi?</ScrollLink>
+            {this.props.history.location.pathname !== '/'?
+              <p onClick={() => this.scrollToSection('simpleStepsSection')}>O co chodzi?</p>
+              :
+              <ScrollLink to={'simpleStepsSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O co chodzi?</ScrollLink>
+            }
           </button>
           <button className={'header__top-menu__navigation__btn'}>
-            <ScrollLink to={'aboutSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O nas</ScrollLink>
+            {this.props.history.location.pathname !== '/'?
+              <p onClick={() => this.scrollToSection('aboutSection')}>O co chodzi?</p>
+              :
+              <ScrollLink to={'aboutSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O nas</ScrollLink>
+            }
           </button>
           <button className={'header__top-menu__navigation__btn'}>
-            <ScrollLink to={'whoWheHelpSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Fudacja i organizacje</ScrollLink>
+            {this.props.history.location.pathname !== '/'?
+              <p onClick={() => this.scrollToSection('whoWheHelpSection')}>O co chodzi?</p>
+              :
+              <ScrollLink to={'whoWheHelpSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Fudacja i organizacje</ScrollLink>
+            }
           </button>
           <button className={'header__top-menu__navigation__btn'}>
-            <ScrollLink to={'contactSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Kontakt</ScrollLink>
+            {this.props.history.location.pathname !== '/'?
+              <p onClick={() => this.scrollToSection('contactSection')}>O co chodzi?</p>
+              :
+              <ScrollLink to={'contactSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Kontakt</ScrollLink>
+            }
           </button>
         </nav>
       </div>
