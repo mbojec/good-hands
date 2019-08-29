@@ -1,14 +1,9 @@
 import React from "react";
 import {LoginPanel} from "../Login";
-import {Header} from "../Header";
 import {FirebaseContext} from "../../firebase";
 
 export function Login() {
     return(
-      <div className={'app'}>
-        <header className={"app-header--login"}>
-          <Header/>
-        </header>
         <main>
           <section className={'app-login-section'}>
             <FirebaseContext.Consumer>
@@ -16,6 +11,5 @@ export function Login() {
             </FirebaseContext.Consumer>
           </section>
         </main>
-      </div>
     )
 }

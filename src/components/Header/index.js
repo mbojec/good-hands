@@ -1,1 +1,1 @@
-export {Header} from './Header'
+export {HeaderTopMenu} from './HeaderTopMenu'

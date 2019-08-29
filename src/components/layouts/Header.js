@@ -1,5 +1,5 @@
 import React from "react";
-import {HeaderTopMenu} from "./HeaderTopMenu";
+import {HeaderTopMenu} from "../Header";
 
 export function Header() {
   return(
