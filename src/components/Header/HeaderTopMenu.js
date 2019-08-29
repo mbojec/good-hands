@@ -1,13 +1,15 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
+import {withRedux} from "../../store/wrapper";
 
-export class HeaderTopMenu extends Component{
+class HeaderTopMenu extends Component{
 
   render() {
     return(
       <div className={'row'}>
         <div className={'col-xs-12 header__top-menu__login-register'}>
+          {this.props.login && <div className={'header__top-menu__login-register__user-email'}><p>{`Cześć ${this.props.userEmail}`}</p></div>}
           <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--login'}><Link to={'/logowanie'}>Zaloguj</Link></button>
           <button className={'header__top-menu__login-register__btn header__top-menu__login-register__btn--register header__top-menu__login-register__btn--pressed'}><Link to={'/rejestracja'}>Załóż konto</Link></button>
         </div>
@@ -30,3 +32,6 @@ export class HeaderTopMenu extends Component{
     )
   }
 }
+
+const connectedComponent = withRedux(HeaderTopMenu);
+export {connectedComponent as HeaderTopMenu}

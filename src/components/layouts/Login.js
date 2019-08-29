@@ -1,6 +1,7 @@
 import React from "react";
 import {LoginPanel} from "../Login";
 import {Header} from "../Header";
+import {FirebaseContext} from "../../firebase";
 
 export function Login() {
     return(
@@ -9,10 +10,12 @@ export function Login() {
           <Header/>
         </header>
         <main>
-          <section className={'app-login-section'}><LoginPanel/></section>
+          <section className={'app-login-section'}>
+            <FirebaseContext.Consumer>
+              {firebase => <LoginPanel firebase={firebase} />}
+            </FirebaseContext.Consumer>
+          </section>
         </main>
       </div>
     )
 }
-
-// export default Login

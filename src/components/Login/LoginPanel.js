@@ -1,8 +1,19 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import {Decoration} from "../../assets/svg";
+import { withRouter } from 'react-router-dom';
+import {withRedux} from "../../store/wrapper";
 
-export class LoginPanel extends Component{
+
+const INITIAL_STATE = {
+  password: '',
+  repeatedPassword:'',
+  email: '',
+  passwordValidationError: false,
+  emailValidationError: false
+};
+
+class LoginPanel extends Component{
 
   constructor(props) {
     super(props);
@@ -38,7 +49,23 @@ export class LoginPanel extends Component{
     const passwordValidation = this.state.passwordValidationError;
     const emailValidation = this.state.emailValidationError;
     if(!passwordValidation && !emailValidation){
-      console.log('proper validation');
+      this.props.firebase
+        .doSignInWithEmailAndPassword(this.state.email, this.state.password)
+        .then(authUser => {
+          this.props.onLogin(this.state.email);
+          this.setState({ ...INITIAL_STATE });
+          this.props.history.push({pathname:'/'})
+        })
+        .catch(error => {
+          console.log(error);
+          this.setState({
+            password: '',
+            repeatedPassword:'',
+            email: '',
+            passwordValidationError: !passwordValidation,
+            emailValidationError: !emailValidation,
+          });
+        });
     } else {
       this.setState({
         password: '',
@@ -66,7 +93,7 @@ export class LoginPanel extends Component{
             <div className={'login-form__form__password'}>
               <label className={'login-form__form__label'}>Hasło</label>
               <input onBlur={event => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
-              {this.state.passwordValidationError && <label className={'login-form__form__label--error'}>Podane hasło jest za krótkie!</label>}
+              {this.state.passwordValidationError && <label className={'login-form__form__label--error'}>Podane hasło albo email jest nieprawidłowe !</label>}
             </div>
           </div>
           <div className={'login-form__btn-section'}>
@@ -78,3 +105,8 @@ export class LoginPanel extends Component{
     )
   }
 }
+
+const wrappedComponent = withRouter(LoginPanel);
+const connectedComponent = withRedux(wrappedComponent);
+export {connectedComponent as LoginPanel}
+
