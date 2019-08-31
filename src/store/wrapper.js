@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {add, asyncRemove, remove} from "./actions/firebase";
+import {add, asyncRemove, remove, logIn,logOut} from "./actions/firebase";
 
 export function withRedux(WrappedComponent) {
   class withReduxComponent extends Component {
@@ -14,6 +14,8 @@ export function withRedux(WrappedComponent) {
       onAddInfo: () => dispatch(add({bags: 5, organizations: 7, founds: 10})),
       onClear: () => dispatch(asyncRemove()),
       onRemove: () => dispatch(remove()),
+      onLogin: (userEmail) => dispatch(logIn(userEmail)),
+      onLogout: () => dispatch(logOut())
     }
   };
 
@@ -22,6 +24,8 @@ export function withRedux(WrappedComponent) {
       bags: state.firebase.bags,
       organizations: state.firebase.organizations,
       founds: state.firebase.founds,
+      login: state.firebase.login,
+      userEmail: state.firebase.userEmail
     }
   };
 
