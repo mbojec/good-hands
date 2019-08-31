@@ -1,34 +1,4 @@
 import React, {Component} from "react";
-
-
-const checkboxes = [
-  {
-    value: 'clothes',
-    key: 'checkBox1',
-    label: 'ubrania, które nadaja się do ponownego użycia',
-  },
-  {
-    value: 'clothesToTrash',
-    key: 'checkBox2',
-    label: 'ubrania, do wyrzucenia',
-  },
-  {
-    value: 'toys',
-    key: 'checkBox3',
-    label: 'zabawki',
-  },
-  {
-    value: 'books',
-    key: 'checkBox4',
-    label: 'książki',
-  },
-  {
-    value: 'other',
-    key: 'checkBox5',
-    label: 'Inne',
-  }
-];
-
 class FormContainer extends Component{
 
   state = {
@@ -39,13 +9,17 @@ class FormContainer extends Component{
     other: false
   };
 
+  onHandleSubmit(e){
+    e.preventDefault();
+    console.log(this.state);
+  }
+
   onChange(e){
-    this.setState({
-    [e.target.name]: e.target.checked
-    })
+    this.setState({[e.target.value]: e.target.checked});
   }
 
   render() {
+    console.log(this.state);
     return(
       <div className={'form row'}>
         <div className={'col-xs-5 col-sm-6 col-md-7 form__content'}>
@@ -54,31 +28,31 @@ class FormContainer extends Component{
           </div>
           <div className={'form__checkboxes-section'}>
             <p className={'form__checkboxes-section__title'}>Zaznacz co chesz oddać:</p>
-            <form onChange={ (e) => this.onChange(e)}>
+            <form onChange={ (e) => this.onChange(e)} onSubmit={event => this.onHandleSubmit(event)}>
               <div className={"form__checkbox-container"}>
                 <input type={'checkbox'} name={'devotedThing'} id={'clothes'} value={'clothes'}/>
-                <label className={'checkboxLabel'} for={'clothes'}/><label className={'checkboxLabelText'} for={'clothes'}>ubrania, które nadaja się do ponownego użycia</label>
+                <label className={'checkboxLabel'} htmlFor={'clothes'}/><label className={'checkboxLabelText'} htmlFor={'clothes'}>ubrania, które nadaja się do ponownego użycia</label>
               </div>
               <div className={"form__checkbox-container"}>
                 <input type={'checkbox'} name={'devotedThing'} id={'clothesToTrash'} value={'clothesToTrash'} onChange={(e) => this.onChange(e)}/>
-                <label className={'checkboxLabel'} for={'clothesToTrash'}/><label className={'checkboxLabelText'} for={'clothesToTrash'}>ubrania, do wyrzucenia</label>
+                <label className={'checkboxLabel'} htmlFor={'clothesToTrash'}/><label className={'checkboxLabelText'} htmlFor={'clothesToTrash'}>ubrania, do wyrzucenia</label>
               </div>
               <div className={"form__checkbox-container"}>
                 <input type={'checkbox'} name={'devotedThing'} id={'toys'} value={'toys'} onChange={(e) => this.onChange(e)}/>
-                <label className={'checkboxLabel'} for={'toys'}/><label className={'checkboxLabelText'} for={'toys'}>zabawki</label>
+                <label className={'checkboxLabel'} htmlFor={'toys'}/><label className={'checkboxLabelText'} htmlFor={'toys'}>zabawki</label>
               </div>
               <div className={"form__checkbox-container"}>
                 <input type={'checkbox'} name={'devotedThing'} value={'books'} id={'books'} onChange={(e) => this.onChange(e)}/>
-                <label className={'checkboxLabel'} for={'books'}/><label className={'checkboxLabelText'} for={'books'}>książki</label>
+                <label className={'checkboxLabel'} htmlFor={'books'}/><label className={'checkboxLabelText'} htmlFor={'books'}>książki</label>
               </div>
               <div className={"form__checkbox-container"}>
                 <input type={'checkbox'} name={'devotedThing'} id={'other'} value={'other'} onChange={(e) => this.onChange(e)}/>
-                <label className={'checkboxLabel'} for={'other'}/><label className={'checkboxLabelText'} for={'other'}>Inne</label>
+                <label className={'checkboxLabel'} htmlFor={'other'}/><label className={'checkboxLabelText'} htmlFor={'other'}>Inne</label>
+              </div>
+              <div className={'form__btn'}>
+                <input type={'submit'} value={'Dalej'}/>
               </div>
             </form>
-          </div>
-          <div className={'form__btn-section'}>
-
           </div>
         </div>
         <div className={'col-xs-7 col-sm-6 col-md-5'}/>

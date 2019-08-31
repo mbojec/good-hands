@@ -42,7 +42,7 @@
 .form__checkboxes-section{
   flex-grow: 1;
   margin-top: 70px;
-  margin-bottom: 70px;
+  //margin-bottom: 70px;
 }
 
 .form__checkboxes-section__title{
@@ -79,6 +79,21 @@
     margin-left: 30px;
     display:inline-block;
     width: 100%;
+  }
+}
+
+.form__btn{
+  margin-top: 70px;
+  font-size: 24px;
+  @include btn-border($color-dark);
+  max-width: 180px;
+  height: 79px;
+  input {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    border: 0;
   }
 }
 
