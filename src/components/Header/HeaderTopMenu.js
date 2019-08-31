@@ -40,7 +40,13 @@ class HeaderTopMenu extends Component{
           <button className={`header__top-menu__login-register__btn header__top-menu__login-register__btn--login ${!this.props.login && 'header__top-menu__login-register__btn--pressed'}`}>{this.props.login? <a href={'#'} onClick={() => this.logout()}>Wyloguj</a>: <Link to={'/rejestracja'}>Załóż konto</Link> }</button>
         </div>
         <nav className={'col-xs-12 header__top-menu__navigation'}>
-          <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>Start</button>
+          <button className={'header__top-menu__navigation__btn header__top-menu__navigation__btn--pressed'}>
+            {this.props.history.location.pathname !== '/'?
+              <p onClick={() => this.scrollToSection('introSection')}>Start</p>
+              :
+              <ScrollLink to={'introSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Start</ScrollLink>
+            }
+          </button>
           <button className={'header__top-menu__navigation__btn'}>
             {this.props.history.location.pathname !== '/'?
               <p onClick={() => this.scrollToSection('simpleStepsSection')}>O co chodzi?</p>
