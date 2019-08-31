@@ -76,6 +76,38 @@
   justify-content: space-between;
 }
 
+.form__input-section__column-section{
+  flex-grow: 1;
+}
+
+.form__input-section__column-section__container{
+  align-items: center;
+  justify-content: flex-start;
+
+  textarea{
+    background-color: transparent;
+    @include btn-border($color-dark);
+    outline: 0;
+  }
+}
+
+.form__input-section__column-section__title{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form__input-section__column-section__label{
+  font-size: 24px;
+  height: 100%;
+}
+
+.form__input-section__column-section__input{
+  max-height: 40px;
+  @include btn-border($color-dark);
+  outline: 0;
+  background-color: transparent;
+}
+
 .form__select-container{
   @include btn-border($color-dark);
   max-width: 300px;
@@ -132,19 +164,6 @@
     @include btn-border($color-dark);
     background-color: transparent;
     display:inline-block;
-  }
-
-  .checkboxLabel--third{
-    flex-shrink: 0;
-    @include btn-border($color-dark);
-    background-color: transparent;
-    font-size: 24px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .form__checkbox__label__text{

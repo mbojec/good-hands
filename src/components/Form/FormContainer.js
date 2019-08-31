@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {FormFirstStep} from "./FormFirstStep";
 import {FormSecondStep} from "./FormSecondStep";
 import {FormThirdStep} from "./FormThirdStep";
+import {FomrFourtStep} from "./FomrFourtStep";
 
 class FormContainer extends Component{
 
@@ -11,7 +12,8 @@ class FormContainer extends Component{
         <div className={'col-xs-5 col-sm-6 col-md-7 form__container'}>
           {/*<FormFirstStep/>*/}
           {/*<FormSecondStep/>*/}
-          <FormThirdStep/>
+          {/*<FormThirdStep/>*/}
+          <FomrFourtStep/>
         </div>
         <div className={'col-xs-7 col-sm-6 col-md-5'}/>
       </div>
