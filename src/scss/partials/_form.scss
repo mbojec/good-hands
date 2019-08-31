@@ -41,7 +41,7 @@
 
 .form__checkboxes-section{
   flex-grow: 1;
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -82,7 +82,7 @@
 }
 
 .form__checkboxes-section__title{
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -93,6 +93,14 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+
+  input[type='radio']{
+    visibility: hidden;
+  }
+
+  input[type="radio"]:checked + label{
+    background-color: $color-yellow;
+  }
 
   input[type='checkbox']{
     visibility: hidden;
@@ -111,6 +119,19 @@
     display:inline-block;
   }
 
+  .checkboxLabel--third{
+    flex-shrink: 0;
+    @include btn-border($color-dark);
+    background-color: transparent;
+    font-size: 24px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .checkboxLabelText{
     margin-left: 30px;
     display:inline-block;
@@ -119,7 +140,7 @@
 }
 
 .form__btn__section{
-  margin-top: 70px;
+  margin-top: 50px;
   display: flex;
   flex-flow: row nowrap;
   margin-bottom: 70px;
@@ -153,6 +174,19 @@
     outline: 0;
     border: 0;
   }
+}
+
+.form__target__section{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.organization-input{
+  min-height: 40px;
+  outline: 0;
+  background-color: transparent;
+  max-width: 570px;
+  @include btn-border($color-dark);
 }
 
 
