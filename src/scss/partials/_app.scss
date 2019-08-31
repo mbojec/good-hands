@@ -77,4 +77,18 @@ body{
   max-height: $login-height;
 }
 
+.app-form-section{
+  width: 100%;
+  background: white;
+  height: 80vh;
+  max-height: $form_height;
+}
+
+.app-info-strap-section{
+  width: 100%;
+  background: #FAD648;
+  height: 20vh;
+  max-height: $info-strap-height;
+}
+
 
