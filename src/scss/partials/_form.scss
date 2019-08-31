@@ -42,7 +42,43 @@
 .form__checkboxes-section{
   flex-grow: 1;
   margin-top: 70px;
-  //margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
+.form__checkboxes-section__select-container{
+  position: relative;
+  @include btn-border($color-dark);
+  max-width: 300px;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+
+  select{
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    outline: 0;
+    appearance:none;
+    text-align-last: center;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-image: url("../assets/svg/Icon-Arrow-Down.svg");
+
+    option{
+      width: 50px;
+    }
+  }
 }
 
 .form__checkboxes-section__title{
@@ -82,12 +118,34 @@
   }
 }
 
-.form__btn{
+.form__btn__section{
   margin-top: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 70px;
+  height: 100%;
+  max-height: 79px;
+}
+
+.form__btn{
+  flex-grow: 1;
   font-size: 24px;
   @include btn-border($color-dark);
   max-width: 180px;
-  height: 79px;
+  margin-right: 45px;
+  margin-bottom: 10px;
+  height: 100%;
+  max-height: 79px;
+  button{
+
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    margin-right: 45px;
+  }
+
   input {
     background-color: transparent;
     height: 100%;
@@ -96,6 +154,8 @@
     border: 0;
   }
 }
+
+
 
 
 
