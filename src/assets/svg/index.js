@@ -6,3 +6,4 @@ export {Reload} from './Reload';
 export {MagnifeGlass} from './Magnife-Glass';
 export {FacebookIcon} from './Facebook';
 export {IstagramIcon} from './Istagram';
+export {Steps} from './Steps';

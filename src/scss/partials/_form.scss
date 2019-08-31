@@ -1,0 +1,262 @@
+.form{
+  min-height: 85vh;
+  padding: 0 calc(100% * (1 / 14));
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-color:white;
+  @include fluid-background-image("../assets/images/Background-Form.png", "../assets/images/Background-Form@2x.png")
+
+}
+
+.form__info__container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 35px calc(100% * (1 / 14));
+}
+
+.form__info__header{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form__info__desc{
+  font-size: 22px;
+}
+
+
+.form__container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.form__num-section{
+  margin-top: 35px;
+  font-size: 24px;
+}
+
+.form__input-section{
+  flex-grow: 1;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+}
+
+.form__input-section--container{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form__input-section__title{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form__input-section__subtitle{
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.form__input-section__checkbox-section{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__input-section__column-section{
+  flex-grow: 1;
+}
+
+.form__input-section__column-section__container{
+  align-items: center;
+  justify-content: flex-start;
+
+  textarea{
+    background-color: transparent;
+    @include btn-border($color-dark);
+    outline: 0;
+  }
+}
+
+.form__input-section__column-section__title{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form__input-section__column-section__label{
+  font-size: 24px;
+  height: 100%;
+}
+
+.form__input-section__column-section__input{
+  max-height: 40px;
+  @include btn-border($color-dark);
+  outline: 0;
+  background-color: transparent;
+}
+
+.form__select-container{
+  @include btn-border($color-dark);
+  max-width: 300px;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+
+  select{
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    outline: 0;
+    appearance:none;
+    text-align-last: center;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-image: url("../assets/svg/Icon-Arrow-Down.svg");
+
+  }
+}
+
+
+.form__checkbox__container{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-right: 15px;
+
+  input[type='radio']{
+    width: 0;
+    visibility: hidden;
+  }
+
+  input[type="radio"]:checked + label{
+    background-color: $color-yellow;
+  }
+
+  input[type='checkbox']{
+    width: 0;
+    visibility: hidden;
+  }
+
+  input[type="checkbox"]:checked label{
+    background-color: $color-yellow;
+  }
+
+  .form__checkbox__label{
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    @include btn-border($color-dark);
+    background-color: transparent;
+    display:inline-block;
+  }
+
+  .form__checkbox__label__text{
+    margin-left: 15px;
+    display:inline-block;
+    width: 100%;
+  }
+}
+
+.form__btn-section{
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 70px;
+  height: 79px;
+}
+
+.form__btn{
+  flex-grow: 1;
+  font-size: 24px;
+  @include btn-border($color-dark);
+  max-width: 180px;
+  margin-right: 45px;
+  height: 100%;
+
+  input, button{
+    background-color: transparent;
+    outline: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+.form__target__section{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.form__input-section__organization{
+  min-height: 40px;
+  outline: 0;
+  background-color: transparent;
+  max-width: 570px;
+  @include btn-border($color-dark);
+}
+
+.summary__container{
+  margin-bottom: 50px;
+}
+
+.summary__card{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.summary__icon{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.summary__desc{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.form__gratitude__container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+
+  p{
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+
+
+

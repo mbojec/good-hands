@@ -6,7 +6,7 @@ export class Home extends Component{
     return (
         <>
           <main className={'app-main'}>
-            <section className={'app-intro'}><HomeIntro/></section>
+            <section id={'introSection'} className={'app-intro'}><HomeIntro/></section>
             <section className={'app-three-columns-section'}><HomeThreeColumns/></section>
             <section id={'simpleStepsSection'} className={'app-simple-step-section'}><HomeSimpleStep/></section>
             <section id={'aboutSection'} className={'app-about-section'}><HomeAbout/></section>

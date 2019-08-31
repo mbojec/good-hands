@@ -3,12 +3,12 @@ import React from 'react'
 const Decoration = () => (
   <svg width={253} height={33}>
     <defs>
-      <clipPath id="prefix__a">
+      <clipPath id="prefix__zz">
         <path fill="none" d="M0 0h253v33H0z" />
       </clipPath>
     </defs>
     <g
-      clipPath="url(#prefix__a)"
+      clipPath="url(#prefix__zz)"
       fill="none"
       stroke="#1a1818"
       strokeLinecap="round"
