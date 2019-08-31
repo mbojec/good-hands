@@ -3,6 +3,8 @@ import {FormFirstStep} from "./FormFirstStep";
 import {FormSecondStep} from "./FormSecondStep";
 import {FormThirdStep} from "./FormThirdStep";
 import {FomrFourtStep} from "./FomrFourtStep";
+import {FormGratitude} from "./FormGratitude";
+import {FormSummary} from "./FormSummary";
 
 class FormContainer extends Component{
 
@@ -13,7 +15,9 @@ class FormContainer extends Component{
           {/*<FormFirstStep/>*/}
           {/*<FormSecondStep/>*/}
           {/*<FormThirdStep/>*/}
-          <FomrFourtStep/>
+          {/*<FomrFourtStep/>*/}
+          {/*<FormSummary/>*/}
+          <FormGratitude/>
         </div>
         <div className={'col-xs-7 col-sm-6 col-md-5'}/>
       </div>

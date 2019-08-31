@@ -57,6 +57,13 @@
 
 }
 
+.form__input-section--container{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .form__input-section__title{
   font-size: 30px;
   font-weight: bold;
@@ -209,6 +216,42 @@
   background-color: transparent;
   max-width: 570px;
   @include btn-border($color-dark);
+}
+
+.summary__container{
+  margin-bottom: 50px;
+}
+
+.summary__card{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.summary__icon{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.summary__desc{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.form__gratitude__container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+
+  p{
+    margin-bottom: 25px;
+  }
 }
 
 
