@@ -1,7 +1,18 @@
 import React, {Component} from "react";
 import {Reload, Things} from "../../assets/svg";
+import {withRedux} from "../../store/wrapper";
 
 class FormSummary extends Component{
+
+  handleSubmit(event) {
+    console.log(this.state);
+    event.preventDefault();
+    this.props.onMoveNext();
+  }
+
+  handleClick(){
+    this.props.onMovePrev();
+  }
 
   render() {
     console.log(this.state);
@@ -57,7 +68,7 @@ class FormSummary extends Component{
             </div>
             <div className={'form__btn-section'}>
               <div className={'form__btn'}>
-                <button>Wstecz</button>
+                <button onClick={() => this.handleClick()}>Wstecz</button>
               </div>
               <div className={'form__btn'}>
                 <input type={'submit'} value={'Potwierdzam'}/>
@@ -70,4 +81,6 @@ class FormSummary extends Component{
   }
 }
 
-export {FormSummary}
+
+const connectedComponent = withRedux(FormSummary);
+export {connectedComponent as FormSummary}

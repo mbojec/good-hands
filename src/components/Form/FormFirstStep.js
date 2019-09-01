@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {withRedux} from "../../store/wrapper";
 
 class FormFirstStep extends Component{
 
@@ -9,6 +10,7 @@ class FormFirstStep extends Component{
   onHandleSubmit(e){
     e.preventDefault();
     console.log(this.state);
+    this.props.onMoveNext();
   }
 
   onChange(e){
@@ -64,4 +66,5 @@ class FormFirstStep extends Component{
   }
 }
 
-export {FormFirstStep}
+const connectedComponent = withRedux(FormFirstStep);
+export {connectedComponent as FormFirstStep}

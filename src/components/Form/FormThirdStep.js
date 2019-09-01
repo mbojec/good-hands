@@ -1,19 +1,19 @@
 import React, {Component} from "react";
+import {withRedux} from "../../store/wrapper";
 
 class FormThirdStep extends Component{
 
   state = {
-    city: '',
+    foundationCity: '',
     children: false,
     singleMothers:false,
     homeless: false,
     handicap: false,
     elderPeople: false,
-    organizationName: ''
   };
 
   handleSelect(event) {
-    this.setState({city: event.target.value});
+    this.setState({foundationCity: event.target.value});
   }
 
   handleChange(event) {
@@ -27,6 +27,11 @@ class FormThirdStep extends Component{
   handleSubmit(event) {
     console.log(this.state);
     event.preventDefault();
+    this.props.onMoveNext();
+  }
+
+  handleClick(){
+    this.props.onMovePrev();
   }
 
 
@@ -42,7 +47,7 @@ class FormThirdStep extends Component{
           <form onSubmit={event => this.handleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={'form__select-container'}>
-                  <select value={this.state.city} onChange={ (e) => this.handleSelect(e)}>
+                  <select value={this.state.foundationCity} onChange={ (e) => this.handleSelect(e)}>
                     <option value={""}>-- wybierz --</option>
                     <option value={"Poznań"}>Poznań</option>
                     <option value={"Warszawa"}>Warszawa</option>
@@ -79,7 +84,7 @@ class FormThirdStep extends Component{
             </div>
             <div className={'form__btn-section'}>
               <div className={'form__btn'}>
-                <button>Wstecz</button>
+                <button onClick={() => this.handleClick()} >Wstecz</button>
               </div>
               <div className={'form__btn'}>
                 <input type={'submit'} value={'Dalej'}/>
@@ -92,4 +97,5 @@ class FormThirdStep extends Component{
   }
 }
 
-export {FormThirdStep}
+const connectedComponent = withRedux(FormThirdStep);
+export {connectedComponent as FormThirdStep}
