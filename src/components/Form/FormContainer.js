@@ -14,8 +14,8 @@ class FormContainer extends Component{
         <div className={'col-xs-5 col-sm-6 col-md-7 form__container'}>
           {/*<FormFirstStep/>*/}
           {/*<FormSecondStep/>*/}
-          <FormThirdStep/>
-          {/*<FomrFourtStep/>*/}
+          {/*<FormThirdStep/>*/}
+          <FomrFourtStep/>
           {/*<FormSummary/>*/}
           {/*<FormGratitude/>*/}
         </div>
