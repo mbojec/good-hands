@@ -1,4 +1,4 @@
-import {MOVE_NEXT, MOVE_PREV, SAVE_FIRST_FORM, SAVE_FORM_STEP} from "../actions/form";
+import {MOVE_NEXT, MOVE_PREV, SAVE_FORM_STEP} from "../actions/form";
 
 const initialState = {
   formStep: 1,

@@ -10,6 +10,7 @@ class FormFirstStep extends Component{
   onHandleSubmit(e){
     e.preventDefault();
     console.log(this.state);
+    this.props.onSaveData(this.state);
     this.props.onMoveNext();
   }
 
