@@ -160,7 +160,7 @@
     visibility: hidden;
   }
 
-  input[type="checkbox"]:checked label{
+  input[type="checkbox"]:checked + label{
     background-color: $color-yellow;
   }
 
@@ -172,6 +172,24 @@
     background-color: transparent;
     display:inline-block;
   }
+
+  .form__checkbox__label--third{
+    flex-shrink: 0;
+    @include btn-border($color-dark);
+    background-color: transparent;
+    font-size: 24px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .form__checkbox__label--third--selected{
+    background-color: $color-yellow;
+  }
+
 
   .form__checkbox__label__text{
     margin-left: 15px;
@@ -212,6 +230,9 @@
 
 .form__input-section__organization{
   min-height: 40px;
+  font-size: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
   outline: 0;
   background-color: transparent;
   max-width: 570px;

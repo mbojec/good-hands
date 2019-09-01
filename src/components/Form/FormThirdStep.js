@@ -3,11 +3,25 @@ import React, {Component} from "react";
 class FormThirdStep extends Component{
 
   state = {
-    city: 0
+    city: '',
+    children: false,
+    singleMothers:false,
+    homeless: false,
+    handicap: false,
+    elderPeople: false,
+    organizationName: ''
   };
 
+  handleSelect(event) {
+    this.setState({city: event.target.value});
+  }
+
   handleChange(event) {
-    this.setState({numberOfBags: event.target.value});
+    this.setState({[event.target.value]: event.target.checked});
+  }
+
+  handleInput(event){
+    this.setState({organizationName: event.target.value})
   }
 
   handleSubmit(event) {
@@ -28,40 +42,40 @@ class FormThirdStep extends Component{
           <form onSubmit={event => this.handleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={'form__select-container'}>
-                  <select value={this.state.city} onChange={ (e) => this.handleChange(e)}>
-                    <option value={0}>-- wybierz --</option>
-                    <option value={1}>Poznań</option>
-                    <option value={2}>Warszawa</option>
-                    <option value={3}>Kraków</option>
-                    <option value={4}>Katowice</option>
-                    <option value={5}>Wrocław</option>
+                  <select value={this.state.city} onChange={ (e) => this.handleSelect(e)}>
+                    <option value={""}>-- wybierz --</option>
+                    <option value={"Poznań"}>Poznań</option>
+                    <option value={"Warszawa"}>Warszawa</option>
+                    <option value={'Kraków'}>Kraków</option>
+                    <option value={"Katowice"}>Katowice</option>
+                    <option value={'Wrocław'}>Wrocław</option>
                   </select>
               </div>
               <label className={'form__input-section__subtitle'}>Komu chesz pomóc?</label>
               <div className={'form__target__section'}>
                 <div className={"form__checkbox__container"}>
-                  <label className={'checkboxLabel--third'} htmlFor={'clothes'}>dzieciom</label>
-                  <input type={'checkbox'} name={'devotedThing'} id={'clothes'} value={'clothes'}/>
+                  <label className={`form__checkbox__label--third ${this.state.children && 'form__checkbox__label--third--selected'}`} htmlFor={'children'}>dzieciom</label>
+                  <input type={'checkbox'} name={'devotedThing'} id={'children'} value={'children'} onChange={(e) => this.handleChange(e)}/>
                 </div>
                 <div className={"form__checkbox__container"}>
-                  <label className={'checkboxLabel--third'} htmlFor={'clothesToTrash'}>samotnym matkom</label>
-                  <input type={'checkbox'} name={'devotedThing'} id={'clothesToTrash'} value={'clothesToTrash'} onChange={(e) => this.onChange(e)}/>
+                  <label className={`form__checkbox__label--third ${this.state.singleMothers && 'form__checkbox__label--third--selected'}`} htmlFor={'singleMothers'}>samotnym matkom</label>
+                  <input type={'checkbox'} name={'devotedThing'} id={'singleMothers'} value={'singleMothers'} onChange={(e) => this.handleChange(e)}/>
                 </div>
                 <div className={"form__checkbox__container"}>
-                  <label className={'checkboxLabel--third'} htmlFor={'toys'}>bezdomnym</label>
-                  <input type={'checkbox'} name={'devotedThing'} id={'toys'} value={'toys'} onChange={(e) => this.onChange(e)}/>
+                  <label className={`form__checkbox__label--third ${this.state.homeless && 'form__checkbox__label--third--selected'}`} htmlFor={'homeless'}>bezdomnym</label>
+                  <input type={'checkbox'} name={'devotedThing'} id={'homeless'} value={'homeless'} onChange={(e) => this.handleChange(e)}/>
                 </div>
                 <div className={"form__checkbox__container"}>
-                  <label className={'checkboxLabel--third'} htmlFor={'books'}>niepoełnosprawnym</label>
-                  <input type={'checkbox'} name={'devotedThing'} value={'books'} id={'books'} onChange={(e) => this.onChange(e)}/>
+                  <label className={`form__checkbox__label--third ${this.state.handicap && 'form__checkbox__label--third--selected'}`} htmlFor={'handicap'}>niepoełnosprawnym</label>
+                  <input type={'checkbox'} name={'devotedThing'} value={'handicap'} id={'handicap'} onChange={(e) => this.handleChange(e)}/>
                 </div>
                 <div className={"form__checkbox__container"}>
-                  <label className={'checkboxLabel--third'} htmlFor={'other'}>osobom starszym</label>
-                  <input type={'checkbox'} name={'devotedThing'} id={'other'} value={'other'} onChange={(e) => this.onChange(e)}/>
+                  <label className={`form__checkbox__label--third ${this.state.elderPeople && 'form__checkbox__label--third--selected'}`} htmlFor={'elderPeople'}>osobom starszym</label>
+                  <input type={'checkbox'} name={'devotedThing'} id={'elderPeople'} value={'elderPeople'} onChange={(e) => this.handleChange(e)}/>
                 </div>
               </div>
               <label className={'form__input-section__subtitle'}>Wpisz nazwę konkretnej organizacji</label>
-              <input type={'text'} className={'organization-input form__input-section__organization'}/>
+              <input type={'text'} value={this.state.organizationName} className={'organization-input form__input-section__organization'} onChange={event => this.handleInput(event)}/>
             </div>
             <div className={'form__btn-section'}>
               <div className={'form__btn'}>
