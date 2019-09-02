@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {add, asyncRemove, remove, logIn,logOut} from "./actions/firebase";
+import {add, logIn,logOut, setUid, fetchData} from "./actions/firebase";
 import {moveNext, movePrev, saveData} from "./actions/form";
 
 export function withRedux(WrappedComponent) {
@@ -12,9 +12,9 @@ export function withRedux(WrappedComponent) {
 
   const mapDispatchToProps = dispatch => {
     return {
-      onAddInfo: () => dispatch(add({bags: 5, organizations: 7, founds: 10})),
-      onClear: () => dispatch(asyncRemove()),
-      onRemove: () => dispatch(remove()),
+      onAddInfo: (data) => dispatch(add(data)),
+      onSetUid: (uid) => dispatch(setUid(uid)),
+      onFetchData:(firebase) => dispatch(fetchData(firebase)),
       onLogin: (userEmail) => dispatch(logIn(userEmail)),
       onLogout: () => dispatch(logOut()),
       onMoveNext:() => dispatch(moveNext()),
@@ -25,20 +25,17 @@ export function withRedux(WrappedComponent) {
 
   const mapStateToProps = state => {
     return {
-      bags: state.firebase.bags,
-      organizations: state.firebase.organizations,
-      founds: state.firebase.founds,
+      uid: state.firebase.uid,
+      bags: state.firebase.numberOfBags,
+      organizations: state.firebase.numberOfOrganizations,
+      founds: state.firebase.numberOfFounds,
       login: state.firebase.login,
       userEmail: state.firebase.userEmail,
       formStep: state.form.formStep,
       numberOfBags: state.form.numberOfBags,
       devotedThing: state.form.devotedThing,
       foundationCity: state.form.foundationCity,
-      children: state.form.children,
-      singleMothers: state.form.singleMothers,
-      homeless: state.form.homeless,
-      handicap: state.form.handicap,
-      elderPeople: state.form.elderPeople,
+      targetGroup: state.form.targetGroup,
       organizationName: state.form.organizationName,
       street: state.form.street,
       city: state.form.city,
@@ -47,6 +44,9 @@ export function withRedux(WrappedComponent) {
       date: state.form.date,
       time: state.form.time,
       comments: state.form.comments,
+      organizationsList: state.firebase.organizations,
+      foundationsList: state.firebase.foundations,
+      collectionsList: state.firebase.collections
     }
   };
 

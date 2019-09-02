@@ -1,108 +1,9 @@
 import React, {Component} from "react";
 import {PaginationList} from "./PaginationList";
 import {Decoration} from "../../assets/svg";
+import {withRedux} from "../../store/wrapper";
 
-const list = [
-  {
-    title: `Fundacja "Dbam o Zdrowie"`,
-    subtitle: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
-    info: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Dla dzieci”`,
-    subtitle: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
-    info: `ubrania, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Bez domu”`,
-    subtitle: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
-    info: `ubrania, jedzenie, ciepłe koce`
-  },
-  {
-    title: `Fundacja "Dbam o Zdrowie2"`,
-    subtitle: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
-    info: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Dla dzieci2”`,
-    subtitle: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
-    info: `ubrania, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Bez domu2”`,
-    subtitle: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
-    info: `ubrania, jedzenie, ciepłe koce`
-  },
-  {
-    title: `Fundacja "Dbam o Zdrowie3"`,
-    subtitle: `Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.`,
-    info: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Dla dzieci3”`,
-    subtitle: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
-    info: `ubrania, meble, zabawki`
-  },
-  {
-    title: `Fundacja  “Bez domu3”`,
-    subtitle: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
-    info: `ubrania, jedzenie, ciepłe koce`
-  },
-];
-
-const list2 = [
-  {
-    title: `Organizacja  “Lorem Ipsum 1”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  },
-  {
-    title: `Organizacja  “Lorem Ipsum 2”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  },
-  {
-    title: `Organizacja  “Lorem Ipsum 3”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  },
-  {
-    title: `Organizacja  “Lorem Ipsum 4”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  },
-  {
-    title: `Organizacja  “Lorem Ipsum 5”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  },
-  {
-    title: `Organizacja  “Lorem Ipsum 6”`,
-    subtitle: `Quis varius quam quisque id diam vel quam elementum pulvinar.`,
-    info: `Egestas, sed, tempus `
-  }
-];
-
-const list3 = [
-  {
-    title: `Zbiórka  “Lorem Ipsum 1”`,
-    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
-    info: `Mi, quis, hendrerit, dolor `
-  },
-  {
-    title: `Zbiórka  “Lorem Ipsum 2”`,
-    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
-    info: `Mi, quis, hendrerit, dolor `
-  },
-  {
-    title: `Zbiórka  “Lorem Ipsum 3”`,
-    subtitle: `Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. `,
-    info: `Mi, quis, hendrerit, dolor `
-  }
-];
-
-
-export class HomeWhoWeHelp extends Component{
+class HomeWhoWeHelp extends Component{
 
   constructor(props){
     super(props);
@@ -120,11 +21,11 @@ export class HomeWhoWeHelp extends Component{
   render() {
     let currentList;
     if(this.state.currentList === 0){
-      currentList = list;
+      currentList = this.props.foundationsList;
     } else if(this.state.currentList === 1){
-      currentList = list2;
+      currentList = this.props.organizationsList;
     } else {
-      currentList = list3;
+      currentList = this.props.collectionsList;
     }
 
     return(
@@ -159,3 +60,7 @@ export class HomeWhoWeHelp extends Component{
     )
   }
 }
+
+
+const connectedComponent = withRedux(HomeWhoWeHelp);
+export {connectedComponent as HomeWhoWeHelp}

@@ -6,6 +6,7 @@ import {FomrFourtStep} from "./FomrFourtStep";
 import {FormGratitude} from "./FormGratitude";
 import {FormSummary} from "./FormSummary";
 import {withRedux} from "../../store/wrapper";
+import {FirebaseContext} from "../../firebase";
 
 class FormContainer extends Component{
 
@@ -29,7 +30,15 @@ class FormContainer extends Component{
         break
       }
       case 5: {
-        form = <FormSummary/>;
+
+        form =
+          <FirebaseContext.Consumer>
+            {firebase => <FormSummary firebase={firebase} />}
+          </FirebaseContext.Consumer>;
+        break
+      }
+      case 6: {
+        form = <FormGratitude/>;
         break
       }
       default:

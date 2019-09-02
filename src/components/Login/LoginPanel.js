@@ -53,6 +53,7 @@ class LoginPanel extends Component{
         .doSignInWithEmailAndPassword(this.state.email, this.state.password)
         .then(authUser => {
           this.props.onLogin(this.state.email);
+          this.props.onSetUid(authUser.user.uid);
           this.setState({ ...INITIAL_STATE });
           this.props.history.push({pathname:'/'})
         })

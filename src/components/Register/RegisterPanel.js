@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Decoration} from "../../assets/svg";
 import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import {withRedux} from "../../store/wrapper";
 
 const INITIAL_STATE = {
   password: '',
@@ -55,6 +56,9 @@ class RegisterPanel extends Component{
       this.props.firebase
         .doCreateUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(authUser => {
+          this.props.firebase.setUser(authUser.user.uid, this.state.email);
+          this.props.onSetUid(authUser.user.uid);
+          this.props.onLogin(this.state.email);
           this.setState({ ...INITIAL_STATE });
           this.props.history.push({pathname:'/'})
         })
@@ -116,5 +120,6 @@ class RegisterPanel extends Component{
   }
 }
 
-const wrappedComponent = withRouter(RegisterPanel);
+const connectedComponent = withRedux(RegisterPanel);
+const wrappedComponent = withRouter(connectedComponent);
 export {wrappedComponent as RegisterPanel}

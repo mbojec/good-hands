@@ -1,28 +1,29 @@
-import { ADD_THREE_COLUMN_INFO, CLEAR_THREE_COLUMN_INFO, LOG_IN, LOG_OUT } from "../actions/firebase";
+import { FETCH_DATA, LOG_IN, LOG_OUT, SET_UID } from "../actions/firebase";
 
 const initialState = {
-  bags: 0,
-  organizations: 0,
-  founds: 0,
+  uid:'',
+  numberOfBags: 0,
+  numberOfOrganizations: 0,
+  numberOfFounds: 0,
+  organizations: [],
+  foundations: [],
+  collections: [],
   login: false,
   userEmail: ''
 };
 
 const firebase = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_THREE_COLUMN_INFO:
-      const copy = {
-        ...state,
-        ...action.payload
-      };
-      return copy;
-
-    case CLEAR_THREE_COLUMN_INFO:
+    case SET_UID:
       return {
         ...state,
-        bags: 0,
-        organizations: 0,
-        founds: 0
+        uid: action.payload
+      };
+
+    case FETCH_DATA:
+      return {
+        ...state,
+        ...action.payload
       };
 
     case LOG_IN:
@@ -35,6 +36,7 @@ const firebase = (state = initialState, action) => {
     case LOG_OUT:
       return {
         ...state,
+        userEmail: '',
         login: false
       };
 

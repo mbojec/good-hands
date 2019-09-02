@@ -1,12 +1,12 @@
-export const ADD_THREE_COLUMN_INFO = 'ADD_THREE_COLUMN_INFO';
-export const CLEAR_THREE_COLUMN_INFO = 'CLEAR_THREE_COLUMN_INFO';
+export const FETCH_DATA = 'FETCH_DATA';
 export const LOG_IN = "LOG_IN";
 export const LOG_OUT = 'LOG_OUT';
+export const SET_UID = 'SET_UID';
 
 
 export const add = payload => {
   return {
-    type: ADD_THREE_COLUMN_INFO,
+    type: FETCH_DATA,
     payload
   };
 };
@@ -18,22 +18,20 @@ export const logIn = userEmail => {
   };
 };
 
-export const logOut = payload => {
+export const logOut = () => {
   return {
     type: LOG_OUT,
   };
 };
 
-export const remove = () => {
+export const setUid = payload => {
   return {
-    type: CLEAR_THREE_COLUMN_INFO,
+    type: SET_UID,
+    payload
   };
 };
 
-export const asyncRemove = () => dispatch => {
-  let timer;
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    dispatch(remove());
-  }, 2000);
+export const fetchData = (firebase) => dispatch => {
+  firebase.getData().then(res => dispatch(add(res)))
 };
+
