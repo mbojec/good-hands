@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {withRedux} from "../../store/wrapper";
 
 class FormSecondStep extends Component{
 
@@ -13,6 +14,12 @@ class FormSecondStep extends Component{
   handleSubmit(event) {
     console.log(this.state);
     event.preventDefault();
+    this.props.onSaveData(this.state);
+    this.props.onMoveNext();
+  }
+
+  handleClick(){
+    this.props.onMovePrev();
   }
 
 
@@ -43,10 +50,10 @@ class FormSecondStep extends Component{
             </div>
             <div className={'form__btn-section'}>
               <div className={'form__btn'}>
-                <button>Wstecz</button>
+                <button onClick={() => this.handleClick()}>Wstecz</button>
               </div>
               <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'}/>
+                <input type={'submit'} value={'Dalej'} disabled={!this.state.numberOfBags > 0}/>
               </div>
             </div>
           </form>
@@ -55,5 +62,5 @@ class FormSecondStep extends Component{
     )
   }
 }
-
-export {FormSecondStep}
+const connectedComponent = withRedux(FormSecondStep);
+export {connectedComponent as FormSecondStep}
