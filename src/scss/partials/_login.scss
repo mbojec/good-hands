@@ -1,0 +1,118 @@
+.login-container{
+  width: 100%;
+  max-width: 510px;
+  margin: 0 auto;
+  height: 100%;
+  @extend %center--column
+}
+
+.login-title{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 253px;
+  @include fluid-type(768px, 1400px, 36px, 40px);
+}
+
+.login-form__container{
+  width: 100%;
+}
+
+.login-form__form{
+  width: 75%;
+  margin: 0 auto;
+  background-color: $color-light;
+}
+
+.login-form__form__label{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-form__form__label--error{
+  display: block;
+  width: 100%;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.login-form__form__input{
+  display: block;
+  background-color: $color-light;
+  outline: none;
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid $color-gray;
+  height: 40px;
+}
+
+.login-form__form__input--error{
+  border-bottom: 1px solid red;
+}
+
+.login-form__form__email{
+  padding-top: 40px;
+  padding-right: 67px;
+  padding-left: 67px;
+}
+
+.login-form__form__password{
+  padding: 31px 67px 40px;
+}
+
+.login-form__form__repeated-password{
+  padding-bottom: 40px;
+  padding-left: 67px;
+  padding-right: 67px;
+}
+
+.login-form__btn-section{
+  margin-top: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.login-form__btn {
+  position: absolute;
+  font-size: 18px;
+  height: 50px;
+  padding: 0 16px;
+  @extend %btn-bkg;
+
+  a{
+    color: black;
+  }
+
+}
+
+.login-form__btn--selected{
+  @include btn-border($color-gray)
+}
+
+.login-form__btn--login{
+  right: 0;
+}
+
+.login-form__btn--register{
+  left: 0;
+}
+
+.logout-title{
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  @include fluid-type(768px, 1400px, 36px, 40px);
+}
+
+.logout-section{
+  @extend %center;
+}
+
+.logout-btn{
+  font-size: 18px;
+  height: 50px;
+  padding: 0 16px;
+  @extend %btn-bkg;
+  @include btn-border($color-gray);
+}

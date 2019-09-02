@@ -1,8 +1,18 @@
 $screen-breakpoint-xs: 0;
-$screen-breakpoint-sm: 576px;
+$screen-breakpoint-sm: 425px;
 $screen-breakpoint-md: 768px;
-$screen-breakpoint-lg: 992px;
-$screen-breakpoint-xl: 1200px;
+$screen-breakpoint-lg: 1024px;
+$screen-breakpoint-xl: 1440px;
+$screen-breakpoint-xxl: 1900px;
 
-$app-max-width: 1618px;
-$app-header-height: 963px;
+$app-max-width: 1900px;
+$header-max-height: 963px;
+$header-login-max-height: 150px;
+$three-columns-height: 384px;
+$simple-steps-height: 624px;
+$about-height: 935px;
+$help-height: 862px;
+$contact-height: 1112px;
+$login-height: 946px;
+$form_height: 883px;
+$info-strap-height:179px;

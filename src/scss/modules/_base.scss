@@ -11,12 +11,32 @@
   width: 100%;
 }
 
+%container{
+  padding: 0 calc(100% * (1 / 14));
+  width: 100%;
+  height: 100%;
+}
+
 %center {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+}
+
+%center--column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+%btn-bkg {
+  background-color: white;
+  border: none;
+  outline: 0;
 }
 
 a {
