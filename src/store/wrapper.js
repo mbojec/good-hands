@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {add, asyncRemove, remove, logIn,logOut} from "./actions/firebase";
+import {add, asyncRemove, remove, logIn,logOut, setUid, fetchData} from "./actions/firebase";
 import {moveNext, movePrev, saveData} from "./actions/form";
 
 export function withRedux(WrappedComponent) {
@@ -12,8 +12,10 @@ export function withRedux(WrappedComponent) {
 
   const mapDispatchToProps = dispatch => {
     return {
-      onAddInfo: () => dispatch(add({bags: 5, organizations: 7, founds: 10})),
+      onAddInfo: (data) => dispatch(add(data)),
       onClear: () => dispatch(asyncRemove()),
+      onSetUid: (uid) => dispatch(setUid(uid)),
+      onFetchData:(firebase) => dispatch(fetchData(firebase)),
       onRemove: () => dispatch(remove()),
       onLogin: (userEmail) => dispatch(logIn(userEmail)),
       onLogout: () => dispatch(logOut()),
@@ -25,9 +27,10 @@ export function withRedux(WrappedComponent) {
 
   const mapStateToProps = state => {
     return {
-      bags: state.firebase.bags,
-      organizations: state.firebase.organizations,
-      founds: state.firebase.founds,
+      uid: state.firebase.uid,
+      bags: state.firebase.numberOfBags,
+      organizations: state.firebase.numberOfOrganizations,
+      founds: state.firebase.numberOfFounds,
       login: state.firebase.login,
       userEmail: state.firebase.userEmail,
       formStep: state.form.formStep,
