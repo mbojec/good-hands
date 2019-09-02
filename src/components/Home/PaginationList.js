@@ -5,11 +5,27 @@ export class PaginationList extends Component{
 
   constructor(props){
     super(props);
+    let list = this.createList();
     this.state = {
-      list: this.props.list,
+      list: [...list],
       currentPage: 1,
       itemsPerPage: 3
     }
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if(this.state.list.length === 0){
+      let list = this.createList();
+      this.setState({list: [...list]})
+    }
+  }
+
+  createList(){
+    const newList = [];
+    for(let key in this.props.list){
+      newList.push(this.props.list[key])
+    }
+    return newList;
   }
 
   handleClick(event) {

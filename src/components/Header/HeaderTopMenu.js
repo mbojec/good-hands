@@ -11,7 +11,7 @@ class HeaderTopMenu extends Component{
   };
 
   logout(){
-    this.props.onLogout();
+    this.props.firebase.doSignOut().then(() =>{this.props.onLogout()});
     this.props.history.push({pathname:'/wylogowano'})
   }
 

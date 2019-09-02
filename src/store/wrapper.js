@@ -44,6 +44,9 @@ export function withRedux(WrappedComponent) {
       date: state.form.date,
       time: state.form.time,
       comments: state.form.comments,
+      organizationsList: state.firebase.organizations,
+      foundationsList: state.firebase.foundations,
+      collectionsList: state.firebase.collections
     }
   };
 

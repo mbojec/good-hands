@@ -1,7 +1,8 @@
 import React from "react";
 import {Decoration} from "../../assets/svg";
+import { withRouter } from 'react-router-dom';
 
-export function LogoutPanel() {
+const LogoutPanel = (props) => {
 
   return(
       <div className={'login-container row'}>
@@ -10,8 +11,11 @@ export function LogoutPanel() {
           <Decoration/>
         </div>
         <div className={'col-xl-12 logout-section'}>
-          <button className={'logout-btn'}>Strona główna</button>
+          <button className={'logout-btn'} onClick={() => props.history.push({pathname:'/'})}>Strona główna</button>
         </div>
       </div>
     )
-}
+};
+
+const wrappedComponent = withRouter(LogoutPanel);
+export {wrappedComponent as LogoutPanel}
