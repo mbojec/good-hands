@@ -18,11 +18,10 @@ const firebase = (state = initialState, action) => {
       };
 
     case ADD_THREE_COLUMN_INFO:
-      const copy = {
+      return {
         ...state,
         ...action.payload
       };
-      return copy;
 
     case CLEAR_THREE_COLUMN_INFO:
       return {

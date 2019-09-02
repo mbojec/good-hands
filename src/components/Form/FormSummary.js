@@ -4,9 +4,22 @@ import {withRedux} from "../../store/wrapper";
 
 class FormSummary extends Component{
 
-  handleSubmit(event) {
+  handleSubmit() {
     console.log(this.state);
-    event.preventDefault();
+    const donation = {
+      street: this.props.street,
+      city: this.props.city,
+      postalCode: this.props.postalCode,
+      phoneNumber: this.props.phoneNumber,
+      date: this.props.date,
+      time: this.props.time,
+      comments: this.props.comments,
+      numberOfBags: this.props.numberOfBags,
+      devotedThing: this.props.devotedThing,
+      targetGroup: this.props.targetGroup,
+      foundationCity: this.props.foundationCity
+    };
+    this.props.firebase.setDonation(this.props.uid, donation);
     this.props.onMoveNext();
   }
 
@@ -23,10 +36,10 @@ class FormSummary extends Component{
           <div className={'summary__container'}>
             <p className={'col-xs-12 form__input-section__column-section__title'}>Oddajesz</p>
             <div className={'col-xs-12 summary__card'}>
-              <div className={'summary__icon'}><Things/></div><p className={'summary__desc'}>4 worki, urania w dobrym stanie</p>
+              <div className={'summary__icon'}><Things/></div><p className={'summary__desc'}>{`${this.props.numberOfBags} worek/worki, ${this.props.devotedThing}, ${this.props.targetGroup}`}</p>
             </div>
             <div className={'col-xs-12 summary__card'}>
-              <div className={'summary__icon'}><Reload/></div><p className={'summary__desc'}>do lokalizacji: Warszawa</p>
+              <div className={'summary__icon'}><Reload/></div><p className={'summary__desc'}>{`do lokalizacji: ${this.props.foundationCity}`}</p>
             </div>
           </div>
           <div className={'form__input-section--container'}>
@@ -71,7 +84,7 @@ class FormSummary extends Component{
                 <button onClick={() => this.handleClick()}>Wstecz</button>
               </div>
               <div className={'form__btn'}>
-                <input type={'submit'} value={'Potwierdzam'}/>
+                <button onClick={() => this.handleSubmit()}>Potwierdzam</button>
               </div>
             </div>
           </div>

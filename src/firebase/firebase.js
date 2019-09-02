@@ -42,6 +42,10 @@ class Firebase {
     });
   };
 
+  setDonation = (uid, donation) => this.db.ref(`users/${uid}/donations/${donation.date}`).set({
+    ...donation
+  });
+
 }
 
 export default Firebase;

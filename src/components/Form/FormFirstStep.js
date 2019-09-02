@@ -30,27 +30,27 @@ class FormFirstStep extends Component{
           <form onChange={ (e) => this.onChange(e)} onSubmit={event => this.onHandleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} id={'clothes'} value={'clothes'}/>
+                <input type={'radio'} name={'devotedThing'} id={'clothes'} value={'ubrania, które nadaja się do ponownego użycia'}/>
                 <label className={'form__checkbox__label'} htmlFor={'clothes'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'clothes'}>ubrania, które nadaja się do ponownego użycia</label>
               </div>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} id={'clothesToTrash'} value={'clothesToTrash'}/>
+                <input type={'radio'} name={'devotedThing'} id={'clothesToTrash'} value={'ubrania, do wyrzucenia'}/>
                 <label className={'form__checkbox__label'} htmlFor={'clothesToTrash'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'clothesToTrash'}>ubrania, do wyrzucenia</label>
               </div>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} id={'toys'} value={'toys'}/>
+                <input type={'radio'} name={'devotedThing'} id={'toys'} value={'zabawki'}/>
                 <label className={'form__checkbox__label'} htmlFor={'toys'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'toys'}>zabawki</label>
               </div>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} value={'books'} id={'books'}/>
+                <input type={'radio'} name={'devotedThing'} value={'books'} id={'książki'}/>
                 <label className={'form__checkbox__label'} htmlFor={'books'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'books'}>książki</label>
               </div>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} id={'other'} value={'other'}/>
+                <input type={'radio'} name={'devotedThing'} id={'other'} value={'Inne'}/>
                 <label className={'form__checkbox__label'} htmlFor={'other'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'other'}>Inne</label>
               </div>
