@@ -53,7 +53,7 @@ class FormSecondStep extends Component{
                 <button onClick={() => this.handleClick()}>Wstecz</button>
               </div>
               <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'}/>
+                <input type={'submit'} value={'Dalej'} disabled={!this.state.numberOfBags > 0}/>
               </div>
             </div>
           </form>

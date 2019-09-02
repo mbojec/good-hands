@@ -10,6 +10,7 @@ class FormThirdStep extends Component{
     homeless: false,
     handicap: false,
     elderPeople: false,
+    organizationName: ''
   };
 
   handleSelect(event) {
@@ -33,6 +34,11 @@ class FormThirdStep extends Component{
 
   handleClick(){
     this.props.onMovePrev();
+  }
+
+  isDataValid(){
+    return this.state.foundationCity.length > 0 &&
+      (this.state.children || this.state.singleMothers || this.state.homeless || this.state.handicap || this.state.elderPeople)
   }
 
 
@@ -88,7 +94,7 @@ class FormThirdStep extends Component{
                 <button onClick={() => this.handleClick()} >Wstecz</button>
               </div>
               <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'}/>
+                <input type={'submit'} value={'Dalej'} disabled={!this.isDataValid()}/>
               </div>
             </div>
           </form>

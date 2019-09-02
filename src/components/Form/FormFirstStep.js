@@ -57,7 +57,7 @@ class FormFirstStep extends Component{
             </div>
             <div className={'form__btn-section'}>
               <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'}/>
+                <input disabled={!this.state.devotedThing.length > 0} type={'submit'} value={'Dalej'}/>
               </div>
             </div>
           </form>
