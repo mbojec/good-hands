@@ -21,13 +21,14 @@ class HeaderTopMenu extends Component{
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    scroller.scrollTo(this.state.sectionToScroll, {
-      duration: 500,
-      smooth: true,
-      spy: true,
-      offset: -20
-    });
-
+    if (this.state.sectionToScroll.length > 1){
+      scroller.scrollTo(this.state.sectionToScroll, {
+        duration: 500,
+        smooth: true,
+        spy: true,
+        offset: -20
+      });
+    }
   }
 
 
@@ -56,21 +57,21 @@ class HeaderTopMenu extends Component{
           </button>
           <button className={'header__top-menu__navigation__btn'}>
             {this.props.history.location.pathname !== '/'?
-              <p onClick={() => this.scrollToSection('aboutSection')}>O co chodzi?</p>
+              <p onClick={() => this.scrollToSection('aboutSection')}>O nas</p>
               :
               <ScrollLink to={'aboutSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>O nas</ScrollLink>
             }
           </button>
           <button className={'header__top-menu__navigation__btn'}>
             {this.props.history.location.pathname !== '/'?
-              <p onClick={() => this.scrollToSection('whoWheHelpSection')}>O co chodzi?</p>
+              <p onClick={() => this.scrollToSection('whoWheHelpSection')}>Fudacja i organizacje</p>
               :
               <ScrollLink to={'whoWheHelpSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Fudacja i organizacje</ScrollLink>
             }
           </button>
           <button className={'header__top-menu__navigation__btn'}>
             {this.props.history.location.pathname !== '/'?
-              <p onClick={() => this.scrollToSection('contactSection')}>O co chodzi?</p>
+              <p onClick={() => this.scrollToSection('contactSection')}>Kontakt</p>
               :
               <ScrollLink to={'contactSection'} spy={true} activeClass="active" smooth={true} offset={-20} duration= {500}>Kontakt</ScrollLink>
             }

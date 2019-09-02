@@ -1,4 +1,4 @@
-import { ADD_THREE_COLUMN_INFO, CLEAR_THREE_COLUMN_INFO, LOG_IN, LOG_OUT, SET_UID } from "../actions/firebase";
+import { ADD_THREE_COLUMN_INFO, LOG_IN, LOG_OUT, SET_UID } from "../actions/firebase";
 
 const initialState = {
   uid:'',
@@ -21,14 +21,6 @@ const firebase = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload
-      };
-
-    case CLEAR_THREE_COLUMN_INFO:
-      return {
-        ...state,
-        numberOfBags: 0,
-        numberOfOrganizations: 0,
-        numberOfFounds: 0,
       };
 
     case LOG_IN:

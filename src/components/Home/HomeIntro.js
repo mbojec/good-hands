@@ -13,8 +13,8 @@ class HomeIntro extends Component{
             <div className={'col-xs-12 intro__decoration'}><Decoration/></div>
             <div className={'col-xxl-1'}/>
             <div className={'col-xs-12 col-xxl-10 intro__btn-section'}>
-              <button className={'intro__btn-section__btn'} onClick={event => this.props.onAddInfo()}>ODDAJ <br/> RZECZY</button>
-              <button className={'intro__btn-section__btn'} onClick={event => this.props.onClear()}>ZORGANIZUJ ZBIÓRKĘ</button>
+              <button className={'intro__btn-section__btn'}>ODDAJ <br/> RZECZY</button>
+              <button className={'intro__btn-section__btn'}>ZORGANIZUJ ZBIÓRKĘ</button>
             </div>
             <div className={'col-xxl-1'}/>
           </div>

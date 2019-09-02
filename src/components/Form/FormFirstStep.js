@@ -9,7 +9,6 @@ class FormFirstStep extends Component{
 
   onHandleSubmit(e){
     e.preventDefault();
-    console.log(this.state);
     this.props.onSaveData(this.state);
     this.props.onMoveNext();
   }
@@ -19,7 +18,6 @@ class FormFirstStep extends Component{
   }
 
   render() {
-    console.log(this.state);
     return(
       <>
         <div className={'form__num-section'}>
@@ -45,7 +43,7 @@ class FormFirstStep extends Component{
                 <label className={'form__checkbox__label__text'} htmlFor={'toys'}>zabawki</label>
               </div>
               <div className={"form__checkbox__container"}>
-                <input type={'radio'} name={'devotedThing'} value={'books'} id={'książki'}/>
+                <input type={'radio'} name={'devotedThing'} id={'books'} value={'książki'} />
                 <label className={'form__checkbox__label'} htmlFor={'books'}/>
                 <label className={'form__checkbox__label__text'} htmlFor={'books'}>książki</label>
               </div>
