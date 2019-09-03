@@ -3,6 +3,7 @@ import {Decoration} from "../../assets/svg";
 import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import {withRedux} from "../../store/wrapper";
+import {withFirebase} from "../../firebase";
 
 const INITIAL_STATE = {
   password: '',
@@ -120,6 +121,7 @@ class RegisterPanel extends Component{
   }
 }
 
-const connectedComponent = withRedux(RegisterPanel);
+const firebaseComponent = withFirebase(RegisterPanel);
+const connectedComponent = withRedux(firebaseComponent);
 const wrappedComponent = withRouter(connectedComponent);
 export {wrappedComponent as RegisterPanel}

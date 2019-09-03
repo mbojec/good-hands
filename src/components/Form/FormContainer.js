@@ -20,11 +20,7 @@ const FormContainer = (props) => {
         return <FomrFourtStep/>;
       }
       case 5: {
-        return(
-          <FirebaseContext.Consumer>
-            {firebase => <FormSummary firebase={firebase} />}
-          </FirebaseContext.Consumer>
-        );
+        return <FormSummary/>;
       }
       case 6: {
         return <FormGratitude/>;

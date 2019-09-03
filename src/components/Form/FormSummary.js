@@ -2,6 +2,7 @@ import React from "react";
 import {Reload, Things} from "../../assets/svg";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
+import {withFirebase} from "../../firebase";
 
 const FormSummary = (props) => {
 
@@ -86,6 +87,6 @@ const FormSummary = (props) => {
   )
 };
 
-
-const connectedComponent = withRedux(FormSummary);
+const wrappedComponent = withFirebase(FormSummary);
+const connectedComponent = withRedux(wrappedComponent);
 export {connectedComponent as FormSummary}

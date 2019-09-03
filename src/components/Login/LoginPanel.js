@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {Decoration} from "../../assets/svg";
 import { withRouter } from 'react-router-dom';
 import {withRedux} from "../../store/wrapper";
+import {withFirebase} from "../../firebase";
 
 
 const INITIAL_STATE = {
@@ -107,7 +108,8 @@ class LoginPanel extends Component{
   }
 }
 
-const wrappedComponent = withRouter(LoginPanel);
+const firebaseComponent = withFirebase(LoginPanel);
+const wrappedComponent = withRouter(firebaseComponent);
 const connectedComponent = withRedux(wrappedComponent);
 export {connectedComponent as LoginPanel}
 
