@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
-import {FormBtn} from "./FormBtn";
-import {FormSelectSection} from "./FormSelectSection";
+import {FormBtn, FormSelectSection} from "./";
 
 class FormSecondStep extends Component{
 

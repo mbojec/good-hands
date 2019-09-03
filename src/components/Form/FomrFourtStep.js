@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
-import {FormBtn} from "./FormBtn";
+import {FormBtn} from "./";
 
 class FomrFourtStep extends Component{
 
