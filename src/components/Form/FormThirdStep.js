@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./FormBtn";
+import {FormSelectSection} from "./FormSelectSection";
+
 
 
 class FormThirdStep extends Component{
@@ -58,14 +60,7 @@ class FormThirdStep extends Component{
           <form onSubmit={event => this.handleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={'form__select-container'}>
-                  <select value={this.state.foundationCity} onChange={ (e) => this.handleSelect(e)}>
-                    <option value={""}>-- wybierz --</option>
-                    <option value={"Poznań"}>Poznań</option>
-                    <option value={"Warszawa"}>Warszawa</option>
-                    <option value={'Kraków'}>Kraków</option>
-                    <option value={"Katowice"}>Katowice</option>
-                    <option value={'Wrocław'}>Wrocław</option>
-                  </select>
+                  <FormSelectSection value={this.state.foundationCity} onHandleSelect={(event) => this.handleSelect(event)}/>
               </div>
               <label className={'form__input-section__subtitle'}>Komu chesz pomóc?</label>
               <div className={'form__target__section'}>
