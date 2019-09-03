@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React from "react";
 import {Decoration} from "../../assets/svg";
 
-class FormGratitude extends Component{
+const FormGratitude = () => {
 
-  render() {
     return(
       <div className={'form__gratitude__container'}>
         <p>Dziękujemy za przesłanie formularza <br/>
@@ -12,7 +11,7 @@ class FormGratitude extends Component{
         <Decoration/>
       </div>
     )
-  }
-}
+
+};
 
 export {FormGratitude}

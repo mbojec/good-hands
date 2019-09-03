@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import * as comp from './components'
 import {withRedux} from "./store/wrapper";
+import {withFirebase} from "./firebase";
 
 class App extends Component{
 
@@ -30,5 +31,6 @@ class App extends Component{
   }
 
 }
-const connectedComponent = withRedux(App);
+const wrappedComponent = withFirebase(App);
+const connectedComponent = withRedux(wrappedComponent);
 export {connectedComponent as App};

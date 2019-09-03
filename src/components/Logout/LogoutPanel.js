@@ -17,5 +17,5 @@ const LogoutPanel = (props) => {
     )
 };
 
-const wrappedComponent = withRouter(LogoutPanel);
-export {wrappedComponent as LogoutPanel}
+const LogoutPanelHoc = withRouter(LogoutPanel);
+export {LogoutPanelHoc as LogoutPanel}

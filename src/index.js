@@ -10,9 +10,7 @@ import Firebase, { FirebaseContext } from "./firebase";
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Provider store={store}>
-      <FirebaseContext.Consumer>
-        {firebase => <App firebase={firebase} />}
-      </FirebaseContext.Consumer>
+      <App/>
     </Provider>
   </FirebaseContext.Provider>,
   document.getElementById("root")

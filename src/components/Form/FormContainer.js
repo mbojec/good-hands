@@ -1,61 +1,43 @@
-import React, {Component} from "react";
-import {FormFirstStep} from "./FormFirstStep";
-import {FormSecondStep} from "./FormSecondStep";
-import {FormThirdStep} from "./FormThirdStep";
-import {FomrFourtStep} from "./FomrFourtStep";
-import {FormGratitude} from "./FormGratitude";
-import {FormSummary} from "./FormSummary";
+import React from "react";
+import {FormFirstStep, FormSecondStep, FormThirdStep, FormFourthStep, FormSummary, FormGratitude} from "./";
 import {withRedux} from "../../store/wrapper";
-import {FirebaseContext} from "../../firebase";
 
-class FormContainer extends Component{
+const FormContainer = (props) => {
 
-  render() {
-    let form;
-    switch (this.props.formStep) {
+  const form = () =>{
+    switch (props.formStep) {
       case 1: {
-        form = <FormFirstStep/>;
-        break
+        return <FormFirstStep/>;
       }
       case 2: {
-        form = <FormSecondStep/>;
-        break
+        return <FormSecondStep/>;
       }
       case 3: {
-        form = <FormThirdStep/>;
-        break
+        return <FormThirdStep/>;
       }
       case 4: {
-        form = <FomrFourtStep/>;
-        break
+        return <FormFourthStep/>;
       }
       case 5: {
-
-        form =
-          <FirebaseContext.Consumer>
-            {firebase => <FormSummary firebase={firebase} />}
-          </FirebaseContext.Consumer>;
-        break
+        return <FormSummary/>;
       }
       case 6: {
-        form = <FormGratitude/>;
-        break
+        return <FormGratitude/>;
       }
       default:
-        form = <FormFirstStep/>;
-        break
+        return <FormFirstStep/>;
     }
-    console.log(form);
-    return(
-      <div className={'form row'}>
-        <div className={'col-xs-5 col-sm-6 col-md-7 form__container'}>
-          {form}
-        </div>
-        <div className={'col-xs-7 col-sm-6 col-md-5'}/>
-      </div>
-    )
-  }
-}
+  };
 
-const connectedComponent = withRedux(FormContainer);
-export {connectedComponent as FormContainer};
+  return (
+    <div className={'form row'}>
+      <div className={'col-xs-5 col-sm-6 col-md-7 form__container'}>
+        {form()}
+      </div>
+      <div className={'col-xs-7 col-sm-6 col-md-5'}/>
+    </div>
+  )
+};
+
+const FormContainerHoc = withRedux(FormContainer);
+export {FormContainerHoc as FormContainer};

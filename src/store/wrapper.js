@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {add, logIn,logOut, setUid, fetchData} from "./actions/firebase";
+import {logIn,logOut, setUid, fetchData} from "./actions/firebase";
 import {moveNext, movePrev, saveData} from "./actions/form";
 
 export function withRedux(WrappedComponent) {
@@ -12,7 +12,6 @@ export function withRedux(WrappedComponent) {
 
   const mapDispatchToProps = dispatch => {
     return {
-      onAddInfo: (data) => dispatch(add(data)),
       onSetUid: (uid) => dispatch(setUid(uid)),
       onFetchData:(firebase) => dispatch(fetchData(firebase)),
       onLogin: (userEmail) => dispatch(logIn(userEmail)),

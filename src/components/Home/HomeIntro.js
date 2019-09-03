@@ -23,5 +23,5 @@ class HomeIntro extends Component{
     }
 }
 
-const connectedComponent = withRedux(HomeIntro);
-export {connectedComponent as HomeIntro}
+const HomeIntroHoc = withRedux(HomeIntro);
+export {HomeIntroHoc as HomeIntro}

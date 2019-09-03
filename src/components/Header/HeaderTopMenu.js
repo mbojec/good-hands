@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { Link as ScrollLink, scroller} from 'react-scroll';
 import {withRedux} from "../../store/wrapper";
 import { withRouter } from 'react-router-dom';
+import {compose} from "recompose";
 
 class HeaderTopMenu extends Component{
 
@@ -82,6 +83,5 @@ class HeaderTopMenu extends Component{
   }
 }
 
-const wrappedComponent = withRouter(HeaderTopMenu);
-const connectedComponent = withRedux(wrappedComponent);
-export {connectedComponent as HeaderTopMenu}
+const HeaderTopMenuHoc = compose(withRedux, withRouter)(HeaderTopMenu);
+export {HeaderTopMenuHoc as HeaderTopMenu}
