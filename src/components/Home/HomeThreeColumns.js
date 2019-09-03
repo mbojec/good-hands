@@ -35,5 +35,5 @@ class HomeThreeColumns extends Component{
     }
 }
 
-const connectedComponent = withRedux(HomeThreeColumns);
-export {connectedComponent as HomeThreeColumns}
+const HomeThreeColumnsHoc = withRedux(HomeThreeColumns);
+export {HomeThreeColumnsHoc as HomeThreeColumns}

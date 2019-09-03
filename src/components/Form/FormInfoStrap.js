@@ -39,5 +39,5 @@ class FormInfoStrap extends Component{
   }
 }
 
-const connectedComponent = withRedux(FormInfoStrap);
-export {connectedComponent as FormInfoStrap}
+const FormInfoStrapHoc = withRedux(FormInfoStrap);
+export {FormInfoStrapHoc as FormInfoStrap}

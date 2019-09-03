@@ -64,5 +64,5 @@ class FormFirstStep extends Component{
   }
 }
 
-const connectedComponent = withRedux(FormFirstStep);
-export {connectedComponent as FormFirstStep}
+const FormFirstStepHoc = withRedux(FormFirstStep);
+export {FormFirstStepHoc as FormFirstStep}

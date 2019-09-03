@@ -33,5 +33,5 @@ const FormSelectSection = ({onHandleSelect, value, formStep}) => {
 
 };
 
-const connectedComponent = withRedux(FormSelectSection);
-export {connectedComponent as FormSelectSection};
+const FormSelectSectionHoc = withRedux(FormSelectSection);
+export {FormSelectSectionHoc as FormSelectSection};

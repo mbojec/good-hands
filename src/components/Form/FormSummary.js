@@ -3,6 +3,7 @@ import {Reload, Things} from "../../assets/svg";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
 import {withFirebase} from "../../firebase";
+import {compose} from "recompose";
 
 const FormSummary = (props) => {
 
@@ -87,6 +88,5 @@ const FormSummary = (props) => {
   )
 };
 
-const wrappedComponent = withFirebase(FormSummary);
-const connectedComponent = withRedux(wrappedComponent);
-export {connectedComponent as FormSummary}
+const FormSummaryHoc = compose(withFirebase, withRedux)(FormSummary);
+export {FormSummaryHoc as FormSummary}

@@ -1,7 +1,6 @@
 import React from "react";
-import {FormFirstStep, FormSecondStep, FormThirdStep, FomrFourtStep, FormSummary, FormGratitude} from "./";
+import {FormFirstStep, FormSecondStep, FormThirdStep, FormFourthStep, FormSummary, FormGratitude} from "./";
 import {withRedux} from "../../store/wrapper";
-import {FirebaseContext} from "../../firebase";
 
 const FormContainer = (props) => {
 
@@ -17,7 +16,7 @@ const FormContainer = (props) => {
         return <FormThirdStep/>;
       }
       case 4: {
-        return <FomrFourtStep/>;
+        return <FormFourthStep/>;
       }
       case 5: {
         return <FormSummary/>;
@@ -40,5 +39,5 @@ const FormContainer = (props) => {
   )
 };
 
-const connectedComponent = withRedux(FormContainer);
-export {connectedComponent as FormContainer};
+const FormContainerHoc = withRedux(FormContainer);
+export {FormContainerHoc as FormContainer};

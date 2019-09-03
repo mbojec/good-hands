@@ -4,6 +4,7 @@ import {Decoration} from "../../assets/svg";
 import { withRouter } from 'react-router-dom';
 import {withRedux} from "../../store/wrapper";
 import {withFirebase} from "../../firebase";
+import {compose} from "recompose";
 
 
 const INITIAL_STATE = {
@@ -108,8 +109,6 @@ class LoginPanel extends Component{
   }
 }
 
-const firebaseComponent = withFirebase(LoginPanel);
-const wrappedComponent = withRouter(firebaseComponent);
-const connectedComponent = withRedux(wrappedComponent);
-export {connectedComponent as LoginPanel}
+const LoginPanelHoc = compose(withFirebase, withRedux, withRouter)(LoginPanel);
+export {LoginPanelHoc as LoginPanel}
 

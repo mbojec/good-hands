@@ -30,5 +30,5 @@ const FormBtn = ({onHandleSubmit,onHandleClick, disabled, formStep}) => {
 
 };
 
-const connectedComponent = withRedux(FormBtn);
-export {connectedComponent as FormBtn};
+const FormBtnHoc = withRedux(FormBtn);
+export {FormBtnHoc as FormBtn};

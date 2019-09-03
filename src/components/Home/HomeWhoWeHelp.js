@@ -62,5 +62,5 @@ class HomeWhoWeHelp extends Component{
 }
 
 
-const connectedComponent = withRedux(HomeWhoWeHelp);
-export {connectedComponent as HomeWhoWeHelp}
+const HomeWhoWeHelpHoc = withRedux(HomeWhoWeHelp);
+export {HomeWhoWeHelpHoc as HomeWhoWeHelp}

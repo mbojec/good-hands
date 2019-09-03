@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
 
-class FomrFourtStep extends Component{
+class FormFourthStep extends Component{
 
   state = {
     street: "",
@@ -91,5 +91,5 @@ class FomrFourtStep extends Component{
   }
 }
 
-const connectedComponent = withRedux(FomrFourtStep);
-export {connectedComponent as FomrFourtStep}
+const FormFourthStepHoc = withRedux(FormFourthStep);
+export {FormFourthStepHoc as FormFourthStep}
