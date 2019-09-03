@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
+import {FormBtn} from "./FormBtn";
 
 class FomrFourtStep extends Component{
 
@@ -81,12 +82,7 @@ class FomrFourtStep extends Component{
               </div>
             </div>
             <div className={'form__btn-section'}>
-              <div className={'form__btn'}>
-                <button onClick={() => this.handleClick()}>Wstecz</button>
-              </div>
-              <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'} disabled={!this.isDataValid()}/>
-              </div>
+              <FormBtn disabled={!this.isDataValid()} onHandleClick={() => this.handleClick()} onHandleSubmit={(event) => this.handleSubmit(event)}/>
             </div>
           </form>
         </div>

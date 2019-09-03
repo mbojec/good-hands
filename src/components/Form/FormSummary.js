@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Reload, Things} from "../../assets/svg";
 import {withRedux} from "../../store/wrapper";
+import {FormBtn} from "./FormBtn";
 
 class FormSummary extends Component{
 
@@ -80,12 +81,7 @@ class FormSummary extends Component{
               </div>
             </div>
             <div className={'form__btn-section'}>
-              <div className={'form__btn'}>
-                <button onClick={() => this.handleClick()}>Wstecz</button>
-              </div>
-              <div className={'form__btn'}>
-                <button onClick={() => this.handleSubmit()}>Potwierdzam</button>
-              </div>
+              <FormBtn onHandleClick={() => this.handleClick()} onHandleSubmit={(event) => this.handleSubmit(event)}/>
             </div>
           </div>
         </div>

@@ -30,7 +30,6 @@ class FormContainer extends Component{
         break
       }
       case 5: {
-
         form =
           <FirebaseContext.Consumer>
             {firebase => <FormSummary firebase={firebase} />}

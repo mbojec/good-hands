@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
+import {FormBtn} from "./FormBtn";
 
 class FormFirstStep extends Component{
 
@@ -7,7 +8,7 @@ class FormFirstStep extends Component{
     devotedThing: ''
   };
 
-  onHandleSubmit(e){
+  handleSubmit(e){
     e.preventDefault();
     this.props.onSaveData(this.state);
     this.props.onMoveNext();
@@ -25,7 +26,7 @@ class FormFirstStep extends Component{
         </div>
         <div className={'form__input-section'}>
           <p className={'form__input-section__title'}>Zaznacz co chesz oddać:</p>
-          <form onChange={ (e) => this.onChange(e)} onSubmit={event => this.onHandleSubmit(event)}>
+          <form onChange={ (e) => this.onChange(e)} onSubmit={event => this.handleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={"form__checkbox__container"}>
                 <input type={'radio'} name={'devotedThing'} id={'clothes'} value={'ubrania, które nadaja się do ponownego użycia'}/>
@@ -54,9 +55,7 @@ class FormFirstStep extends Component{
               </div>
             </div>
             <div className={'form__btn-section'}>
-              <div className={'form__btn'}>
-                <input disabled={!this.state.devotedThing.length > 0} type={'submit'} value={'Dalej'}/>
-              </div>
+              <FormBtn disabled={!this.state.devotedThing.length > 0} onHandleSubmit={(event) => this.handleSubmit(event)}/>
             </div>
           </form>
         </div>
