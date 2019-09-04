@@ -1,8 +1,17 @@
 import React, {Component} from "react";
 import {HomeContact} from "../Home";
 import {FormIntro, FormContainer, FormInfoStrap} from "../Form";
+import {compose} from "recompose";
+import {withRedux} from "../../store/wrapper";
+import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
-export class Form extends Component{
+class Form extends Component{
+
+  componentDidMount() {
+    !this.props.login && this.props.history.push({pathname: '/logowanie'});
+  }
+
   render() {
     return(
       <>
@@ -18,3 +27,10 @@ export class Form extends Component{
     )
   }
 }
+Form.propTypes = {
+  login: PropTypes.bool,
+  history: PropTypes.object
+};
+
+const FormHoc = compose(withRedux, withRouter)(Form);
+export {FormHoc as Form}
