@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
+import {FormBtn, FormSelectSection} from "./";
+import PropTypes from "prop-types";
 
 class FormThirdStep extends Component{
 
@@ -27,7 +29,6 @@ class FormThirdStep extends Component{
   }
 
   handleSubmit(event) {
-    console.log(this.state);
     event.preventDefault();
     this.props.onSaveData({organizationName: this.state.organizationName,
       targetGroup:this.state.targetGroup, foundationCity: this.state.foundationCity});
@@ -45,7 +46,6 @@ class FormThirdStep extends Component{
 
 
   render() {
-    console.log(this.state);
     return(
       <>
         <div className={'form__num-section'}>
@@ -56,14 +56,7 @@ class FormThirdStep extends Component{
           <form onSubmit={event => this.handleSubmit(event)}>
             <div className={'form__input-section__checkbox-section'}>
               <div className={'form__select-container'}>
-                  <select value={this.state.foundationCity} onChange={ (e) => this.handleSelect(e)}>
-                    <option value={""}>-- wybierz --</option>
-                    <option value={"Poznań"}>Poznań</option>
-                    <option value={"Warszawa"}>Warszawa</option>
-                    <option value={'Kraków'}>Kraków</option>
-                    <option value={"Katowice"}>Katowice</option>
-                    <option value={'Wrocław'}>Wrocław</option>
-                  </select>
+                  <FormSelectSection value={this.state.foundationCity} onHandleSelect={(event) => this.handleSelect(event)}/>
               </div>
               <label className={'form__input-section__subtitle'}>Komu chesz pomóc?</label>
               <div className={'form__target__section'}>
@@ -92,12 +85,7 @@ class FormThirdStep extends Component{
               <input type={'text'} value={this.state.organizationName} className={'organization-input form__input-section__organization'} onChange={event => this.handleInput(event)}/>
             </div>
             <div className={'form__btn-section'}>
-              <div className={'form__btn'}>
-                <button onClick={() => this.handleClick()} >Wstecz</button>
-              </div>
-              <div className={'form__btn'}>
-                <input type={'submit'} value={'Dalej'} disabled={!this.isDataValid()}/>
-              </div>
+              <FormBtn disabled={!this.isDataValid()} onHandleClick={() => this.handleClick()} onHandleSubmit={(event) => this.handleSubmit(event)}/>
             </div>
           </form>
         </div>
@@ -106,5 +94,11 @@ class FormThirdStep extends Component{
   }
 }
 
-const connectedComponent = withRedux(FormThirdStep);
-export {connectedComponent as FormThirdStep}
+FormThirdStep.propTypes = {
+  onSaveData: PropTypes.func,
+  onMoveNext: PropTypes.func,
+  onMovePrev: PropTypes.func
+};
+
+const FormThirdStepHoc = withRedux(FormThirdStep);
+export {FormThirdStepHoc as FormThirdStep}

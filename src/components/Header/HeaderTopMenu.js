@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 import { Link as ScrollLink, scroller} from 'react-scroll';
 import {withRedux} from "../../store/wrapper";
 import { withRouter } from 'react-router-dom';
+import {withFirebase} from "../../firebase";
+import {compose} from "recompose";
+import PropTypes from "prop-types";
 
 class HeaderTopMenu extends Component{
 
@@ -20,6 +23,7 @@ class HeaderTopMenu extends Component{
     this.setState({sectionToScroll: destination})
   }
 
+  // eslint-disable-next-line no-unused-vars
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.state.sectionToScroll.length > 1){
       scroller.scrollTo(this.state.sectionToScroll, {
@@ -82,6 +86,13 @@ class HeaderTopMenu extends Component{
   }
 }
 
-const wrappedComponent = withRouter(HeaderTopMenu);
-const connectedComponent = withRedux(wrappedComponent);
-export {connectedComponent as HeaderTopMenu}
+HeaderTopMenu.propTypes = {
+  history: PropTypes.object,
+  firebase: PropTypes.object,
+  userEmail: PropTypes.string,
+  login: PropTypes.bool,
+  onLogout: PropTypes.func
+};
+
+const HeaderTopMenuHoc = compose(withRedux, withRouter, withFirebase)(HeaderTopMenu);
+export {HeaderTopMenuHoc as HeaderTopMenu}

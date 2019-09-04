@@ -133,7 +133,9 @@
     background-repeat: no-repeat;
     background-position: 100%;
     background-image: url("../assets/svg/Icon-Arrow-Down.svg");
-
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 
@@ -196,6 +198,12 @@
     display:inline-block;
     width: 100%;
   }
+
+  label{
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }
 
 .form__btn-section{
@@ -220,6 +228,10 @@
     height: 100%;
     width: 100%;
     border: 0;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 

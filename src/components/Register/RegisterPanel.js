@@ -1,8 +1,11 @@
 import React, {Component} from "react";
 import {Decoration} from "../../assets/svg";
 import {Link} from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import {withRedux} from "../../store/wrapper";
+import {withFirebase} from "../../firebase";
+import { compose } from "recompose";
+import PropTypes from "prop-types";
 
 const INITIAL_STATE = {
   password: '',
@@ -42,6 +45,7 @@ class RegisterPanel extends Component{
   }
 
   handleEmailValidation(){
+    // eslint-disable-next-line no-useless-escape
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = re.test(String(this.state.email).toLowerCase());
     this.setState({emailValidationError: !emailValidation,})
@@ -52,7 +56,6 @@ class RegisterPanel extends Component{
     const repeatedPasswordValidation = this.state.repeatedPasswordValidationError;
     const emailValidation = this.state.emailValidationError;
     if(!passwordValidation && !emailValidation && !repeatedPasswordValidation){
-      console.log('proper validation');
       this.props.firebase
         .doCreateUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(authUser => {
@@ -62,8 +65,7 @@ class RegisterPanel extends Component{
           this.setState({ ...INITIAL_STATE });
           this.props.history.push({pathname:'/'})
         })
-        .catch(error => {
-          console.log(error);
+        .catch(() => {
           this.setState({
             password: '',
             repeatedPassword:'',
@@ -96,17 +98,17 @@ class RegisterPanel extends Component{
           <div className={'login-form__form'}>
             <div className={'login-form__form__email'}>
               <label className={'login-form__form__label'}>Email</label>
-              <input onBlur={event => this.handleEmailValidation()} value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={() => this.handleEmailValidation()} value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
               {this.state.emailValidationError && <label className={'login-form__form__label--error'}>Podany email jest nieprawidłowy!</label>}
             </div>
             <div className={'login-form__form__password'}>
               <label className={'login-form__form__label'}>Hasło</label>
-              <input onBlur={event => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={() => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
               {this.state.passwordValidationError && <label className={'login-form__form__label--error'}>Podane hasło jest za krótkie!</label>}
             </div>
             <div className={'login-form__form__repeated-password'}>
               <label className={'login-form__form__label'}>Powtórz hasło</label>
-              <input onBlur={event => this.handleRepeatedPasswordValidation()} value={this.state.repeatedPassword} onChange={e => this.handleChange(e)} type={'password'} name={'repeatedPassword'} className={`login-form__form__input ${this.state.repeatedPasswordValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={() => this.handleRepeatedPasswordValidation()} value={this.state.repeatedPassword} onChange={e => this.handleChange(e)} type={'password'} name={'repeatedPassword'} className={`login-form__form__input ${this.state.repeatedPasswordValidationError && "login-form__form__input--error"}`}/>
               {this.state.repeatedPasswordValidationError && <label className={'login-form__form__label--error'}>Podane hasło nie zgadza się!</label>}
             </div>
           </div>
@@ -120,6 +122,12 @@ class RegisterPanel extends Component{
   }
 }
 
-const connectedComponent = withRedux(RegisterPanel);
-const wrappedComponent = withRouter(connectedComponent);
-export {wrappedComponent as RegisterPanel}
+RegisterPanel.propTypes = {
+  history: PropTypes.object,
+  onSetUid: PropTypes.func,
+  onLogin: PropTypes.func,
+  firebase: PropTypes.node,
+};
+
+const RegisterPanelHoc = compose(withFirebase, withRedux, withRouter)(RegisterPanel);
+export {RegisterPanelHoc as RegisterPanel}

@@ -23,5 +23,5 @@ class FormIntro extends Component{
   }
 }
 
-const connectedComponent = withRedux(FormIntro);
-export {connectedComponent as FormIntro}
+const FormIntroHoc = withRedux(FormIntro);
+export {FormIntroHoc as FormIntro}

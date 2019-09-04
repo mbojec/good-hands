@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
+import PropTypes from 'prop-types';
 
 class HomeThreeColumns extends Component{
     render() {
@@ -35,5 +36,11 @@ class HomeThreeColumns extends Component{
     }
 }
 
-const connectedComponent = withRedux(HomeThreeColumns);
-export {connectedComponent as HomeThreeColumns}
+HomeThreeColumns.propTypes = {
+  bags: PropTypes.number,
+  organizations: PropTypes.number,
+  founds: PropTypes.number,
+};
+
+const HomeThreeColumnsHoc = withRedux(HomeThreeColumns);
+export {HomeThreeColumnsHoc as HomeThreeColumns}
