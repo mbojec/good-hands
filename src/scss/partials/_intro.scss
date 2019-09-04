@@ -51,6 +51,9 @@
   text-align: center;
   margin: 0 22px;
   color: $color-dark;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .intro__dsc-section{

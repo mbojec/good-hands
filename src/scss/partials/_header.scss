@@ -55,6 +55,9 @@
   a{
     color: $color-dark;
   }
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .header__top-menu__navigation__btn--pressed{
