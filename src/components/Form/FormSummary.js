@@ -4,6 +4,7 @@ import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
 import {withFirebase} from "../../firebase";
 import {compose} from "recompose";
+import PropTypes from "prop-types";
 
 const FormSummary = (props) => {
 
@@ -86,6 +87,24 @@ const FormSummary = (props) => {
       </div>
     </>
   )
+};
+
+FormSummary.propTypes = {
+  street: PropTypes.string,
+  city: PropTypes.string,
+  postalCode: PropTypes.string,
+  phoneNumber: PropTypes.string,
+  date: PropTypes.string,
+  time: PropTypes.string,
+  comments: PropTypes.string,
+  numberOfBags: PropTypes.string,
+  devotedThing: PropTypes.string,
+  targetGroup: PropTypes.string,
+  foundationCity: PropTypes.string,
+  onMoveNext: PropTypes.func,
+  onMovePrev: PropTypes.func,
+  firebase: PropTypes.object,
+  uid: PropTypes.string
 };
 
 const FormSummaryHoc = compose(withFirebase, withRedux)(FormSummary);

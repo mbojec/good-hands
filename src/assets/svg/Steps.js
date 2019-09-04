@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Steps = props => {
+const Steps = () => {
   if (window.innerWidth > 1600){
     return <StepsLarge/>;
   } else if(window.innerWidth > 1200){

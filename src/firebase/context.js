@@ -4,6 +4,7 @@ const FirebaseContext = React.createContext(null);
 
 export default FirebaseContext;
 
+// eslint-disable-next-line react/display-name
 export const withFirebase = Component => props => (
   <FirebaseContext.Consumer>
     {firebase => <Component {...props} firebase={firebase} />}

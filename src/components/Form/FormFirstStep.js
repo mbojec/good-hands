@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
+import PropTypes from "prop-types";
 
 class FormFirstStep extends Component{
 
@@ -63,6 +64,11 @@ class FormFirstStep extends Component{
     )
   }
 }
+
+FormFirstStep.propTypes = {
+  onSaveData: PropTypes.func,
+  onMoveNext: PropTypes.func
+};
 
 const FormFirstStepHoc = withRedux(FormFirstStep);
 export {FormFirstStepHoc as FormFirstStep}

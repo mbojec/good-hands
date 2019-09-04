@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
+import PropTypes from "prop-types";
 
 class FormInfoStrap extends Component{
 
@@ -38,6 +39,10 @@ class FormInfoStrap extends Component{
     return content
   }
 }
+
+FormInfoStrap.propTypes = {
+  formStep: PropTypes.number
+};
 
 const FormInfoStrapHoc = withRedux(FormInfoStrap);
 export {FormInfoStrapHoc as FormInfoStrap}

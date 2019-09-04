@@ -88,6 +88,9 @@
     height: 50px;
     @include btn-border($color-dark);
     background-color: transparent;
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 
@@ -95,4 +98,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
+
+  * {
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }

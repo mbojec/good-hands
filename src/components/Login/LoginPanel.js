@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import {withRedux} from "../../store/wrapper";
 import {withFirebase} from "../../firebase";
 import {compose} from "recompose";
+import PropTypes from "prop-types";
 
 
 const INITIAL_STATE = {
@@ -42,6 +43,7 @@ class LoginPanel extends Component{
   }
 
   handleEmailValidation(){
+    // eslint-disable-next-line no-useless-escape
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = re.test(String(this.state.email).toLowerCase());
     this.setState({emailValidationError: !emailValidation,})
@@ -59,8 +61,7 @@ class LoginPanel extends Component{
           this.setState({ ...INITIAL_STATE });
           this.props.history.push({pathname:'/'})
         })
-        .catch(error => {
-          console.log(error);
+        .catch(() => {
           this.setState({
             password: '',
             repeatedPassword:'',
@@ -90,12 +91,12 @@ class LoginPanel extends Component{
           <div className={'login-form__form'}>
             <div className={'login-form__form__email'}>
               <label className={'login-form__form__label'}>Email</label>
-              <input onBlur={event => this.handleEmailValidation()} value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={() => this.handleEmailValidation()} value={this.state.email} onChange={e => this.handleChange(e)} type={'text'} name={'email'} className={`login-form__form__input ${this.state.emailValidationError && "login-form__form__input--error"}`}/>
               {this.state.emailValidationError && <label className={'login-form__form__label--error'}>Podany email jest nieprawidłowy!</label>}
             </div>
             <div className={'login-form__form__password'}>
               <label className={'login-form__form__label'}>Hasło</label>
-              <input onBlur={event => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
+              <input onBlur={() => this.handlePasswordValidation()} value={this.state.password} onChange={e => this.handleChange(e)} type={'password'} name={'password'} className={`login-form__form__input ${this.state.passwordValidationError && "login-form__form__input--error"}`}/>
               {this.state.passwordValidationError && <label className={'login-form__form__label--error'}>Podane hasło albo email jest nieprawidłowe !</label>}
             </div>
           </div>
@@ -108,6 +109,12 @@ class LoginPanel extends Component{
     )
   }
 }
+LoginPanel.propTypes = {
+  firebase: PropTypes.object,
+  history: PropTypes.object,
+  onSetUid: PropTypes.func,
+  onLogin: PropTypes.func
+};
 
 const LoginPanelHoc = compose(withFirebase, withRedux, withRouter)(LoginPanel);
 export {LoginPanelHoc as LoginPanel}
