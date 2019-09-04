@@ -78,5 +78,5 @@ export class PaginationList extends Component{
 }
 
 PaginationList.propTypes = {
-  list: PropTypes.object,
+  list: PropTypes.any,
 };

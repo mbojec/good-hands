@@ -37,7 +37,7 @@ const FormSelectSection = ({onHandleSelect, value, formStep}) => {
 FormSelectSection.propTypes = {
   onHandleSelect: PropTypes.func,
   formStep: PropTypes.number,
-  value: PropTypes.object
+  value: PropTypes.any
 };
 
 const FormSelectSectionHoc = withRedux(FormSelectSection);

@@ -93,17 +93,17 @@ FormSummary.propTypes = {
   street: PropTypes.string,
   city: PropTypes.string,
   postalCode: PropTypes.string,
-  phoneNumber: PropTypes.number,
+  phoneNumber: PropTypes.string,
   date: PropTypes.string,
   time: PropTypes.string,
   comments: PropTypes.string,
-  numberOfBags: PropTypes.number,
+  numberOfBags: PropTypes.string,
   devotedThing: PropTypes.string,
   targetGroup: PropTypes.string,
   foundationCity: PropTypes.string,
   onMoveNext: PropTypes.func,
   onMovePrev: PropTypes.func,
-  firebase: PropTypes.node,
+  firebase: PropTypes.object,
   uid: PropTypes.string
 };
 

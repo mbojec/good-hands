@@ -63,9 +63,9 @@ class HomeWhoWeHelp extends Component{
 }
 
 HomeWhoWeHelp.propTypes = {
-  foundationsList: PropTypes.object,
-  organizationsList: PropTypes.object,
-  collectionsList: PropTypes.object,
+  foundationsList: PropTypes.any,
+  organizationsList: PropTypes.any,
+  collectionsList: PropTypes.any,
 };
 
 

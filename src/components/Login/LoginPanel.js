@@ -110,7 +110,7 @@ class LoginPanel extends Component{
   }
 }
 LoginPanel.propTypes = {
-  firebase: PropTypes.node,
+  firebase: PropTypes.object,
   history: PropTypes.object,
   onSetUid: PropTypes.func,
   onLogin: PropTypes.func
