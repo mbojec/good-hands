@@ -1,6 +1,7 @@
 import React from "react";
 import {Decoration} from "../../assets/svg";
 import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 const LogoutPanel = (props) => {
 
@@ -15,6 +16,10 @@ const LogoutPanel = (props) => {
         </div>
       </div>
     )
+};
+
+LogoutPanel.propTypes = {
+  history: PropTypes.object,
 };
 
 const LogoutPanelHoc = withRouter(LogoutPanel);

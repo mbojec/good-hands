@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRedux} from "../../store/wrapper";
+import PropTypes from "prop-types";
 
 const FormBtn = ({onHandleSubmit,onHandleClick, disabled, formStep}) => {
 
@@ -28,6 +29,13 @@ const FormBtn = ({onHandleSubmit,onHandleClick, disabled, formStep}) => {
     </>
   )
 
+};
+
+FormBtn.propTypes = {
+  onHandleSubmit: PropTypes.func,
+  onHandleClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  formStep: PropTypes.number
 };
 
 const FormBtnHoc = withRedux(FormBtn);

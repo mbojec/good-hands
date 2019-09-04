@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRedux} from "../../store/wrapper";
+import PropTypes from "prop-types";
 
 const FormSelectSection = ({onHandleSelect, value, formStep}) => {
 
@@ -31,6 +32,12 @@ const FormSelectSection = ({onHandleSelect, value, formStep}) => {
     </select>
   )
 
+};
+
+FormSelectSection.propTypes = {
+  onHandleSelect: PropTypes.func,
+  formStep: PropTypes.number,
+  value: PropTypes.object
 };
 
 const FormSelectSectionHoc = withRedux(FormSelectSection);

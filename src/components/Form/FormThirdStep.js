@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn, FormSelectSection} from "./";
+import PropTypes from "prop-types";
 
 class FormThirdStep extends Component{
 
@@ -28,7 +29,6 @@ class FormThirdStep extends Component{
   }
 
   handleSubmit(event) {
-    console.log(this.state);
     event.preventDefault();
     this.props.onSaveData({organizationName: this.state.organizationName,
       targetGroup:this.state.targetGroup, foundationCity: this.state.foundationCity});
@@ -46,7 +46,6 @@ class FormThirdStep extends Component{
 
 
   render() {
-    console.log(this.state);
     return(
       <>
         <div className={'form__num-section'}>
@@ -94,6 +93,12 @@ class FormThirdStep extends Component{
     )
   }
 }
+
+FormThirdStep.propTypes = {
+  onSaveData: PropTypes.func,
+  onMoveNext: PropTypes.func,
+  onMovePrev: PropTypes.func
+};
 
 const FormThirdStepHoc = withRedux(FormThirdStep);
 export {FormThirdStepHoc as FormThirdStep}

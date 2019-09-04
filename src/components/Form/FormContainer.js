@@ -1,6 +1,7 @@
 import React from "react";
 import {FormFirstStep, FormSecondStep, FormThirdStep, FormFourthStep, FormSummary, FormGratitude} from "./";
 import {withRedux} from "../../store/wrapper";
+import PropTypes from "prop-types";
 
 const FormContainer = (props) => {
 
@@ -37,6 +38,10 @@ const FormContainer = (props) => {
       <div className={'col-xs-7 col-sm-6 col-md-5'}/>
     </div>
   )
+};
+
+FormContainer.propTypes = {
+  formStep: PropTypes.number
 };
 
 const FormContainerHoc = withRedux(FormContainer);

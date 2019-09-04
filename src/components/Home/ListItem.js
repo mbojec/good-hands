@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function  ListItem({listItem}) {
     return(
@@ -14,3 +15,6 @@ export function  ListItem({listItem}) {
     )
   }
 
+ListItem.propTypes = {
+  listItem: PropTypes.object
+};

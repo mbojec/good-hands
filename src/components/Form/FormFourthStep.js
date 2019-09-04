@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {withRedux} from "../../store/wrapper";
 import {FormBtn} from "./";
+import PropTypes from "prop-types";
 
 class FormFourthStep extends Component{
 
@@ -19,7 +20,6 @@ class FormFourthStep extends Component{
   }
 
   handleSubmit(event) {
-    console.log(this.state);
     event.preventDefault();
     this.props.onSaveData(this.state);
     this.props.onMoveNext();
@@ -36,7 +36,6 @@ class FormFourthStep extends Component{
 
 
   render() {
-    console.log(this.state);
     return(
       <>
         <div className={'form__num-section'}>
@@ -90,6 +89,12 @@ class FormFourthStep extends Component{
     )
   }
 }
+
+FormFourthStep.propTypes = {
+  onSaveData: PropTypes.func,
+  onMovePrev: PropTypes.func,
+  onMoveNext: PropTypes.func
+};
 
 const FormFourthStepHoc = withRedux(FormFourthStep);
 export {FormFourthStepHoc as FormFourthStep}

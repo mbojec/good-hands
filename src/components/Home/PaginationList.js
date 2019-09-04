@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {ListItem} from "./ListItem";
+import PropTypes from "prop-types";
 
 export class PaginationList extends Component{
 
@@ -13,6 +14,7 @@ export class PaginationList extends Component{
     }
   }
 
+  // eslint-disable-next-line no-unused-vars
   componentDidUpdate(prevProps, prevState, snapshot) {
     if(this.state.list.length === 0){
       let list = this.createList();
@@ -74,3 +76,7 @@ export class PaginationList extends Component{
   }
 
 }
+
+PaginationList.propTypes = {
+  list: PropTypes.object,
+};

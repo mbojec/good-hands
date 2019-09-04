@@ -32,6 +32,7 @@ export class HomeContact extends Component{
   }
 
   handleEmailValidation(){
+    // eslint-disable-next-line no-useless-escape
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = re.test(String(this.state.email).toLowerCase());
     this.setState({emailValidationError: !emailValidation,})
@@ -93,17 +94,17 @@ export class HomeContact extends Component{
               <div className={'row'}>
                 <div className={'col-xs-6 contact-form-section__contact-form__input-section contact-form-section__contact-form__input-section__name'}>
                   <label>Wpisz swoje imię</label>
-                  <input onBlur={event => this.handleNameValidation()} name={'name'} className={'contact-form-section__contact-form__input'} type={'text'} placeholder={'Krzysztof'} value={this.state.name} onChange={e => this.handleChange(e)}/>
+                  <input onBlur={() => this.handleNameValidation()} name={'name'} className={'contact-form-section__contact-form__input'} type={'text'} placeholder={'Krzysztof'} value={this.state.name} onChange={e => this.handleChange(e)}/>
                 </div>
                 <div className={'col-xs-6 contact-form-section__contact-form__input-section'}>
                   <label>Wpisz swoje email</label>
-                  <input onBlur={event => this.handleEmailValidation()} name={'email'} className={'contact-form-section__contact-form__input'} type={'email'} placeholder={'abc@xyz.pl'} value={this.state.email} onChange={e => this.handleChange(e)}/>
+                  <input onBlur={() => this.handleEmailValidation()} name={'email'} className={'contact-form-section__contact-form__input'} type={'email'} placeholder={'abc@xyz.pl'} value={this.state.email} onChange={e => this.handleChange(e)}/>
                 </div>
                 <div className={'col-xs-6 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__name'}>{this.state.nameValidationError && <label>Podane imie jest nieprawidłowe!</label>}</div>
                 <div className={'col-xs-6 contact-form-section__contact-form__error-section'}>{ this.state.emailValidationError && <label>Poadany email jest nieprawidłowy!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__textarea-section'}>
                   <label>Wpisz swoją wiadomość</label>
-                  <textarea onBlur={event => this.handleMessageValidation()} name={'message'} rows={'4'} value={this.state.message} onChange={e => this.handleChange(e)} placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
+                  <textarea onBlur={() => this.handleMessageValidation()} name={'message'} rows={'4'} value={this.state.message} onChange={e => this.handleChange(e)} placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
                 </div>
                 <div className={'col-xs-12 contact-form-section__contact-form__error-section contact-form-section__contact-form__error-section__desc'}>{this.state.messageValidationError && <label>Wiadomość musi mieć conajmiej 120 znaków!</label>}</div>
                 <div className={'col-xs-12 contact-form-section__contact-form__sbm-btn'}>

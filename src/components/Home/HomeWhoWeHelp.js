@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {PaginationList} from "./PaginationList";
 import {Decoration} from "../../assets/svg";
 import {withRedux} from "../../store/wrapper";
+import PropTypes from "prop-types";
 
 class HomeWhoWeHelp extends Component{
 
@@ -60,6 +61,12 @@ class HomeWhoWeHelp extends Component{
     )
   }
 }
+
+HomeWhoWeHelp.propTypes = {
+  foundationsList: PropTypes.object,
+  organizationsList: PropTypes.object,
+  collectionsList: PropTypes.object,
+};
 
 
 const HomeWhoWeHelpHoc = withRedux(HomeWhoWeHelp);
