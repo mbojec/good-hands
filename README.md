@@ -8,13 +8,13 @@ The process of donating things is simple, a Person has to register in the databa
 ## Project structure
 
 ### Home screen
-<div align="center"><img src="https://github.com/mbojec/good-hands/blob/development/screenshots/Home.png?raw=true" width="100%"/></div>
+<div align="center"><img src="https://github.com/mbojec/good-hands/blob/master/screenshots/Home.png?raw=true" width="100%"/></div>
 
 ### Form screen
-<div align="center"><img src="https://github.com/mbojec/good-hands/blob/development/screenshots/Form.png?raw=true" width="100%"/></div>
+<div align="center"><img src="https://github.com/mbojec/good-hands/blob/master/screenshots/Form.png?raw=true" width="100%"/></div>
 
 ### Registration panel
-<div align="center"><img src="https://github.com/mbojec/good-hands/blob/development/screenshots/Register.png?raw=true" width="100%"/></div>
+<div align="center"><img src="https://github.com/mbojec/good-hands/blob/master/screenshots/Register.png?raw=true" width="100%"/></div>
 
 ## Building project
 
