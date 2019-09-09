@@ -1,12 +1,12 @@
-import React from "react";
-import {LoginPanel} from "../Login";
+import React from 'react';
+import { LoginPanel } from '../Login';
 
 export function Login() {
-    return(
-        <main>
-          <section className={'app-login-section'}>
-            <LoginPanel/>
-          </section>
-        </main>
-    )
+  return (
+    <main>
+      <section className={'app-login-section'}>
+        <LoginPanel />
+      </section>
+    </main>
+  );
 }

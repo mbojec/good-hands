@@ -1,16 +1,15 @@
-import React, {Component} from "react";
-import {withRedux} from "../../store/wrapper";
-import {FormBtn, FormSelectSection} from "./";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { withRedux } from '../../store/wrapper';
+import { FormBtn, FormSelectSection } from './';
+import PropTypes from 'prop-types';
 
-class FormSecondStep extends Component{
-
+class FormSecondStep extends Component {
   state = {
-    numberOfBags: 0
+    numberOfBags: 0,
   };
 
   handleChange(event) {
-    this.setState({numberOfBags: event.target.value});
+    this.setState({ numberOfBags: event.target.value });
   }
 
   handleSubmit(event) {
@@ -19,13 +18,12 @@ class FormSecondStep extends Component{
     this.props.onMoveNext();
   }
 
-  handleClick(){
+  handleClick() {
     this.props.onMovePrev();
   }
 
-
   render() {
-    return(
+    return (
       <>
         <div className={'form__num-section'}>
           <p>Krok 2/4</p>
@@ -37,25 +35,29 @@ class FormSecondStep extends Component{
               <div>
                 <label>Liczna 60l worków: </label>
                 <div className={'form__select-container'}>
-                  <FormSelectSection value={this.state.numberOfBags} onHandleSelect={(event) => this.handleChange(event)}/>
+                  <FormSelectSection value={this.state.numberOfBags} onHandleSelect={event => this.handleChange(event)} />
                 </div>
               </div>
             </div>
             <div className={'form__btn-section'}>
-              <FormBtn disabled={!this.state.numberOfBags > 0} onHandleClick={() => this.handleClick()} onHandleSubmit={(event) => this.handleSubmit(event)}/>
+              <FormBtn
+                disabled={!this.state.numberOfBags > 0}
+                onHandleClick={() => this.handleClick()}
+                onHandleSubmit={event => this.handleSubmit(event)}
+              />
             </div>
           </form>
         </div>
       </>
-    )
+    );
   }
 }
 
 FormSecondStep.propTypes = {
   onSaveData: PropTypes.func,
   onMoveNext: PropTypes.func,
-  onMovePrev: PropTypes.func
+  onMovePrev: PropTypes.func,
 };
 
 const FormSecondStepHoc = withRedux(FormSecondStep);
-export {FormSecondStepHoc as FormSecondStep}
+export { FormSecondStepHoc as FormSecondStep };

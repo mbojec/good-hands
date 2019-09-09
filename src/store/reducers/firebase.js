@@ -1,7 +1,7 @@
-import { FETCH_DATA, LOG_IN, LOG_OUT, SET_UID } from "../actions/firebase";
+import { FETCH_DATA, LOG_IN, LOG_OUT, SET_UID } from '../actions/firebase';
 
 const initialState = {
-  uid:'',
+  uid: '',
   numberOfBags: 0,
   numberOfOrganizations: 0,
   numberOfFounds: 0,
@@ -9,7 +9,7 @@ const initialState = {
   foundations: [],
   collections: [],
   login: false,
-  userEmail: ''
+  userEmail: '',
 };
 
 const firebase = (state = initialState, action) => {
@@ -17,27 +17,27 @@ const firebase = (state = initialState, action) => {
     case SET_UID:
       return {
         ...state,
-        uid: action.payload
+        uid: action.payload,
       };
 
     case FETCH_DATA:
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
       };
 
     case LOG_IN:
       return {
         ...state,
         login: true,
-        userEmail: action.userEmail
+        userEmail: action.userEmail,
       };
 
     case LOG_OUT:
       return {
         ...state,
         userEmail: '',
-        login: false
+        login: false,
       };
 
     default:
@@ -45,4 +45,4 @@ const firebase = (state = initialState, action) => {
   }
 };
 
-export {firebase};
+export { firebase };

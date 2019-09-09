@@ -1,1 +1,1 @@
-export {LogoutPanel} from './LogoutPanel'
+export { LogoutPanel } from './LogoutPanel';

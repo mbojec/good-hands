@@ -1,10 +1,10 @@
-.simple-steps-container{
+.simple-steps-container {
   width: 100%;
   height: 100%;
   background-color: white;
 }
 
-.simple-steps-title{
+.simple-steps-title {
   max-height: 110px;
   padding: 0 calc(100% * (1 / 14));
   @extend %center--column;
@@ -14,56 +14,55 @@
   }
 }
 
-.simple-steps-row{
+.simple-steps-row {
   background-color: $color-light;
   max-height: 325px;
 }
 
-.simple-steps-row__icons-container{
+.simple-steps-row__icons-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.simple-steps-row__single-icon-container{
+.simple-steps-row__single-icon-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  hr{
+  hr {
     margin: 10.5px 0;
     width: 70px;
   }
 }
 
-.simple-steps-row__single-icon-container__icon{
+.simple-steps-row__single-icon-container__icon {
   width: 83px;
   height: 83px;
 }
 
-.simple-steps-row__single-icon-container__title{
-
+.simple-steps-row__single-icon-container__title {
 }
 
-.simple-steps-row__single-icon-container__subtitle{
-
+.simple-steps-row__single-icon-container__subtitle {
 }
 
-.simple-steps-btn-section{
+.simple-steps-btn-section {
   padding: 0 calc(100% * (1 / 14));
-  @extend %center
+  @extend %center;
 }
 
-.simple-steps-btn-section__btn{
+.simple-steps-btn-section__btn {
   height: 120px;
   @include fluid-width(768px, 1400px, 240px, 310px);
   @include fluid-type(768px, 1400px, 30px, 36px);
+
   font-weight: 300;
   @include btn-border($color-dark);
   @extend %btn-bkg;
-  a{
+  a {
     color: $color-dark;
   }
 }

@@ -1,38 +1,42 @@
-.help-container{
+.help-container {
   @extend %container;
 }
 
-.help-title{
+.help-title {
   @include fluid-type(768px, 1900px, 18px, 38px);
   @extend %center--column;
+
   text-align: center;
 }
 
-.help-title__decoration{
+.help-title__decoration {
   margin-top: 25px;
   max-width: 253px;
 }
 
-.help-menu{
+.help-menu {
   @extend %center;
 }
 
-.help-menu__btn{
+.help-menu__btn {
   @include fluid-type(768px, 1400px, 20px, 24px);
+
   flex-grow: 1;
   @extend %btn-bkg;
+
   height: 79px;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
-.help-menu__btn--selected{
+.help-menu__btn--selected {
   @include btn-border($color-dark);
 }
 
-.help-foundations__desc{
+.help-foundations__desc {
   @include fluid-type(768px, 1400px, 18px, 22px);
+
   text-align: center;
   margin-top: 70px;
 }

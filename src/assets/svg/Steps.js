@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Steps = () => {
-  if (window.innerWidth > 1600){
-    return <StepsLarge/>;
-  } else if(window.innerWidth > 1200){
-    return <StepsRegular/>;
-  } else if(window.innerWidth > 1000){
-    return <StepsMedium/>;
+  if (window.innerWidth > 1600) {
+    return <StepsLarge />;
+  } else if (window.innerWidth > 1200) {
+    return <StepsRegular />;
+  } else if (window.innerWidth > 1000) {
+    return <StepsMedium />;
   } else {
-    return <StepsSmall/>;
+    return <StepsSmall />;
   }
 };
 
@@ -68,10 +68,7 @@ const StepsLarge = () => (
       <g className="prefix__page-1__steps-lg">
         <g className="prefix__page-1__steps-lg__-1">
           <g className="prefix__page-1__steps-lg__-1__rectangle-19-kopia-3">
-            <path
-              className="prefix__page-1__steps-lg__-1__rectangle-19-kopia-3__path"
-              d="M190 95.353L95.353 190 0 94.647 94.647 0z"
-            />
+            <path className="prefix__page-1__steps-lg__-1__rectangle-19-kopia-3__path" d="M190 95.353L95.353 190 0 94.647 94.647 0z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -79,69 +76,42 @@ const StepsLarge = () => (
               className="prefix__page-1__steps-lg__-1__rectangle-19-kopia-3__shape"
             />
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg__-1__wybierz-rzeczy"
-          >
-            <g
-              className="prefix__page-1__steps-lg__-1__wybierz-rzeczy__wybierz"
-              transform="translate(57.749 72)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg__-1__wybierz-rzeczy">
+            <g className="prefix__page-1__steps-lg__-1__wybierz-rzeczy__wybierz" transform="translate(57.749 72)">
               <use fill="#000" xlinkHref="#prefix__a" />
               <use fill="#3C3C3C" xlinkHref="#prefix__a" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg__-1__wybierz-rzeczy__rzeczy"
-              transform="translate(57.749 72)"
-            >
+            <g className="prefix__page-1__steps-lg__-1__wybierz-rzeczy__rzeczy" transform="translate(57.749 72)">
               <use fill="#000" xlinkHref="#prefix__b" />
               <use fill="#3C3C3C" xlinkHref="#prefix__b" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-lg__-1__-1-2">
-            <g
-              className="prefix__page-1__steps-lg__-1__-1-2__1"
-              transform="translate(87.606 19)"
-            >
+            <g className="prefix__page-1__steps-lg__-1__-1-2__1" transform="translate(87.606 19)">
               <use fill="#000" xlinkHref="#prefix__c" />
               <use fill="#3C3C3C" xlinkHref="#prefix__c" />
             </g>
           </g>
         </g>
         <g className="prefix__page-1__steps-lg__-2">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki"
-          >
-            <g
-              className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki__spakujje"
-              transform="translate(206.854 72)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki">
+            <g className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki__spakujje" transform="translate(206.854 72)">
               <use fill="#000" xlinkHref="#prefix__d" />
               <use fill="#3C3C3C" xlinkHref="#prefix__d" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki__wworki"
-              transform="translate(206.854 72)"
-            >
+            <g className="prefix__page-1__steps-lg__-2__spakuj-je-w-worki__wworki" transform="translate(206.854 72)">
               <use fill="#000" xlinkHref="#prefix__e" />
               <use fill="#3C3C3C" xlinkHref="#prefix__e" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-lg__-2__-2-2">
-            <g
-              className="prefix__page-1__steps-lg__-2__-2-2__2"
-              transform="translate(243.854 19)"
-            >
+            <g className="prefix__page-1__steps-lg__-2__-2-2__2" transform="translate(243.854 19)">
               <use fill="#000" xlinkHref="#prefix__f" />
               <use fill="#3C3C3C" xlinkHref="#prefix__f" />
             </g>
           </g>
           <g className="prefix__page-1__steps-lg__-2__rectangle-19-kopia-4">
-            <path
-              className="prefix__page-1__steps-lg__-2__rectangle-19-kopia-4__path"
-              d="M349 95.353L254.353 190 159 94.647 253.647 0z"
-            />
+            <path className="prefix__page-1__steps-lg__-2__rectangle-19-kopia-4__path" d="M349 95.353L254.353 190 159 94.647 253.647 0z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -151,39 +121,24 @@ const StepsLarge = () => (
           </g>
         </g>
         <g className="prefix__page-1__steps-lg__-3">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119"
-          >
-            <g
-              className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119__wybierz"
-              transform="translate(372.113 70)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119">
+            <g className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119__wybierz" transform="translate(372.113 70)">
               <use fill="#000" xlinkHref="#prefix__g" />
               <use fill="#3C3C3C" xlinkHref="#prefix__g" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119__fundacj\u0119"
-              transform="translate(372.113 70)"
-            >
+            <g className="prefix__page-1__steps-lg__-3__wybierz-fundacj\u0119__fundacj\u0119" transform="translate(372.113 70)">
               <use fill="#000" xlinkHref="#prefix__h" />
               <use fill="#3C3C3C" xlinkHref="#prefix__h" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-lg__-3__-3-2">
-            <g
-              className="prefix__page-1__steps-lg__-3__-3-2__3"
-              transform="translate(401.113 19)"
-            >
+            <g className="prefix__page-1__steps-lg__-3__-3-2__3" transform="translate(401.113 19)">
               <use fill="#000" xlinkHref="#prefix__i" />
               <use fill="#3C3C3C" xlinkHref="#prefix__i" />
             </g>
           </g>
           <g className="prefix__page-1__steps-lg__-3__rectangle-19-kopia-8">
-            <path
-              className="prefix__page-1__steps-lg__-3__rectangle-19-kopia-8__path"
-              d="M507 95.353L412.353 190 317 94.647 411.647 0z"
-            />
+            <path className="prefix__page-1__steps-lg__-3__rectangle-19-kopia-8__path" d="M507 95.353L412.353 190 317 94.647 411.647 0z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -193,39 +148,24 @@ const StepsLarge = () => (
           </g>
         </g>
         <g className="prefix__page-1__steps-lg__-4">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera"
-          >
-            <g
-              className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera__zam\xF3w"
-              transform="translate(536.394 72)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera">
+            <g className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera__zam\xF3w" transform="translate(536.394 72)">
               <use fill="#000" xlinkHref="#prefix__j" />
               <use fill="#3C3C3C" xlinkHref="#prefix__j" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera__kuriera"
-              transform="translate(536.394 72)"
-            >
+            <g className="prefix__page-1__steps-lg__-4__zam\xF3w-kuriera__kuriera" transform="translate(536.394 72)">
               <use fill="#000" xlinkHref="#prefix__k" />
               <use fill="#3C3C3C" xlinkHref="#prefix__k" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-lg__-4__-4-2">
-            <g
-              className="prefix__page-1__steps-lg__-4__-4-2__4"
-              transform="translate(557.394 19)"
-            >
+            <g className="prefix__page-1__steps-lg__-4__-4-2__4" transform="translate(557.394 19)">
               <use fill="#000" xlinkHref="#prefix__l" />
               <use fill="#3C3C3C" xlinkHref="#prefix__l" />
             </g>
           </g>
           <g className="prefix__page-1__steps-lg__-4__rectangle-19-kopia-9">
-            <path
-              className="prefix__page-1__steps-lg__-4__rectangle-19-kopia-9__path"
-              d="M663 95.353L568.353 190 473 94.647 567.647 0z"
-            />
+            <path className="prefix__page-1__steps-lg__-4__rectangle-19-kopia-9__path" d="M663 95.353L568.353 190 473 94.647 567.647 0z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -295,10 +235,7 @@ const StepsRegular = props => (
       <g className="prefix__page-1__steps-lg-copy">
         <g className="prefix__page-1__steps-lg-copy__-1">
           <g className="prefix__page-1__steps-lg-copy__-1__rectangle-19-kopia-3">
-            <path
-              className="prefix__page-1__steps-lg-copy__-1__rectangle-19-kopia-3__path"
-              d="M162.278 81.89l-80.414 80.351L.85 81.29 81.264.939z"
-            />
+            <path className="prefix__page-1__steps-lg-copy__-1__rectangle-19-kopia-3__path" d="M162.278 81.89l-80.414 80.351L.85 81.29 81.264.939z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -306,66 +243,36 @@ const StepsRegular = props => (
               className="prefix__page-1__steps-lg-copy__-1__rectangle-19-kopia-3__shape"
             />
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy__wybierz"
-              transform="translate(49.915 62.064)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy">
+            <g className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy__wybierz" transform="translate(49.915 62.064)">
               <use fill="#000" xlinkHref="#prefix__a" />
               <use fill="#3C3C3C" xlinkHref="#prefix__a" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy__rzeczy"
-              transform="translate(49.915 62.064)"
-            >
+            <g className="prefix__page-1__steps-lg-copy__-1__wybierz-rzeczy__rzeczy" transform="translate(49.915 62.064)">
               <use fill="#000" xlinkHref="#prefix__b" />
               <use fill="#3C3C3C" xlinkHref="#prefix__b" />
             </g>
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-1__-1-2"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-1__-1-2__1"
-              transform="translate(75.282 17.07)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-1__-1-2">
+            <g className="prefix__page-1__steps-lg-copy__-1__-1-2__1" transform="translate(75.282 17.07)">
               <use fill="#000" xlinkHref="#prefix__c" />
               <use fill="#3C3C3C" xlinkHref="#prefix__c" />
             </g>
           </g>
         </g>
         <g className="prefix__page-1__steps-lg-copy__-2">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki__spakujje"
-              transform="translate(176.597 62.064)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki">
+            <g className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki__spakujje" transform="translate(176.597 62.064)">
               <use fill="#000" xlinkHref="#prefix__d" />
               <use fill="#3C3C3C" xlinkHref="#prefix__d" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki__wworki"
-              transform="translate(176.597 62.064)"
-            >
+            <g className="prefix__page-1__steps-lg-copy__-2__spakuj-je-w-worki__wworki" transform="translate(176.597 62.064)">
               <use fill="#000" xlinkHref="#prefix__e" />
               <use fill="#3C3C3C" xlinkHref="#prefix__e" />
             </g>
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-2__-2-2"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-2__-2-2__2"
-              transform="translate(208.033 17.07)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-2__-2-2">
+            <g className="prefix__page-1__steps-lg-copy__-2__-2-2__2" transform="translate(208.033 17.07)">
               <use fill="#000" xlinkHref="#prefix__f" />
               <use fill="#3C3C3C" xlinkHref="#prefix__f" />
             </g>
@@ -384,33 +291,18 @@ const StepsRegular = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-lg-copy__-3">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119__wybierz"
-              transform="translate(317.006 60.366)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119">
+            <g className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119__wybierz" transform="translate(317.006 60.366)">
               <use fill="#000" xlinkHref="#prefix__g" />
               <use fill="#3C3C3C" xlinkHref="#prefix__g" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119__fundacj\u0119"
-              transform="translate(317.006 60.366)"
-            >
+            <g className="prefix__page-1__steps-lg-copy__-3__wybierz-fundacj\u0119__fundacj\u0119" transform="translate(317.006 60.366)">
               <use fill="#000" xlinkHref="#prefix__h" />
               <use fill="#3C3C3C" xlinkHref="#prefix__h" />
             </g>
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-3__-3-2"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-3__-3-2__3"
-              transform="translate(341.645 17.07)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-3__-3-2">
+            <g className="prefix__page-1__steps-lg-copy__-3__-3-2__3" transform="translate(341.645 17.07)">
               <use fill="#000" xlinkHref="#prefix__i" />
               <use fill="#3C3C3C" xlinkHref="#prefix__i" />
             </g>
@@ -429,33 +321,18 @@ const StepsRegular = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-lg-copy__-4">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera__zam\xF3w"
-              transform="translate(456.582 62.064)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera">
+            <g className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera__zam\xF3w" transform="translate(456.582 62.064)">
               <use fill="#000" xlinkHref="#prefix__j" />
               <use fill="#3C3C3C" xlinkHref="#prefix__j" />
             </g>
-            <g
-              className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera__kuriera"
-              transform="translate(456.582 62.064)"
-            >
+            <g className="prefix__page-1__steps-lg-copy__-4__zam\xF3w-kuriera__kuriera" transform="translate(456.582 62.064)">
               <use fill="#000" xlinkHref="#prefix__k" />
               <use fill="#3C3C3C" xlinkHref="#prefix__k" />
             </g>
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-lg-copy__-4__-4-2"
-          >
-            <g
-              className="prefix__page-1__steps-lg-copy__-4__-4-2__4"
-              transform="translate(474.425 17.07)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-lg-copy__-4__-4-2">
+            <g className="prefix__page-1__steps-lg-copy__-4__-4-2__4" transform="translate(474.425 17.07)">
               <use fill="#000" xlinkHref="#prefix__l" />
               <use fill="#3C3C3C" xlinkHref="#prefix__l" />
             </g>
@@ -534,10 +411,7 @@ const StepsMedium = props => (
       <g className="prefix__page-1__steps-md">
         <g className="prefix__page-1__steps-md__-1">
           <g className="prefix__page-1__steps-md__-1__rectangle-19-kopia-3">
-            <path
-              className="prefix__page-1__steps-md__-1__rectangle-19-kopia-3__path"
-              d="M143.322 72.344L72.301 143.33.751 71.815 71.771.829z"
-            />
+            <path className="prefix__page-1__steps-md__-1__rectangle-19-kopia-3__path" d="M143.322 72.344L72.301 143.33.751 71.815 71.771.829z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -545,69 +419,42 @@ const StepsMedium = props => (
               className="prefix__page-1__steps-md__-1__rectangle-19-kopia-3__shape"
             />
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-md__-1__wybierz-rzeczy"
-          >
-            <g
-              className="prefix__page-1__steps-md__-1__wybierz-rzeczy__wybierz"
-              transform="translate(44.084 54.83)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-md__-1__wybierz-rzeczy">
+            <g className="prefix__page-1__steps-md__-1__wybierz-rzeczy__wybierz" transform="translate(44.084 54.83)">
               <use fill="#000" xlinkHref="#prefix__a" />
               <use fill="#3C3C3C" xlinkHref="#prefix__a" />
             </g>
-            <g
-              className="prefix__page-1__steps-md__-1__wybierz-rzeczy__rzeczy"
-              transform="translate(44.084 54.83)"
-            >
+            <g className="prefix__page-1__steps-md__-1__wybierz-rzeczy__rzeczy" transform="translate(44.084 54.83)">
               <use fill="#000" xlinkHref="#prefix__b" />
               <use fill="#3C3C3C" xlinkHref="#prefix__b" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-md__-1__-1-2">
-            <g
-              className="prefix__page-1__steps-md__-1__-1-2__1"
-              transform="translate(66.488 15.08)"
-            >
+            <g className="prefix__page-1__steps-md__-1__-1-2__1" transform="translate(66.488 15.08)">
               <use fill="#000" xlinkHref="#prefix__c" />
               <use fill="#3C3C3C" xlinkHref="#prefix__c" />
             </g>
           </g>
         </g>
         <g className="prefix__page-1__steps-md__-2">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-md__-2__spakuj-je-w-worki"
-          >
-            <g
-              className="prefix__page-1__steps-md__-2__spakuj-je-w-worki__spakujje"
-              transform="translate(155.969 54.83)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-md__-2__spakuj-je-w-worki">
+            <g className="prefix__page-1__steps-md__-2__spakuj-je-w-worki__spakujje" transform="translate(155.969 54.83)">
               <use fill="#000" xlinkHref="#prefix__d" />
               <use fill="#3C3C3C" xlinkHref="#prefix__d" />
             </g>
-            <g
-              className="prefix__page-1__steps-md__-2__spakuj-je-w-worki__wworki"
-              transform="translate(155.969 54.83)"
-            >
+            <g className="prefix__page-1__steps-md__-2__spakuj-je-w-worki__wworki" transform="translate(155.969 54.83)">
               <use fill="#000" xlinkHref="#prefix__e" />
               <use fill="#3C3C3C" xlinkHref="#prefix__e" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-md__-2__-2-2">
-            <g
-              className="prefix__page-1__steps-md__-2__-2-2__2"
-              transform="translate(183.733 15.08)"
-            >
+            <g className="prefix__page-1__steps-md__-2__-2-2__2" transform="translate(183.733 15.08)">
               <use fill="#000" xlinkHref="#prefix__f" />
               <use fill="#3C3C3C" xlinkHref="#prefix__f" />
             </g>
           </g>
           <g className="prefix__page-1__steps-md__-2__rectangle-19-kopia-4">
-            <path
-              className="prefix__page-1__steps-md__-2__rectangle-19-kopia-4__path"
-              d="M262.632 72.344l-71.021 70.986-71.55-71.515L191.081.829z"
-            />
+            <path className="prefix__page-1__steps-md__-2__rectangle-19-kopia-4__path" d="M262.632 72.344l-71.021 70.986-71.55-71.515L191.081.829z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -617,39 +464,24 @@ const StepsMedium = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-md__-3">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119"
-          >
-            <g
-              className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119__wybierz"
-              transform="translate(279.975 53.33)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119">
+            <g className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119__wybierz" transform="translate(279.975 53.33)">
               <use fill="#000" xlinkHref="#prefix__g" />
               <use fill="#3C3C3C" xlinkHref="#prefix__g" />
             </g>
-            <g
-              className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119__fundacj\u0119"
-              transform="translate(279.975 53.33)"
-            >
+            <g className="prefix__page-1__steps-md__-3__wybierz-fundacj\u0119__fundacj\u0119" transform="translate(279.975 53.33)">
               <use fill="#000" xlinkHref="#prefix__h" />
               <use fill="#3C3C3C" xlinkHref="#prefix__h" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-md__-3__-3-2">
-            <g
-              className="prefix__page-1__steps-md__-3__-3-2__3"
-              transform="translate(301.736 15.08)"
-            >
+            <g className="prefix__page-1__steps-md__-3__-3-2__3" transform="translate(301.736 15.08)">
               <use fill="#000" xlinkHref="#prefix__i" />
               <use fill="#3C3C3C" xlinkHref="#prefix__i" />
             </g>
           </g>
           <g className="prefix__page-1__steps-md__-3__rectangle-19-kopia-8">
-            <path
-              className="prefix__page-1__steps-md__-3__rectangle-19-kopia-8__path"
-              d="M381.191 72.344L310.17 143.33l-71.55-71.515L309.64.829z"
-            />
+            <path className="prefix__page-1__steps-md__-3__rectangle-19-kopia-8__path" d="M381.191 72.344L310.17 143.33l-71.55-71.515L309.64.829z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -659,39 +491,24 @@ const StepsMedium = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-md__-4">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera"
-          >
-            <g
-              className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera__zam\xF3w"
-              transform="translate(403.248 54.83)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera">
+            <g className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera__zam\xF3w" transform="translate(403.248 54.83)">
               <use fill="#000" xlinkHref="#prefix__j" />
               <use fill="#3C3C3C" xlinkHref="#prefix__j" />
             </g>
-            <g
-              className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera__kuriera"
-              transform="translate(403.248 54.83)"
-            >
+            <g className="prefix__page-1__steps-md__-4__zam\xF3w-kuriera__kuriera" transform="translate(403.248 54.83)">
               <use fill="#000" xlinkHref="#prefix__k" />
               <use fill="#3C3C3C" xlinkHref="#prefix__k" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-md__-4__-4-2">
-            <g
-              className="prefix__page-1__steps-md__-4__-4-2__4"
-              transform="translate(419.006 15.08)"
-            >
+            <g className="prefix__page-1__steps-md__-4__-4-2__4" transform="translate(419.006 15.08)">
               <use fill="#000" xlinkHref="#prefix__l" />
               <use fill="#3C3C3C" xlinkHref="#prefix__l" />
             </g>
           </g>
           <g className="prefix__page-1__steps-md__-4__rectangle-19-kopia-9">
-            <path
-              className="prefix__page-1__steps-md__-4__rectangle-19-kopia-9__path"
-              d="M498.25 72.344l-71.021 70.986-71.55-71.515L426.699.829z"
-            />
+            <path className="prefix__page-1__steps-md__-4__rectangle-19-kopia-9__path" d="M498.25 72.344l-71.021 70.986-71.55-71.515L426.699.829z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -761,10 +578,7 @@ const StepsSmall = props => (
       <g className="prefix__page-1__steps-sm">
         <g className="prefix__page-1__steps-sm__-1">
           <g className="prefix__page-1__steps-sm__-1__rectangle-19-kopia-3">
-            <path
-              className="prefix__page-1__steps-sm__-1__rectangle-19-kopia-3__path"
-              d="M95.643 48.229L48.248 95.553.5 47.876 47.895.553z"
-            />
+            <path className="prefix__page-1__steps-sm__-1__rectangle-19-kopia-3__path" d="M95.643 48.229L48.248 95.553.5 47.876 47.895.553z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -772,60 +586,36 @@ const StepsSmall = props => (
               className="prefix__page-1__steps-sm__-1__rectangle-19-kopia-3__shape"
             />
           </g>
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-sm__-1__wybierz-rzeczy"
-          >
-            <g
-              className="prefix__page-1__steps-sm__-1__wybierz-rzeczy__wybierz"
-              transform="translate(29.419 36.553)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-sm__-1__wybierz-rzeczy">
+            <g className="prefix__page-1__steps-sm__-1__wybierz-rzeczy__wybierz" transform="translate(29.419 36.553)">
               <use fill="#000" xlinkHref="#prefix__a" />
               <use fill="#3C3C3C" xlinkHref="#prefix__a" />
             </g>
-            <g
-              className="prefix__page-1__steps-sm__-1__wybierz-rzeczy__rzeczy"
-              transform="translate(29.419 36.553)"
-            >
+            <g className="prefix__page-1__steps-sm__-1__wybierz-rzeczy__rzeczy" transform="translate(29.419 36.553)">
               <use fill="#000" xlinkHref="#prefix__b" />
               <use fill="#3C3C3C" xlinkHref="#prefix__b" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-sm__-1__-1-2">
-            <g
-              className="prefix__page-1__steps-sm__-1__-1-2__1"
-              transform="translate(44.37 10.053)"
-            >
+            <g className="prefix__page-1__steps-sm__-1__-1-2__1" transform="translate(44.37 10.053)">
               <use fill="#000" xlinkHref="#prefix__c" />
               <use fill="#3C3C3C" xlinkHref="#prefix__c" />
             </g>
           </g>
         </g>
         <g className="prefix__page-1__steps-sm__-2">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki"
-          >
-            <g
-              className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki__spakujje"
-              transform="translate(104.084 36.553)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki">
+            <g className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki__spakujje" transform="translate(104.084 36.553)">
               <use fill="#000" xlinkHref="#prefix__d" />
               <use fill="#3C3C3C" xlinkHref="#prefix__d" />
             </g>
-            <g
-              className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki__wworki"
-              transform="translate(104.084 36.553)"
-            >
+            <g className="prefix__page-1__steps-sm__-2__spakuj-je-w-worki__wworki" transform="translate(104.084 36.553)">
               <use fill="#000" xlinkHref="#prefix__e" />
               <use fill="#3C3C3C" xlinkHref="#prefix__e" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-sm__-2__-2-2">
-            <g
-              className="prefix__page-1__steps-sm__-2__-2-2__2"
-              transform="translate(122.611 10.053)"
-            >
+            <g className="prefix__page-1__steps-sm__-2__-2-2__2" transform="translate(122.611 10.053)">
               <use fill="#000" xlinkHref="#prefix__f" />
               <use fill="#3C3C3C" xlinkHref="#prefix__f" />
             </g>
@@ -844,30 +634,18 @@ const StepsSmall = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-sm__-3">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119"
-          >
-            <g
-              className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119__wybierz"
-              transform="translate(186.837 35.553)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119">
+            <g className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119__wybierz" transform="translate(186.837 35.553)">
               <use fill="#000" xlinkHref="#prefix__g" />
               <use fill="#3C3C3C" xlinkHref="#prefix__g" />
             </g>
-            <g
-              className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119__fundacj\u0119"
-              transform="translate(186.837 35.553)"
-            >
+            <g className="prefix__page-1__steps-sm__-3__wybierz-fundacj\u0119__fundacj\u0119" transform="translate(186.837 35.553)">
               <use fill="#000" xlinkHref="#prefix__h" />
               <use fill="#3C3C3C" xlinkHref="#prefix__h" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-sm__-3__-3-2">
-            <g
-              className="prefix__page-1__steps-sm__-3__-3-2__3"
-              transform="translate(201.359 10.053)"
-            >
+            <g className="prefix__page-1__steps-sm__-3__-3-2__3" transform="translate(201.359 10.053)">
               <use fill="#000" xlinkHref="#prefix__i" />
               <use fill="#3C3C3C" xlinkHref="#prefix__i" />
             </g>
@@ -886,39 +664,24 @@ const StepsSmall = props => (
           </g>
         </g>
         <g className="prefix__page-1__steps-sm__-4">
-          <g
-            fillRule="nonzero"
-            className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera"
-          >
-            <g
-              className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera__zam\xF3w"
-              transform="translate(269.102 36.553)"
-            >
+          <g fillRule="nonzero" className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera">
+            <g className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera__zam\xF3w" transform="translate(269.102 36.553)">
               <use fill="#000" xlinkHref="#prefix__j" />
               <use fill="#3C3C3C" xlinkHref="#prefix__j" />
             </g>
-            <g
-              className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera__kuriera"
-              transform="translate(269.102 36.553)"
-            >
+            <g className="prefix__page-1__steps-sm__-4__zam\xF3w-kuriera__kuriera" transform="translate(269.102 36.553)">
               <use fill="#000" xlinkHref="#prefix__k" />
               <use fill="#3C3C3C" xlinkHref="#prefix__k" />
             </g>
           </g>
           <g fillRule="nonzero" className="prefix__page-1__steps-sm__-4__-4-2">
-            <g
-              className="prefix__page-1__steps-sm__-4__-4-2__4"
-              transform="translate(279.617 10.053)"
-            >
+            <g className="prefix__page-1__steps-sm__-4__-4-2__4" transform="translate(279.617 10.053)">
               <use fill="#000" xlinkHref="#prefix__l" />
               <use fill="#3C3C3C" xlinkHref="#prefix__l" />
             </g>
           </g>
           <g className="prefix__page-1__steps-sm__-4__rectangle-19-kopia-9">
-            <path
-              className="prefix__page-1__steps-sm__-4__rectangle-19-kopia-9__path"
-              d="M332.5 48.229l-47.395 47.324-47.748-47.677L284.752.553z"
-            />
+            <path className="prefix__page-1__steps-sm__-4__rectangle-19-kopia-9__path" d="M332.5 48.229l-47.395 47.324-47.748-47.677L284.752.553z" />
             <path
               fill="#3C3C3C"
               fillRule="nonzero"
@@ -932,6 +695,4 @@ const StepsSmall = props => (
   </svg>
 );
 
-
-
-export {Steps}
+export { Steps };

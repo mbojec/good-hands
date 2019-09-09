@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const FacebookIcon = () => (
   <svg width={30} height={30}>
@@ -6,13 +6,7 @@ const FacebookIcon = () => (
       <clipPath id="prefix__e">
         <path fill="none" d="M0 0h30v30H0z" />
       </clipPath>
-      <pattern
-        id="prefix__f"
-        preserveAspectRatio="xMidYMid slice"
-        width="100%"
-        height="100%"
-        viewBox="0 0 512 512"
-      >
+      <pattern id="prefix__f" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 512 512">
         <image
           width={512}
           height={512}
@@ -27,4 +21,4 @@ const FacebookIcon = () => (
   </svg>
 );
 
-export {FacebookIcon}
+export { FacebookIcon };

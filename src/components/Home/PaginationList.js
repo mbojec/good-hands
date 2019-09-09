@@ -1,38 +1,38 @@
-import React, {Component} from "react";
-import {ListItem} from "./ListItem";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { ListItem } from './ListItem';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-export class PaginationList extends Component{
-
-  constructor(props){
+export class PaginationList extends Component {
+  constructor(props) {
     super(props);
     let list = this.createList();
     this.state = {
       list: [...list],
       currentPage: 1,
-      itemsPerPage: 3
-    }
+      itemsPerPage: 3,
+    };
   }
 
   // eslint-disable-next-line no-unused-vars
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if(this.state.list.length === 0){
+    if (this.state.list.length === 0) {
       let list = this.createList();
-      this.setState({list: [...list]})
+      this.setState({ list: [...list] });
     }
   }
 
-  createList(){
+  createList() {
     const newList = [];
-    for(let key in this.props.list){
-      newList.push(this.props.list[key])
+    for (let key in this.props.list) {
+      newList.push(this.props.list[key]);
     }
     return newList;
   }
 
   handleClick(event) {
     this.setState({
-      currentPage: Number(event.target.id)
+      currentPage: Number(event.target.id),
     });
   }
 
@@ -43,7 +43,11 @@ export class PaginationList extends Component{
     const currentItems = list.slice(indexOfFirstItem, indexOfLastItem);
 
     const renderItems = currentItems.map((item, index) => {
-      return <li key={index}><ListItem listItem={item}/></li>;
+      return (
+        <li key={index}>
+          <ListItem listItem={item} />
+        </li>
+      );
     });
 
     const pageNumbers = [];
@@ -52,29 +56,29 @@ export class PaginationList extends Component{
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
-      if(pageNumbers.length <= 1){
+      const listItemClass = classNames({
+        'list-btn-section__btn': true,
+        'list-btn-section__btn--selected': this.state.currentPage === number,
+      });
+
+      if (pageNumbers.length <= 1) {
         return null;
       } else {
         return (
-          <li className={this.state.currentPage === number? 'list-btn-section__btn list-btn-section__btn--selected': 'list-btn-section__btn'} key={number} id={number} onClick={event => this.handleClick(event)}>
+          <li className={listItemClass} key={number} id={number} onClick={event => this.handleClick(event)}>
             {number}
           </li>
         );
       }
     });
 
-    return(
+    return (
       <div className={'list'}>
-        <ul className={'list-items-section'}>
-          {renderItems}
-        </ul>
-        <ul className={'list-btn-section'}>
-          {renderPageNumbers}
-        </ul>
+        <ul className={'list-items-section'}>{renderItems}</ul>
+        <ul className={'list-btn-section'}>{renderPageNumbers}</ul>
       </div>
-    )
+    );
   }
-
 }
 
 PaginationList.propTypes = {

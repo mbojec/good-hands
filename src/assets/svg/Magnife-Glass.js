@@ -1,21 +1,13 @@
-import React from "react";
+import React from 'react';
 
 function MagnifeGlass() {
   return (
-    <svg
-      viewBox="0 0 83 83"
-    >
+    <svg viewBox="0 0 83 83">
       <defs>
         <clipPath id="e">
           <path fill="none" d="M0 0H83V83H0z" />
         </clipPath>
-        <pattern
-          id="f"
-          width="100%"
-          height="100%"
-          preserveAspectRatio="xMidYMid slice"
-          viewBox="0 0 512 512"
-        >
+        <pattern id="f" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 512 512">
           <image
             width="512"
             height="512"
@@ -23,13 +15,7 @@ function MagnifeGlass() {
           />
         </pattern>
       </defs>
-      <g
-        fill="url(#f)"
-        stroke="rgba(0,0,0,0)"
-        strokeWidth="1"
-        clipPath="url(#e)"
-        data-name="Icon"
-      >
+      <g fill="url(#f)" stroke="rgba(0,0,0,0)" strokeWidth="1" clipPath="url(#e)" data-name="Icon">
         <path stroke="none" d="M0 0H83V83H0z" />
         <path fill="none" d="M0.5 0.5H82.5V82.5H0.5z" />
       </g>
@@ -37,4 +23,4 @@ function MagnifeGlass() {
   );
 }
 
-export {MagnifeGlass};
+export { MagnifeGlass };

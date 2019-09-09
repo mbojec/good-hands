@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import {logIn,logOut, setUid, fetchData} from "./actions/firebase";
-import {moveNext, movePrev, saveData} from "./actions/form";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { logIn, logOut, setUid, fetchData } from './actions/firebase';
+import { moveNext, movePrev, saveData } from './actions/form';
 
 export function withRedux(WrappedComponent) {
   class withReduxComponent extends Component {
     render() {
-      return <WrappedComponent {...this.props} />
+      return <WrappedComponent {...this.props} />;
     }
   }
 
   const mapDispatchToProps = dispatch => {
     return {
-      onSetUid: (uid) => dispatch(setUid(uid)),
-      onFetchData:(firebase) => dispatch(fetchData(firebase)),
-      onLogin: (userEmail) => dispatch(logIn(userEmail)),
+      onSetUid: uid => dispatch(setUid(uid)),
+      onFetchData: firebase => dispatch(fetchData(firebase)),
+      onLogin: userEmail => dispatch(logIn(userEmail)),
       onLogout: () => dispatch(logOut()),
-      onMoveNext:() => dispatch(moveNext()),
-      onMovePrev:() => dispatch(movePrev()),
-      onSaveData:(data) => dispatch(saveData(data))
-    }
+      onMoveNext: () => dispatch(moveNext()),
+      onMovePrev: () => dispatch(movePrev()),
+      onSaveData: data => dispatch(saveData(data)),
+    };
   };
 
   const mapStateToProps = state => {
@@ -45,9 +45,12 @@ export function withRedux(WrappedComponent) {
       comments: state.form.comments,
       organizationsList: state.firebase.organizations,
       foundationsList: state.firebase.foundations,
-      collectionsList: state.firebase.collections
-    }
+      collectionsList: state.firebase.collections,
+    };
   };
 
-  return connect(mapStateToProps, mapDispatchToProps)(withReduxComponent)
+  return connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(withReduxComponent);
 }
