@@ -3,6 +3,7 @@ import { PaginationList } from './PaginationList';
 import { Decoration } from '../../assets/svg';
 import { withRedux } from '../../store/wrapper';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class HomeWhoWeHelp extends Component {
   constructor(props) {
@@ -28,6 +29,11 @@ class HomeWhoWeHelp extends Component {
       currentList = this.props.collectionsList;
     }
 
+    const btnClass = classNames({
+      'help-menu__btn help-menu__btn--selected': this.state.currentList === 0,
+      'help-menu__btn': !this.state.currentList === 0,
+    });
+
     return (
       <div className={'help-container'}>
         <div className={'row--ful-height'}>
@@ -39,25 +45,13 @@ class HomeWhoWeHelp extends Component {
           </div>
           <div className={'col-xs-3'} />
           <div className={'col-xs-6 help-menu'}>
-            <button
-              id={0}
-              className={this.state.currentList === 0 ? 'help-menu__btn help-menu__btn--selected' : 'help-menu__btn'}
-              onClick={event => this.handleClick(event)}
-            >
+            <button id={0} className={btnClass} onClick={event => this.handleClick(event)}>
               Fundacjom
             </button>
-            <button
-              id={1}
-              className={this.state.currentList === 1 ? 'help-menu__btn help-menu__btn--selected' : 'help-menu__btn'}
-              onClick={event => this.handleClick(event)}
-            >
+            <button id={1} className={btnClass} onClick={event => this.handleClick(event)}>
               Organizacjom <br /> pozarządowym
             </button>
-            <button
-              id={2}
-              className={this.state.currentList === 2 ? 'help-menu__btn help-menu__btn--selected' : 'help-menu__btn'}
-              onClick={event => this.handleClick(event)}
-            >
+            <button id={2} className={btnClass} onClick={event => this.handleClick(event)}>
               Lokalnym <br /> zbiórkom
             </button>
           </div>

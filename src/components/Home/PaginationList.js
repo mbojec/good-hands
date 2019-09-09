@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ListItem } from './ListItem';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export class PaginationList extends Component {
   constructor(props) {
@@ -55,16 +56,16 @@ export class PaginationList extends Component {
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
+      const listItemClass = classNames({
+        'list-btn-section__btn': true,
+        'list-btn-section__btn--selected': this.state.currentPage === number,
+      });
+
       if (pageNumbers.length <= 1) {
         return null;
       } else {
         return (
-          <li
-            className={this.state.currentPage === number ? 'list-btn-section__btn list-btn-section__btn--selected' : 'list-btn-section__btn'}
-            key={number}
-            id={number}
-            onClick={event => this.handleClick(event)}
-          >
+          <li className={listItemClass} key={number} id={number} onClick={event => this.handleClick(event)}>
             {number}
           </li>
         );

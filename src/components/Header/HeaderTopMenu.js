@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { withFirebase } from '../../firebase';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class HeaderTopMenu extends Component {
   state = {
@@ -37,6 +38,18 @@ class HeaderTopMenu extends Component {
   }
 
   render() {
+    const loginBtnClass = classNames({
+      'header__top-menu__login-register__btn': true,
+      'header__top-menu__login-register__btn--login': true,
+      'header__top-menu__login-register__btn--pressed': this.props.login,
+    });
+
+    const logoutBtnClass = classNames({
+      'header__top-menu__login-register__btn': true,
+      'header__top-menu__login-register__btn--login': true,
+      'header__top-menu__login-register__btn--pressed': !this.props.login,
+    });
+
     return (
       <div className={'row'}>
         <div className={'col-xs-12 header__top-menu__login-register'}>
@@ -45,16 +58,10 @@ class HeaderTopMenu extends Component {
               <p>{`Cześć ${this.props.userEmail}`}</p>
             </div>
           )}
-          <button
-            className={`header__top-menu__login-register__btn header__top-menu__login-register__btn--login ${this.props.login &&
-              'header__top-menu__login-register__btn--pressed'}`}
-          >
+          <button className={loginBtnClass}>
             {this.props.login ? <Link to={'/oddaj-rzeczy'}>Oddaj rzeczy</Link> : <Link to={'/logowanie'}>Zaloguj</Link>}
           </button>
-          <button
-            className={`header__top-menu__login-register__btn header__top-menu__login-register__btn--login ${!this.props.login &&
-              'header__top-menu__login-register__btn--pressed'}`}
-          >
+          <button className={logoutBtnClass}>
             {this.props.login ? (
               <a href={'#'} onClick={() => this.logout()}>
                 Wyloguj

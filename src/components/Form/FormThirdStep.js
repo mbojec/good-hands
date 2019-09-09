@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRedux } from '../../store/wrapper';
 import { FormBtn, FormSelectSection } from './';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 class FormThirdStep extends Component {
   state = {
@@ -48,6 +49,13 @@ class FormThirdStep extends Component {
     );
   }
 
+  formCheckboxClass(condition) {
+    return classNames({
+      'form__checkbox__label--third': true,
+      'form__checkbox__label--third--selected': condition,
+    });
+  }
+
   render() {
     return (
       <>
@@ -64,19 +72,13 @@ class FormThirdStep extends Component {
               <label className={'form__input-section__subtitle'}>Komu chesz pomóc?</label>
               <div className={'form__target__section'}>
                 <div className={'form__checkbox__container'}>
-                  <label
-                    className={`form__checkbox__label--third ${this.state.children && 'form__checkbox__label--third--selected'}`}
-                    htmlFor={'dzieciom'}
-                  >
+                  <label className={this.formCheckboxClass(this.state.children)} htmlFor={'dzieciom'}>
                     dzieciom
                   </label>
                   <input type={'checkbox'} name={'devotedThing'} id={'dzieciom'} value={'children'} onChange={e => this.handleChange(e)} />
                 </div>
                 <div className={'form__checkbox__container'}>
-                  <label
-                    className={`form__checkbox__label--third ${this.state.singleMothers && 'form__checkbox__label--third--selected'}`}
-                    htmlFor={'samotnym matkom'}
-                  >
+                  <label className={this.formCheckboxClass(this.state.singleMothers)} htmlFor={'samotnym matkom'}>
                     samotnym matkom
                   </label>
                   <input
@@ -88,28 +90,19 @@ class FormThirdStep extends Component {
                   />
                 </div>
                 <div className={'form__checkbox__container'}>
-                  <label
-                    className={`form__checkbox__label--third ${this.state.homeless && 'form__checkbox__label--third--selected'}`}
-                    htmlFor={'bezdomnym'}
-                  >
+                  <label className={this.formCheckboxClass(this.state.homeless)} htmlFor={'bezdomnym'}>
                     bezdomnym
                   </label>
                   <input type={'checkbox'} name={'devotedThing'} id={'bezdomnym'} value={'homeless'} onChange={e => this.handleChange(e)} />
                 </div>
                 <div className={'form__checkbox__container'}>
-                  <label
-                    className={`form__checkbox__label--third ${this.state.handicap && 'form__checkbox__label--third--selected'}`}
-                    htmlFor={'niepoełnosprawnym'}
-                  >
+                  <label className={this.formCheckboxClass(this.state.handicap)} htmlFor={'niepoełnosprawnym'}>
                     niepoełnosprawnym
                   </label>
                   <input type={'checkbox'} name={'devotedThing'} value={'handicap'} id={'niepoełnosprawnym'} onChange={e => this.handleChange(e)} />
                 </div>
                 <div className={'form__checkbox__container'}>
-                  <label
-                    className={`form__checkbox__label--third ${this.state.elderPeople && 'form__checkbox__label--third--selected'}`}
-                    htmlFor={'osobom starszym'}
-                  >
+                  <label className={this.formCheckboxClass(this.state.elderPeople)} htmlFor={'osobom starszym'}>
                     osobom starszym
                   </label>
                   <input type={'checkbox'} name={'devotedThing'} id={'osobom starszym'} value={'elderPeople'} onChange={e => this.handleChange(e)} />
