@@ -1,1 +1,1 @@
-export {RegisterPanel} from './RegisterPanel'
+export { RegisterPanel } from './RegisterPanel';

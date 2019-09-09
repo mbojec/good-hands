@@ -9,7 +9,7 @@ const config = {
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 class Firebase {
@@ -19,33 +19,34 @@ class Firebase {
     this.db = app.database();
   }
 
-  doCreateUserWithEmailAndPassword = (email, password) =>
-    this.auth.createUserWithEmailAndPassword(email, password);
+  doCreateUserWithEmailAndPassword = (email, password) => this.auth.createUserWithEmailAndPassword(email, password);
 
-  doSignInWithEmailAndPassword = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+  doSignInWithEmailAndPassword = (email, password) => this.auth.signInWithEmailAndPassword(email, password);
 
   doSignOut = () => this.auth.signOut();
 
   doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
-  doPasswordUpdate = password =>
-    this.auth.currentUser.updatePassword(password);
+  doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
 
-  setUser = (uid, email) => this.db.ref(`users/${uid}`).set({
-    email: email,
-  });
+  setUser = (uid, email) =>
+    this.db.ref(`users/${uid}`).set({
+      email: email,
+    });
 
   getData = () => {
-    return this.db.ref('/data').once('value').then(function(snapshot) {
-      return (snapshot.val()) || {};
-    });
+    return this.db
+      .ref('/data')
+      .once('value')
+      .then(function(snapshot) {
+        return snapshot.val() || {};
+      });
   };
 
-  setDonation = (uid, donation) => this.db.ref(`users/${uid}/donations/${donation.date}`).set({
-    ...donation
-  });
-
+  setDonation = (uid, donation) =>
+    this.db.ref(`users/${uid}/donations/${donation.date}`).set({
+      ...donation,
+    });
 }
 
 export default Firebase;

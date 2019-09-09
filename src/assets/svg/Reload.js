@@ -1,21 +1,13 @@
-import React from "react";
+import React from 'react';
 
 function Reload() {
   return (
-    <svg
-      viewBox="0 0 83 83"
-    >
+    <svg viewBox="0 0 83 83">
       <defs>
         <clipPath id="g">
           <path fill="none" d="M0 0H83V83H0z" />
         </clipPath>
-        <pattern
-          id="h"
-          width="100%"
-          height="100%"
-          preserveAspectRatio="xMidYMid slice"
-          viewBox="0 0 512 512"
-        >
+        <pattern id="h" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" viewBox="0 0 512 512">
           <image
             width="512"
             height="512"
@@ -23,13 +15,7 @@ function Reload() {
           />
         </pattern>
       </defs>
-      <g
-        fill="url(#h)"
-        stroke="rgba(0,0,0,0)"
-        strokeWidth="1"
-        clipPath="url(#g)"
-        data-name="Icon"
-      >
+      <g fill="url(#h)" stroke="rgba(0,0,0,0)" strokeWidth="1" clipPath="url(#g)" data-name="Icon">
         <path stroke="none" d="M0 0H83V83H0z" />
         <path fill="none" d="M0.5 0.5H82.5V82.5H0.5z" />
       </g>
@@ -37,4 +23,4 @@ function Reload() {
   );
 }
 
-export {Reload};
+export { Reload };

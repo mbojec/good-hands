@@ -1,20 +1,19 @@
 export const FETCH_DATA = 'FETCH_DATA';
-export const LOG_IN = "LOG_IN";
+export const LOG_IN = 'LOG_IN';
 export const LOG_OUT = 'LOG_OUT';
 export const SET_UID = 'SET_UID';
-
 
 export const add = payload => {
   return {
     type: FETCH_DATA,
-    payload
+    payload,
   };
 };
 
 export const logIn = userEmail => {
   return {
     type: LOG_IN,
-    userEmail
+    userEmail,
   };
 };
 
@@ -27,11 +26,10 @@ export const logOut = () => {
 export const setUid = payload => {
   return {
     type: SET_UID,
-    payload
+    payload,
   };
 };
 
-export const fetchData = (firebase) => dispatch => {
-  firebase.getData().then(res => dispatch(add(res)))
+export const fetchData = firebase => dispatch => {
+  firebase.getData().then(res => dispatch(add(res)));
 };
-

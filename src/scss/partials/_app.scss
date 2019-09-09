@@ -1,15 +1,16 @@
-body{
+body {
   font-family: $font-base;
   color: $color-dark;
 }
 
 .app {
   @extend %wrapper;
+
   width: 100vw;
   background: white;
 }
 
-.app-main{
+.app-main {
   position: relative;
   top: -20vh;
 }
@@ -28,7 +29,7 @@ body{
   height: 100vh;
 }
 
-.app-header--login{
+.app-header--login {
   width: 100%;
   background: white;
   height: 30vh;
@@ -57,38 +58,36 @@ body{
   max-height: $about-height;
 }
 
-.app-help-section{
+.app-help-section {
   width: 100%;
   background: white;
   max-height: $help-height;
 }
 
-.app-contact-section{
+.app-contact-section {
   width: 100%;
   background: white;
   height: 100vh;
   max-height: $contact-height;
 }
 
-.app-login-section{
+.app-login-section {
   width: 100%;
   background: white;
   height: 80vh;
   max-height: $login-height;
 }
 
-.app-form-section{
+.app-form-section {
   width: 100%;
   background: white;
   //height: 85vh;
   max-height: $form_height;
 }
 
-.app-info-strap-section{
+.app-info-strap-section {
   width: 100%;
-  background: #FAD648;
+  background: #fad648;
   //height: 15vh;
   max-height: $info-strap-height;
 }
-
-

@@ -1,40 +1,40 @@
-import {MOVE_NEXT, MOVE_PREV, SAVE_FORM_STEP} from "../actions/form";
+import { MOVE_NEXT, MOVE_PREV, SAVE_FORM_STEP } from '../actions/form';
 
 const initialState = {
   formStep: 1,
   numberOfBags: 0,
   devotedThing: '',
   foundationCity: '',
-  targetGroup:'',
+  targetGroup: '',
   organizationName: '',
-  street: "",
+  street: '',
   city: '',
   postalCode: '',
   phoneNumber: '',
-  date:'',
-  time:'',
-  comments:''
+  date: '',
+  time: '',
+  comments: '',
 };
 
 const form = (state = initialState, action) => {
   switch (action.type) {
-    case MOVE_NEXT:{
+    case MOVE_NEXT: {
       return {
         ...state,
-        formStep: state.formStep + 1
+        formStep: state.formStep + 1,
       };
     }
-    case MOVE_PREV:{
+    case MOVE_PREV: {
       return {
         ...state,
-        formStep: state.formStep - 1
+        formStep: state.formStep - 1,
       };
     }
 
     case SAVE_FORM_STEP:
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
       };
 
     default:
@@ -42,4 +42,4 @@ const form = (state = initialState, action) => {
   }
 };
 
-export {form};
+export { form };

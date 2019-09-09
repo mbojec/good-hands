@@ -1,13 +1,12 @@
-import React from "react";
-import {Reload, Things} from "../../assets/svg";
-import {withRedux} from "../../store/wrapper";
-import {FormBtn} from "./";
-import {withFirebase} from "../../firebase";
-import {compose} from "recompose";
-import PropTypes from "prop-types";
+import React from 'react';
+import { Reload, Things } from '../../assets/svg';
+import { withRedux } from '../../store/wrapper';
+import { FormBtn } from './';
+import { withFirebase } from '../../firebase';
+import { compose } from 'recompose';
+import PropTypes from 'prop-types';
 
-const FormSummary = (props) => {
-
+const FormSummary = props => {
   function handleSubmit() {
     const donation = {
       street: props.street,
@@ -20,13 +19,13 @@ const FormSummary = (props) => {
       numberOfBags: props.numberOfBags,
       devotedThing: props.devotedThing,
       targetGroup: props.targetGroup,
-      foundationCity: props.foundationCity
+      foundationCity: props.foundationCity,
     };
     props.firebase.setDonation(props.uid, donation);
     props.onMoveNext();
   }
 
-  function handleClick(){
+  function handleClick() {
     props.onMovePrev();
   }
 
@@ -37,10 +36,16 @@ const FormSummary = (props) => {
         <div className={'summary__container'}>
           <p className={'col-xs-12 form__input-section__column-section__title'}>Oddajesz</p>
           <div className={'col-xs-12 summary__card'}>
-            <div className={'summary__icon'}><Things/></div><p className={'summary__desc'}>{`${props.numberOfBags} worek/worki, ${props.devotedThing}, ${props.targetGroup}`}</p>
+            <div className={'summary__icon'}>
+              <Things />
+            </div>
+            <p className={'summary__desc'}>{`${props.numberOfBags} worek/worki, ${props.devotedThing}, ${props.targetGroup}`}</p>
           </div>
           <div className={'col-xs-12 summary__card'}>
-            <div className={'summary__icon'}><Reload/></div><p className={'summary__desc'}>{`do lokalizacji: ${props.foundationCity}`}</p>
+            <div className={'summary__icon'}>
+              <Reload />
+            </div>
+            <p className={'summary__desc'}>{`do lokalizacji: ${props.foundationCity}`}</p>
           </div>
         </div>
         <div className={'form__input-section--container'}>
@@ -81,12 +86,12 @@ const FormSummary = (props) => {
             </div>
           </div>
           <div className={'form__btn-section'}>
-            <FormBtn onHandleClick={() => handleClick()} onHandleSubmit={(event) => handleSubmit(event)}/>
+            <FormBtn onHandleClick={() => handleClick()} onHandleSubmit={event => handleSubmit(event)} />
           </div>
         </div>
       </div>
     </>
-  )
+  );
 };
 
 FormSummary.propTypes = {
@@ -104,8 +109,11 @@ FormSummary.propTypes = {
   onMoveNext: PropTypes.func,
   onMovePrev: PropTypes.func,
   firebase: PropTypes.object,
-  uid: PropTypes.string
+  uid: PropTypes.string,
 };
 
-const FormSummaryHoc = compose(withFirebase, withRedux)(FormSummary);
-export {FormSummaryHoc as FormSummary}
+const FormSummaryHoc = compose(
+  withFirebase,
+  withRedux,
+)(FormSummary);
+export { FormSummaryHoc as FormSummary };

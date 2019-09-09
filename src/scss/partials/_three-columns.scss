@@ -1,27 +1,28 @@
-.three-columns-container{
+.three-columns-container {
   @extend %container;
+
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-color:$color-yellow;
+  background-color: $color-yellow;
   max-height: $three-columns-height;
-  @include fluid-background-image("../assets/images/3-Columns-Background.png", "../assets/images/3-Columns-Background@2x.png")
+  @include fluid-background-image('../assets/images/3-Columns-Background.png', '../assets/images/3-Columns-Background@2x.png');
 }
 
-.three-columns__single-column{
+.three-columns__single-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.three-columns__single-column__number{
+.three-columns__single-column__number {
   font-size: 90px;
   font-weight: 300;
   text-align: center;
   @include fluid-type(768px, 1900px, 72px, 90px);
 }
 
-.three-columns__single-column__title{
+.three-columns__single-column__title {
   font-size: 18px;
   text-align: center;
   margin-bottom: 24px;
@@ -29,7 +30,7 @@
   @include fluid-type(768px, 1900px, 14px, 18px);
 }
 
-.three-columns__single-column__subtitle{
+.three-columns__single-column__subtitle {
   font-size: 16px;
   font-weight: 300;
   text-align: center;

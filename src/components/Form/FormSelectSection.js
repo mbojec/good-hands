@@ -1,16 +1,15 @@
 import React from 'react';
-import {withRedux} from "../../store/wrapper";
-import PropTypes from "prop-types";
+import { withRedux } from '../../store/wrapper';
+import PropTypes from 'prop-types';
 
-const FormSelectSection = ({onHandleSelect, value, formStep}) => {
-
-  function handleChange(event){
-    onHandleSelect(event)
+const FormSelectSection = ({ onHandleSelect, value, formStep }) => {
+  function handleChange(event) {
+    onHandleSelect(event);
   }
 
-  return(
-    <select value={value} onChange={ (e) => handleChange(e)}>
-      {formStep === 2?
+  return (
+    <select value={value} onChange={e => handleChange(e)}>
+      {formStep === 2 ? (
         <>
           <option value={0}>-- wybierz --</option>
           <option value={1}>1</option>
@@ -19,26 +18,25 @@ const FormSelectSection = ({onHandleSelect, value, formStep}) => {
           <option value={4}>4</option>
           <option value={5}>5</option>
         </>
-        :
+      ) : (
         <>
-          <option value={""}>-- wybierz --</option>
-          <option value={"Poznań"}>Poznań</option>
-          <option value={"Warszawa"}>Warszawa</option>
+          <option value={''}>-- wybierz --</option>
+          <option value={'Poznań'}>Poznań</option>
+          <option value={'Warszawa'}>Warszawa</option>
           <option value={'Kraków'}>Kraków</option>
-          <option value={"Katowice"}>Katowice</option>
+          <option value={'Katowice'}>Katowice</option>
           <option value={'Wrocław'}>Wrocław</option>
         </>
-      }
+      )}
     </select>
-  )
-
+  );
 };
 
 FormSelectSection.propTypes = {
   onHandleSelect: PropTypes.func,
   formStep: PropTypes.number,
-  value: PropTypes.any
+  value: PropTypes.any,
 };
 
 const FormSelectSectionHoc = withRedux(FormSelectSection);
-export {FormSelectSectionHoc as FormSelectSection};
+export { FormSelectSectionHoc as FormSelectSection };

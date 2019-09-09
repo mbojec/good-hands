@@ -1,23 +1,22 @@
-import React from "react";
-import {HeaderTopMenu} from "../Header";
-
+import React from 'react';
+import { HeaderTopMenu } from '../Header';
 
 const Header = () => {
-  return(
+  return (
     <div className={'header-container'}>
       <div className={'row--ful-height'}>
-        <div className={'col-xs-5 col-xxl-5'}/>
+        <div className={'col-xs-5 col-xxl-5'} />
         <div className={'col-xs-7 col-xxl-7'}>
           <div className={'row--ful-height'}>
-            <div className={'col-xl-1 col-xxl-2'}/>
+            <div className={'col-xl-1 col-xxl-2'} />
             <div className={'col-xs-12 col-xl-11 col-xxl-10'}>
-              <HeaderTopMenu/>
+              <HeaderTopMenu />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
-export {Header}
+export { Header };
